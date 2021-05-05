@@ -2,8 +2,53 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@layer components {
-  .title {
-    @apply pt-1 ;
-  }
+* {
+  font-family: 'Rubik', sans-serif;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #f7f7f8;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 4.25rem;
+  letter-spacing: 1%;
+  color: white;
+}
+
+.small-title {
+  font-weight: bold;
+  font-size: 2.9375rem;
+  letter-spacing: 1%;
+  color: white;
+}
+
+.subtitle {
+  font-weight: medium;
+  font-size: 1.875rem;
+  color: #AAAAAB;
+  line-height: 122.8%;
+  letter-spacing: 1%;
+}
+
+.paragraph {
+  font-weight: regular;
+  font-size: 1.375rem;
+  color: #AAAAAB;
+  line-height: 135%;
+  letter-spacing: 1%;
+}
+
+.shadow-blue {
+  box-shadow: 0px 0px 10px #12606D, inset 0px 0px 10px #12606D;
 }
