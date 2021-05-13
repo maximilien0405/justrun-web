@@ -18,6 +18,9 @@ module.exports = {
         blue_border: "#CDF6FF",
         blue_button: "#12606D",
       },
+      borderWidth: {
+        big: '40px',
+      }
     },
   },
   variants: {
