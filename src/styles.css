@@ -10,7 +10,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 16px !important;
 }
 
 html, body {
@@ -65,4 +65,12 @@ html, body {
   font-weight: medium;
   font-size: 1.125rem;
   color: white;
+}
+
+img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }

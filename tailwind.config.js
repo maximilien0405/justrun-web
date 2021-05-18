@@ -19,7 +19,17 @@ module.exports = {
         blue_button: "#12606D",
       },
       borderWidth: {
-        big: '40px',
+        big: '2.5rem',
+      },
+      padding: {
+        '13': '3.25rem',
+      },
+      height: {
+        '18': '4.6875rem',
+      },
+      width: {
+        '15': '3.75rem',
+        '18': '4.6875rem',
       }
     },
   },
