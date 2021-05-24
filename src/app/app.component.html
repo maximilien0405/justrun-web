@@ -1,19 +1,54 @@
-<div class="w-full border-2 border-solid rounded-lg h-[5000px] border-blue_border shadow-blue-border">
+<div class="w-full border-lign border-solid rounded-lg h-[5000px] border-blue_border shadow-blue-border">
 
-  <!----------- LOGO -------------------------------------------->
+  <!---- LOGO -------------->
 
   <div class="absolute left-9 top-9 border-r-big border-b-big border-gray_background_dark">
     <img src="../assets/logo-tight.png" class="w-15" alt="">
   </div>
 
-  <!----------- MENU ITEM -------------------------------------------->
+  <!---- MENU ITEM ---------->
 
-  <button class="items-center inline-block h-10 px-5 text-base leading-10 text-white border-2 rounded-md cursor-pointer focus:outline-none ml-36 bg-gray_background_light border-blue_border shadow-blue-button"><p class="mx-auto text-base">The game</p></button>
+  <div class="absolute flex-row inline-block pb-2 ml-48 px-special top-9 bg-gray_background_dark">
+    <button class="items-center inline-block h-10 px-5 text-base leading-10 text-white rounded-md cursor-pointer border-lign focus:outline-none bg-gray_background_light border-blue_border shadow-blue-button">
+      <p class="mx-auto text-sm">The game</p>
+    </button>
+    <button class="items-center inline-block h-10 px-5 ml-3 text-base leading-10 rounded-md cursor-pointer text-gray_subtitle focus:outline-none bg-gray_background_light shadow-gray">
+      <p class="mx-auto text-sm">Media</p>
+    </button>
+    <button class="items-center inline-block h-10 px-5 ml-3 text-base leading-10 rounded-md cursor-pointer text-gray_subtitle focus:outline-none bg-gray_background_light shadow-gray">
+      <p class="mx-auto text-sm">Our team</p>
+    </button>
+  </div>
 
-  <!----------- BUY BUTTON -------------------------------------------->
+  <!---- BUY BUTTON --------->
 
   <div class="absolute top-9 right-9 border-l-big border-b-big border-gray_background_dark">
-    <button class="flex items-center text-sm font-bold lea­­­ding-snug text-center text-white align-middle border-2 rounded-md cursor-pointer h-18 w-18 bg-blue_button shadow-blue-button border-blue_border px-2 focus:outline-none">BUY­­ NOW</button>
+    <button class="flex items-center text-sm font-bold lea­­­ding-snug text-center text-white align-middle border-lign rounded-md cursor-pointer h-18 w-18 bg-blue_button shadow-blue-button border-blue_border px-2 focus:outline-none">BUY­­ NOW</button>
   </div>
+
+  <!---- SOCIAL BUTTONS --------->
+
+  <div class="absolute inline-block left-9 py-special top-96 bg-gray_background_dark">
+    <div class="flex flex-col items-center justify-center w-10 h-10 align-middle rounded-md bg-gray_background_light border-lign border-blue_border shadow-blue-button">
+      <img src="../assets/discord.svg" class="w-6 h-6" alt="">
+    </div>
+    <div class="flex flex-col items-center justify-center w-10 h-10 mt-3 align-middle rounded-md bg-gray_background_light shadow-gray">
+      <img src="../assets/insta.svg" style="width: 27px !important; height: 27px;" alt="">
+    </div>
+    <div class="flex flex-col items-center justify-center w-10 h-10 mt-3 align-middle rounded-md bg-gray_background_light shadow-gray">
+      <img src="../assets/twitter.svg" class="w-6 h-6" alt="">
+    </div>
+  </div>
+
+  <!--------------- CONTENT ----------------------------------------------------->
+
+  <router-outlet></router-outlet>
+
+  <!--------------- END CONTENT ----------------------------------------------------->
+
+  <!---- BOTTOM CONTAINER --------->
+
+
+
 </div>
 
