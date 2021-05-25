@@ -32,6 +32,9 @@ module.exports = {
       width: {
         '15': '3.75rem',
         '18': '4.6875rem',
+      },
+      margin: {
+        'footer': '8.75rem',
       }
     },
   },
