@@ -53,12 +53,22 @@ html, body {
   box-shadow: 0rem 0rem 0.625rem #12606D, inset 0rem 0rem 0.625rem #12606D;
 }
 
+@media (max-width: 768px) {
+  .shadow-blue-border {
+    box-shadow: none !important;
+  }  
+}
+
 .shadow-blue-button {
   box-shadow: 0rem 0rem 0.9375rem 0rem #12606D;
 }
 
 .shadow-gray {
   filter: drop-shadow(0rem 0.3125rem 0rem rgba(0, 0, 0, 0.25));
+}
+
+.shadow-blue {
+  filter: drop-shadow(0rem 0.3125rem 0rem #12606D);
 }
 
 img {
@@ -68,3 +78,4 @@ img {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+
