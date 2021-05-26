@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styles: ['']
 })
 export class AppComponent {
-  title = 'justrun-web';
+  url = "";
+
+  constructor(private router: Router) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.url = this.router.url;
+      }
+    });
+  }
+
+  ngOnInit(): void {
+  }
 }

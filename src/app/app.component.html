@@ -1,4 +1,4 @@
-<div class="w-full border-lign border-solid rounded-lg h-[5000px] border-blue_border shadow-blue-border">
+<div class="w-full md:border-lign rounded-lg h-[3000px] md:border-blue_border shadow-blue-border">
 
   <!---- LOGO -------------->
 
@@ -9,35 +9,80 @@
   <!---- MENU ITEM ---------->
 
   <div class="absolute flex-row inline-block pb-2 ml-48 px-special top-9 bg-gray_background_dark">
-    <button class="items-center inline-block h-10 px-5 text-base leading-10 text-white rounded-md cursor-pointer border-lign focus:outline-none bg-gray_background_light border-blue_border shadow-blue-button">
+
+    <!-- Button The Game -->
+    <button *ngIf="url !== '/'" routerLink="" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 rounded-md cursor-pointer shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
       <p class="mx-auto text-sm">The game</p>
     </button>
-    <button class="items-center inline-block h-10 px-5 ml-3 text-base leading-10 rounded-md cursor-pointer text-gray_subtitle focus:outline-none bg-gray_background_light shadow-gray">
-      <p class="mx-auto text-sm">Media</p>
+    <button *ngIf="url === '/'" routerLink="" class="box-border items-center inline-block h-10 px-5 text-base leading-10 text-white transition duration-75 rounded-md cursor-pointer shadow-gray border-lign focus:outline-none bg-gray_background_light border-blue_border shadow-blue-button">
+      <p class="mx-auto text-sm">The game</p>
     </button>
-    <button class="items-center inline-block h-10 px-5 ml-3 text-base leading-10 rounded-md cursor-pointer text-gray_subtitle focus:outline-none bg-gray_background_light shadow-gray">
+    
+    <!-- Button Medias -->
+    <button *ngIf="url !== '/medias'" routerLink="medias" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 rounded-md cursor-pointer shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+      <p class="mx-auto text-sm">Medias</p>
+    </button>
+    <button *ngIf="url === '/medias'" routerLink="medias" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 text-white transition duration-75 rounded-md cursor-pointer shadow-gray border-lign focus:outline-none bg-gray_background_light border-blue_border shadow-blue-button">
+      <p class="mx-auto text-sm">Medias</p>
+    </button>
+
+    <!-- Our team -->
+    <button *ngIf="url !== '/our-team'" routerLink="our-team" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 rounded-md cursor-pointer shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+      <p class="mx-auto text-sm">Our team</p>
+    </button>
+    <button *ngIf="url === '/our-team'" routerLink="our-team" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 text-white transition duration-75 rounded-md cursor-pointer shadow-gray border-lign focus:outline-none bg-gray_background_light border-blue_border shadow-blue-button">
       <p class="mx-auto text-sm">Our team</p>
     </button>
   </div>
 
   <!---- BUY BUTTON --------->
 
-  <div class="absolute top-9 right-9 border-l-big border-b-big border-gray_background_dark">
-    <button class="flex items-center text-sm font-bold lea­­­ding-snug text-center text-white align-middle border-lign rounded-md cursor-pointer h-18 w-18 bg-blue_button shadow-blue-button border-blue_border px-2 focus:outline-none">BUY­­ NOW</button>
+  <div class="absolute hidden md:block top-9 right-9 border-l-big border-b-big border-gray_background_dark">
+    <a href="" target="_blank">
+      <button class="flex items-center text-sm font-bold lea­­­ding-snug text-center text-white align-middle transition duration-75 border-lign hover:bg-blue_button_hover rounded-md cursor-pointer h-18 w-18 bg-blue_button shadow-blue-button shadow-gray border-blue_border px-2 focus:outline-none">
+        BUY­­ NOW
+      </button>
+    </a>
   </div>
 
   <!---- SOCIAL BUTTONS --------->
 
-  <div class="absolute inline-block left-9 py-special top-96 bg-gray_background_dark">
-    <div class="flex flex-col items-center justify-center w-10 h-10 align-middle rounded-md bg-gray_background_light border-lign border-blue_border shadow-blue-button">
-      <img src="../assets/discord.svg" class="w-6 h-6" alt="">
-    </div>
-    <div class="flex flex-col items-center justify-center w-10 h-10 mt-3 align-middle rounded-md bg-gray_background_light shadow-gray">
-      <img src="../assets/insta.svg" style="width: 27px !important; height: 27px;" alt="">
-    </div>
-    <div class="flex flex-col items-center justify-center w-10 h-10 mt-3 align-middle rounded-md bg-gray_background_light shadow-gray">
-      <img src="../assets/twitter.svg" class="w-6 h-6" alt="">
-    </div>
+  <!-- With color -->
+  <!--<div class="absolute hidden left-9 py-special top-96 bg-gray_background_dark md:inline-block">
+    <a href="https://discord.com/invite/EvhKvnd" target="_blank">
+      <div class="flex flex-col items-center justify-center w-10 h-10 align-middle transition duration-75 rounded-md cursor-pointer shadow-gray bg-gray_background_light" style="background-color: #5865F2;">
+        <img src="../assets/discord.svg" class="w-6 h-6" alt="">
+      </div>
+    </a>
+    <a href="https://www.instagram.com/justrunthegame/" target="_blank">
+      <div class="flex flex-col items-center justify-center w-10 h-10 mt-3 align-middle rounded-md cursor-pointer shadow-gray bg-gray_background_light" style="background-color: #d90057;">
+        <img src="../assets/insta.svg" style="width: 27px !important; height: 27px;" alt="">
+      </div>
+    </a>
+    <a href="https://twitter.com/JustRun31418939" target="_blank">
+      <div class="flex flex-col items-center justify-center w-10 h-10 mt-3 align-middle rounded-md cursor-pointer bg-gray_background_light shadow-gray" style="background-color: #1DA1F2;">
+        <img src="../assets/twitter.svg" class="w-6 h-6" alt="">
+      </div>
+    </a>
+  </div>-->
+
+  <!-- Without color -->
+  <div class="absolute hidden left-9 py-special top-96 bg-gray_background_dark md:inline-block">
+    <a href="https://discord.com/invite/EvhKvnd" target="_blank">
+      <div class="flex flex-col items-center justify-center w-10 h-10 align-middle transition duration-75 rounded-md cursor-pointer shadow-gray bg-gray_background_light hover:bg-gray_light_hover">
+        <img src="../assets/discord.svg" style="width: 27px !important; height: 27px;" alt="">
+      </div>
+    </a>
+    <a href="https://www.instagram.com/justrunthegame/" target="_blank">
+      <div class="flex flex-col items-center justify-center w-10 h-10 mt-3 align-middle transition duration-75 rounded-md cursor-pointer shadow-gray bg-gray_background_light hover:bg-gray_light_hover">
+        <img src="../assets/insta.svg" class="w-6 h-6" alt="">
+      </div>
+    </a>
+    <a href="https://twitter.com/JustRun31418939" target="_blank">
+      <div class="flex flex-col items-center justify-center w-10 h-10 mt-3 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+        <img src="../assets/twitter.svg" class="w-6 h-6" alt="">
+      </div>
+    </a>
   </div>
 
   <!--------------- CONTENT ----------------------------------------------------->
@@ -48,30 +93,63 @@
 <!--------------- FOOTER ----------------------------------------------------->
 
 <div class="h-['140px']">
-  <div class="flex w-full py-special bg-gray_background_dark">
+  <div class="flex flex-col justify-between w-full border-t border-blue_border sm:shadow-blue-border md:border-none md:flex-row py-13 bg-gray_background_dark">
+    <div class="flex flex-col md:w-full md:flex-row">
+      <!---- Dropdown --------->
 
+      <div class="flex flex-row items-center justify-between w-24 h-10 text-sm transition duration-75 rounded-md cursor-pointer bg-gray_background_light text-gray_subtitle shadow-gray">
+        <div class="flex items-center w-1/2 h-full rounded-l-md hover:bg-gray_light_hover">
+          <span class="w-full text-center text-white">FR</span>
+        </div>
 
-    <!---- Dropdown --------->
-    <div class="flex items-center justify-between h-10 py-2.5 pl-3.5 pr-2.5 cursor-pointer text-sm rounded-md bg-gray_background_light text-gray_subtitle shadow-gray flex-row">
-      <p class="inline-block">
-      Language: <span class="text-white">FR</span>
-      </p>
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 ml-2.5" viewBox="0 0 20 20" fill="currentColor">
-        <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
-      </svg>
+        <div class="h-full w-lign bg-blue_border" style="box-shadow: 0px 0px 15px rgba(18, 96, 109, 0.7);"></div>
+        
+        <div class="flex items-center w-1/2 h-full hover:bg-gray_light_hover rounded-r-md">
+          <span class="w-full text-center text-gray_subtitle">EN</span>
+        </div>
+      </div>
+      <!---- Separator --------->
+      
+      <!---- Copyright --------->
+      <p class="flex items-center mt-5 ml-5 text-md text-gray_subtitle md:mt-0">Copyright© 2021  -  All rights reserved</p>
     </div>
-
     <!---- SOCIAL BUTTONS --------->
-    <div class="flex">
-      <div class="flex items-center justify-center w-10 h-10 mr-3 align-middle rounded-md bg-gray_background_light border-lign border-blue_border shadow-blue-button">
-        <img src="../assets/discord.svg" class="w-6 h-6" alt="">
-      </div>
-      <div class="flex items-center justify-center w-10 h-10 mr-3 align-middle rounded-md bg-gray_background_light shadow-gray">
-        <img src="../assets/insta.svg" style="width: 27px !important; height: 27px;" alt="">
-      </div>
-      <div class="flex items-center justify-center w-10 h-10 align-middle rounded-md bg-gray_background_light shadow-gray">
-        <img src="../assets/twitter.svg" class="w-6 h-6" alt="">
-      </div>
+
+    <!-- With color -->
+    <!--<div class="flex mt-5 md:mt-0">
+      <a href="https://discord.com/invite/EvhKvnd" target="_blank">
+        <div class="flex items-center justify-center w-10 h-10 mr-3 align-middle rounded-md cursor-pointer bg-gray_background_light shadow-gray" style="background-color: #5865F2;">
+          <img src="../assets/discord.svg" class="w-6 h-6" alt="">
+        </div>
+      </a>
+      <a href="https://www.instagram.com/justrunthegame/" target="_blank">
+        <div class="flex items-center justify-center w-10 h-10 mr-3 align-middle rounded-md cursor-pointer bg-gray_background_light shadow-gray" style="background-color: #d90057;">
+          <img src="../assets/insta.svg" style="width: 27px !important; height: 27px;" alt="">
+        </div>
+      </a>
+      <a href="https://twitter.com/JustRun31418939" target="_blank">
+        <div class="flex items-center justify-center w-10 h-10 align-middle rounded-md cursor-pointer bg-gray_background_light shadow-gray" style="background-color: #1DA1F2;">
+          <img src="../assets/twitter.svg" class="w-6 h-6" alt="">
+        </div>
+      </a>
+    </div>-->
+    <!-- Without color -->
+    <div class="flex mt-5 md:mt-0">
+      <a href="https://discord.com/invite/EvhKvnd" target="_blank">
+        <div class="flex items-center justify-center w-10 h-10 mr-3 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+          <img src="../assets/discord.svg" style="width: 27px !important; height: 27px;" alt="">
+        </div>
+      </a>
+      <a href="https://www.instagram.com/justrunthegame/" target="_blank">
+        <div class="flex items-center justify-center w-10 h-10 mr-3 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+          <img src="../assets/insta.svg" class="w-6 h-6" alt="">
+        </div>
+      </a>
+      <a href="https://twitter.com/JustRun31418939" target="_blank">
+        <div class="flex items-center justify-center w-10 h-10 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+          <img src="../assets/twitter.svg" class="w-6 h-6" alt="">
+        </div>
+      </a>
     </div>
   </div>
 </div>
