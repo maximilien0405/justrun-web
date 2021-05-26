@@ -13,10 +13,13 @@ module.exports = {
       colors: {
         white_light: "#F3F4F6",
         gray_background_light: "#37393F",
+        gray_light_hover: '#323339',
         gray_background_dark: "#202225",
         gray_subtitle: "#AAAAAB",
+        gray_subtitle_hover: '#dddddd',
         blue_border: "#CDF6FF",
         blue_button: "#12606D",
+        blue_button_hover: "#105662",
       },
       borderWidth: {
         lign: '0.0938rem',
@@ -32,6 +35,7 @@ module.exports = {
       width: {
         '15': '3.75rem',
         '18': '4.6875rem',
+        'lign':'0.0625rem',
       },
       margin: {
         'footer': '8.75rem',
