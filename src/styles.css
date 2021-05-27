@@ -13,9 +13,15 @@ html {
   font-size: 16px !important;
 }
 
+@media (max-width: 640px) {
+  html {
+    font-size: 14px !important;
+  }
+}
+
 html, body {
-  touch-action: none;
-  -webkit-touch-callout: none; /* iOS Safari */
+  touch-action: pan-y;
+  -webkit-touch-callout: pan-y; /* iOS Safari */
   height: 100%;
   margin: 0;
   background-color: #f7f7f8;
