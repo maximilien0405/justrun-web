@@ -10,6 +10,8 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent {
   url = "";
   public lang: string = "FR";
+  displayDropdown: boolean = false;
+  rotateHamburger: boolean = false;
 
   constructor(private router: Router, public translate: TranslateService) {
     this.router.events.subscribe((event) => {
@@ -26,6 +28,10 @@ export class AppComponent {
 
   public changeLang(lang: string) {
     this.lang = lang;
+  }
+
+  dropdown() {
+    this.displayDropdown = !this.displayDropdown;
   }
 
   ngOnInit(): void {

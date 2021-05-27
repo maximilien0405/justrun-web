@@ -21,6 +21,9 @@ module.exports = {
         blue_button: "#12606D",
         blue_button_hover: "#105662",
       },
+      transitionDuration: {
+        'special': '100ms',
+       },
       borderWidth: {
         lign: '0.0938rem',
         big: '2.5rem',
