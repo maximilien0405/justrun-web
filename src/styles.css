@@ -53,10 +53,14 @@ html, body {
   box-shadow: 0rem 0rem 0.625rem #12606D, inset 0rem 0rem 0.625rem #12606D;
 }
 
+.shadow-blue-border-lign {
+  box-shadow: 0rem 0rem 0.625rem #12606D, inset 0rem 0rem 0.625rem #12606D;
+}
+
 @media (max-width: 768px) {
   .shadow-blue-border {
     box-shadow: none !important;
-  }  
+  }
 }
 
 .shadow-blue-button {
@@ -81,5 +85,5 @@ img {
 
 .lang-selected {
   color: white !important;
-  font-weight: bold !important;
+  font-weight: medium !important;
 }
