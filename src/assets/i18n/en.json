@@ -1,0 +1,12 @@
+{
+    "NAV": {
+        "MENU-1" : "The game",
+        "MENU-2" : "Medias",
+        "MENU-3" : "Our team",
+        "MENU-4" : "Contact us"
+    },
+    "BUYBUTTON" : "BUY NOW",
+    "FOOTER": {
+        "COPYRIGHT": "Copyright© 2021  -  All rights reserved"
+    }
+}
