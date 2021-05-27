@@ -79,3 +79,7 @@ img {
   -ms-user-select: none;
 }
 
+.lang-selected {
+  color: white !important;
+  font-weight: bold !important;
+}
