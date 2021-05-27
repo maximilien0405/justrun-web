@@ -8,5 +8,9 @@
     "BUYBUTTON" : "VOIR PLUS",
     "FOOTER": {
         "COPYRIGHT": "Copyright© 2021  -  Tous droits réservés"
+    },
+    "THE-GAME" : {
+      "TITLE": "OBJECTIF: S'ECHAPPER DE LA TOUR",
+      "SUBTITLE": "Retracez vos souvenirs, découvrez vos capacités et combattez pour votre liberté."
     }
 }

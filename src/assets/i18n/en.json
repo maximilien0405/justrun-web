@@ -5,8 +5,13 @@
         "MENU-3" : "Our team",
         "MENU-4" : "Contact us"
     },
-    "BUYBUTTON" : "BUY NOW",
+    "BUYBUTTON" : "SEE MORE",
     "FOOTER": {
         "COPYRIGHT": "Copyright© 2021  -  All rights reserved"
+    },
+    "THE-GAME" : {
+      "TITLE": "OBJECTIVE: ESCAPE THE TOWER",
+      "SUBTITLE": "Recover your memories, discover your abilities and fight for your freedom."
     }
 }
+

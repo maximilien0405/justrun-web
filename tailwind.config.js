@@ -20,6 +20,7 @@ module.exports = {
         blue_border: "#CDF6FF",
         blue_button: "#12606D",
         blue_button_hover: "#105662",
+        img_background: '#53565A',
       },
       transitionDuration: {
         'special': '100ms',
@@ -27,6 +28,7 @@ module.exports = {
       borderWidth: {
         lign: '0.0938rem',
         big: '2.5rem',
+        cadre: '0.625rem',
       },
       padding: {
         '13': '3.25rem',
