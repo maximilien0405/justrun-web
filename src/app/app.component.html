@@ -7,43 +7,15 @@
   </div>
 
   <!---- LOGO (mobile) + MENU ITEM (mobile) -------------->
-  <img src="../assets/big-logo-background.png" class="mr-4 h-14" alt="">
 
-  <div class="flex flex-row mt-5 mb-8 md:hidden">
+  <div class="flex flex-row justify-between mb-8 md:hidden">
+    <img src="../assets/big-logo-background.png" class="mr-4 h-18" alt="">
+    <button class="box-border flex items-center justify-center text-base leading-10 align-middle transition duration-75 rounded-md cursor-pointer w-14 h-14 shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
 
-    <div class="w-full">
-      <!-- Button The Game -->
-      <button *ngIf="url !== '/'" routerLink="" class="box-border items-center inline-block h-10 pl-5 pr-2.5 text-base leading-10 transition duration-75 cursor-pointer rounded-l-md shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
-        <p class="mx-auto text-sm">{{ 'NAV.MENU-1' | translate }}</p>
-      </button>
-      <button *ngIf="url === '/'" routerLink="" class="box-border items-center inline-block h-10 pl-5 pr-2.5 text-base leading-10 text-white transition duration-75 cursor-pointer rounded-l-md shadow-gray border-lign focus:outline-none bg-gray_background_light border-blue_border shadow-blue-button">
-        <p class="mx-auto text-sm">{{ 'NAV.MENU-1' | translate }}</p>
-      </button>
-
-      <!-- Button Medias -->
-      <button *ngIf="url !== '/medias'" routerLink="medias" class="box-border items-center inline-block h-10 px-2.5 text-base leading-10 transition duration-75 cursor-pointer shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
-        <p class="mx-auto text-sm">{{ 'NAV.MENU-2' | translate }}</p>
-      </button>
-      <button *ngIf="url === '/medias'" routerLink="medias" class="box-border items-center inline-block h-10 px-2.5 text-base leading-10 text-white transition duration-75 cursor-pointer shadow-gray border-lign focus:outline-none bg-gray_background_light border-blue_border shadow-blue-button">
-        <p class="mx-auto text-sm">{{ 'NAV.MENU-2' | translate }}</p>
-      </button>
-
-      <!-- Our team -->
-      <button *ngIf="url !== '/our-team'" routerLink="our-team" class="box-border items-center inline-block h-10 px-2.5 text-base leading-10 transition duration-75 cursor-pointer shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
-        <p class="mx-auto text-sm">{{ 'NAV.MENU-3' | translate }}</p>
-      </button>
-      <button *ngIf="url === '/our-team'" routerLink="our-team" class="box-border items-center inline-block h-10 px-2.5 text-base leading-10 text-white transition duration-75 cursor-pointer shadow-gray border-lign focus:outline-none bg-gray_background_light border-blue_border shadow-blue-button">
-        <p class="mx-auto text-sm">{{ 'NAV.MENU-3' | translate }}</p>
-      </button>
-
-      <!-- Contact us -->
-      <button *ngIf="url !== '/contact-us'" routerLink="contact-us" class="box-border items-center inline-block h-10 pl-2.5 pr-5 text-base leading-10 transition duration-75 cursor-pointer rounded-r-md shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
-        <p class="mx-auto text-sm">{{ 'NAV.MENU-4' | translate }}</p>
-      </button>
-      <button *ngIf="url === '/contact-us'" routerLink="contact-us" class="box-border items-center inline-block h-10 pl-2.5 pr-5 text-base leading-10 text-white transition duration-75 cursor-pointer rounded-r-md shadow-gray border-lign focus:outline-none bg-gray_background_light border-blue_border shadow-blue-button">
-        <p class="mx-auto text-sm">{{ 'NAV.MENU-4' | translate }}</p>
-      </button>
-    </div>
   </div>
   <div class="w-full h-1 border-t-lign border-blue_border md:hidden shadow-blue-border-lign"></div>
 
