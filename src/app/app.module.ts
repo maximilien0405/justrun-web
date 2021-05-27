@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { TheGameComponent } from './the-game/the-game.component';
 import { MediasComponent } from './medias/medias.component';
 import { OurTeamComponent } from './our-team/our-team.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TheGameComponent,
     MediasComponent,
-    OurTeamComponent
+    OurTeamComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
