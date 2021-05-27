@@ -14,6 +14,8 @@ html {
 }
 
 html, body {
+  touch-action: none;
+  -webkit-touch-callout: none; /* iOS Safari */
   height: 100%;
   margin: 0;
   background-color: #f7f7f8;
