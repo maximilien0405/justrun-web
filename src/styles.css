@@ -73,6 +73,12 @@ html, body {
   }
 }
 
+@media (max-width: 1024px) {
+  .w-special-box {
+    min-width: 100% !important;
+  }
+}
+
 .shadow-blue-button {
   box-shadow: 0rem 0rem 0.9375rem 0rem #12606D;
 }
@@ -140,5 +146,5 @@ img {
 }
 
 .w-special-box {
-  max-width: 370px !important;
+  max-width: 370px;
 }
