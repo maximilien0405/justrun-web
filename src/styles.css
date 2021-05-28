@@ -37,9 +37,10 @@ html, body {
 
 .small-title {
   font-weight: bold;
-  font-size: 2.9375rem;
+  font-size: 2.1875rem;
   letter-spacing: 1%;
   color: white;
+  line-height: 120%;
 }
 
 .subtitle {
@@ -52,7 +53,7 @@ html, body {
 
 .paragraph {
   font-weight: regular;
-  font-size: 1.375rem;
+  font-size: 1.1875rem;
   color: #AAAAAB;
   line-height: 135%;
   letter-spacing: 1%;
@@ -109,23 +110,14 @@ img {
 }
 
 @keyframes growDown {
-
   0% {
-
     transform: scaleY(0)
-
   }
-
   80% {
-
     transform: scaleY(1.1)
-
   }
-
   100% {
-
     transform: scaleY(1)
-
   }
 }
 
@@ -134,10 +126,19 @@ img {
 }
 
 .h-special {
-  height: 550px !important;
+  height: 34.375rem !important;
 }
 
 .size-special {
-  height: 500px;
-  width: 600px;
+  height: 31.25rem;
+  width: 37.5rem;
+}
+
+.size-button-hamburger {
+  height: 3.125rem;
+  min-width: 3.125rem;
+}
+
+.w-special-box {
+  max-width: 370px !important;
 }
