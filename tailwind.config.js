@@ -44,7 +44,10 @@ module.exports = {
       },
       margin: {
         'footer': '8.75rem',
-      }
+      },
+      inset: {
+        'button': '9.375rem',
+       }
     },
   },
   variants: {
