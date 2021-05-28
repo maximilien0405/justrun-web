@@ -1,23 +1,27 @@
-<div class="w-full md:border-lign rounded-lg h-[3000px] md:border-blue_border shadow-blue-border md:p-32">
+<div class="w-full rounded-lg md:border-lign md:border-blue_border shadow-blue-border md:p-24">
 
   <!---- LOGO (desktop) -------------->
 
   <div class="absolute hidden md:inline-block left-9 top-9 border-r-big border-b-big border-gray_background_dark">
-    <img src="../assets/logo-tight.png" class="w-18" alt="">
+    <img src="../assets/logos/logo-tight.png" class="w-18" alt="">
   </div>
 
   <!---- LOGO (mobile) + MENU ITEM (mobile) -------------->
 
-  <div class="flex flex-row justify-between mb-12 md:hidden">
-    <img src="../assets/big-logo-background.png" class="h-16 mr-4" alt="">
-    <button (click)="dropdown()" class="box-border flex items-center justify-center text-base leading-10 align-middle transition duration-75 rounded-md cursor-pointer w-14 h-14 shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
-      <svg [class.rotate-menu]="displayDropdown == true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 transition duration-special " fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
+  <div class="flex flex-row justify-between mb-12 md:mb-0">
+    <img src="../assets/logos/logo-tight.png" class="h-16 md:hidden" alt="">
+    <div class="w-full h-1 my-auto mt-5 md:hidden border-t-lign border-blue_border shadow-blue-border-lign mx-7"></div>
+
+    <div class="md:border-l-big md:border-gray_background_dark md:absolute md:top-9 md:right-button">
+      <button (click)="dropdown()" class="box-border flex items-center justify-center text-base leading-10 align-middle transition duration-75 rounded-md cursor-pointer lg:hidden size-button-hamburger min-w-20 shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+        <svg [class.rotate-menu]="displayDropdown == true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 transition duration-special " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
 
     <!---- DROPDOWN NAVIGATION (mobile) -------------->
-    <div *ngIf="displayDropdown" [class.dropdown-height]="displayDropdown == true" class="absolute z-50 h-1 px-3 py-3 rounded-md transition-start right-6 w-72 top-24 md:hidden bg-gray_background_light shadow-gray">
+    <div *ngIf="displayDropdown" [class.dropdown-height]="displayDropdown == true" class="absolute z-50 h-1 px-3 py-3 rounded-md lg:hidden transition-start md:right-button right-6 w-72 top-24 bg-gray_background_light shadow-gray">
 
       <div (click)="dropdown()" [class.text-white]="url === '/'" [class.bg-gray_light_hover]="url === '/'" routerLink="" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover">
         {{ 'NAV.MENU-1' | translate }}
@@ -37,7 +41,7 @@
 
   <!---- MENU ITEM (desktop) ---------->
 
-  <div class="absolute flex-row hidden pb-2 ml-48 md:inline-block px-special top-9 bg-gray_background_dark">
+  <div class="absolute flex-row hidden pb-2 ml-48 lg:inline-block px-special top-9 bg-gray_background_dark">
 
     <!-- Button The Game -->
     <button *ngIf="url !== '/'" routerLink="" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 rounded-md cursor-pointer shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
@@ -86,17 +90,17 @@
   <div class="absolute hidden left-9 py-special top-96 bg-gray_background_dark md:inline-block">
     <a href="https://discord.com/invite/EvhKvnd" target="_blank">
       <div class="flex flex-col items-center justify-center w-10 h-10 align-middle transition duration-75 rounded-md cursor-pointer shadow-gray bg-gray_background_light hover:bg-gray_light_hover">
-        <img src="../assets/discord.svg" style="width: 27px !important; height: 27px;" alt="">
+        <img src="../assets/logos/discord.svg" style="width: 27px !important; height: 27px;" alt="">
       </div>
     </a>
     <a href="https://www.instagram.com/justrunthegame/" target="_blank">
       <div class="flex flex-col items-center justify-center w-10 h-10 mt-3 align-middle transition duration-75 rounded-md cursor-pointer shadow-gray bg-gray_background_light hover:bg-gray_light_hover">
-        <img src="../assets/insta.svg" class="w-6 h-6" alt="">
+        <img src="../assets/logos/insta.svg" class="w-6 h-6" alt="">
       </div>
     </a>
     <a href="https://twitter.com/JustRun31418939" target="_blank">
       <div class="flex flex-col items-center justify-center w-10 h-10 mt-3 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
-        <img src="../assets/twitter.svg" class="w-6 h-6" alt="">
+        <img src="../assets/logos/twitter.svg" class="w-6 h-6" alt="">
       </div>
     </a>
   </div>
@@ -137,17 +141,17 @@
     <div class="flex mt-0">
       <a href="https://discord.com/invite/EvhKvnd" target="_blank">
         <div class="flex items-center justify-center w-10 h-10 mr-3 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
-          <img src="../assets/discord.svg" style="width: 27px !important; height: 27px;" alt="">
+          <img src="../assets/logos/discord.svg" style="width: 1.6875rem !important; height: 1.6875rem;" alt="">
         </div>
       </a>
       <a href="https://www.instagram.com/justrunthegame/" target="_blank">
         <div class="flex items-center justify-center w-10 h-10 mr-3 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
-          <img src="../assets/insta.svg" class="w-6 h-6" alt="">
+          <img src="../assets/logos/insta.svg" class="w-6 h-6" alt="">
         </div>
       </a>
       <a href="https://twitter.com/JustRun31418939" target="_blank">
         <div class="flex items-center justify-center w-10 h-10 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
-          <img src="../assets/twitter.svg" class="w-6 h-6" alt="">
+          <img src="../assets/logos/twitter.svg" class="w-6 h-6" alt="">
         </div>
       </a>
     </div>
