@@ -1,4 +1,4 @@
-<div class="w-full rounded-lg md:border-lign md:border-blue_border shadow-blue-border md:p-24">
+<div class="w-full rounded-lg md:border-lign md:border-blue_border shadow-blue-border md:p-32">
 
   <!---- LOGO (desktop) -------------->
 
@@ -21,7 +21,7 @@
     </div>
 
     <!---- DROPDOWN NAVIGATION (mobile) -------------->
-    <div *ngIf="displayDropdown" [class.dropdown-height]="displayDropdown == true" class="absolute z-50 h-1 px-3 py-3 rounded-md lg:hidden transition-start md:right-button right-6 w-72 top-24 bg-gray_background_light shadow-gray">
+    <div *ngIf="displayDropdown" [class.dropdown-height]="displayDropdown == true" class="absolute z-50 h-1 px-3 py-3 rounded-md lg:hidden transition-start md:right-button right-6 w-72 top-24 md:top-special bg-gray_background_light shadow-gray">
 
       <div (click)="dropdown()" [class.text-white]="url === '/'" [class.bg-gray_light_hover]="url === '/'" routerLink="" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover">
         {{ 'NAV.MENU-1' | translate }}

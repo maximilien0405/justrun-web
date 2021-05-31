@@ -11,6 +11,23 @@
     },
     "THE-GAME" : {
       "TITLE": "OBJECTIF : S'ÉCHAPPER DE LA TOUR",
-      "SUBTITLE": "Retracez vos souvenirs, découvrez vos capacités et combattez pour votre liberté."
+      "SUBTITLE": "Retracez vos souvenirs, découvrez vos capacités et combattez pour votre liberté.",
+      "MIDDLE-TITLE" : "Parfois, l'unique solution est de fuir",
+      "MIDDLE-PARAGRAPH": "JustRun est un jeu 3D d'action FPS se déroulant dans une mystérieuse tour, où chaque étage propose une nouvelle expérience de gameplay.",
+      "BOX-1-TITLE": "SCÉNARIO UNIQUE",
+      "BOX-1-TEXT": "Le jeu propose une histoire qui questionne votre morale et remet en question vos choix, le tout dans un riche univers futuriste.",
+      "BOX-2-TITLE": "GAMEPLAY ÉPOUSTOUFLANT",
+      "BOX-2-TEXT": "Faites évoluer vos compétences tout en évitant de vous faire tuer par l’armée de robots qui garde le bâtiment.",
+      "BOX-3-TITLE": "AMBIANCE STRESSANTE",
+      "BOX-3-TEXT": "Évoluez au sein d'un environnement stressant et angoissant. "
+    },
+    "MEDIAS" : {
+      "TITLE": "MÉDIAS"
+    },
+    "TEAM" : {
+      "TITLE": "NOTRE ÉQUIPE"
+    },
+    "CONTACT" : {
+      "TITLE": "CONTACT"
     }
 }

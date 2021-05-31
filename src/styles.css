@@ -55,7 +55,15 @@ html, body {
   font-weight: regular;
   font-size: 1.1875rem;
   color: #AAAAAB;
-  line-height: 135%;
+  line-height: 145%;
+  letter-spacing: 1%;
+}
+
+.small-paragraph {
+  font-weight: regular;
+  font-size: 1rem;
+  color: #AAAAAB;
+  line-height: 145%;
   letter-spacing: 1%;
 }
 
@@ -147,4 +155,13 @@ img {
 
 .w-special-box {
   max-width: 370px;
+}
+
+.top-special {
+  top:6.5625rem !important;
+}
+
+
+.background-image-1 {
+  background-image: url('assets/img/img1.jpg');
 }

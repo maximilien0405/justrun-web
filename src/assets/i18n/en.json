@@ -11,7 +11,24 @@
     },
     "THE-GAME" : {
       "TITLE": "OBJECTIVE: ESCAPE THE TOWER",
-      "SUBTITLE": "Recover your memories, discover your abilities and fight for your freedom."
+      "SUBTITLE": "Recover your memories, discover your abilities and fight for your freedom.",
+      "MIDDLE-TITLE" : "Sometimes, the only solution is to run",
+      "MIDDLE-PARAGRAPH": "JustRun is a 3D FPS action game set in a mysterious tower, where each floor offers a new gameplay experience.",
+      "BOX-1-TITLE": "UNIQUE STORYLINE",
+      "BOX-1-TEXT": "The game offers a story that questions your morals and challenges your choices, all in a rich futuristic universe.",
+      "BOX-2-TITLE": "STUNNING GAMEPLAY",
+      "BOX-2-TEXT": "Develop your skills while avoiding being killed by the army of robots guarding the building.",
+      "BOX-3-TITLE": "STRESSFUL ATMOSPHERE",
+      "BOX-3-TEXT": " "
+    },
+    "MEDIAS" : {
+      "TITLE": "MEDIAS"
+    },
+    "TEAM" : {
+      "TITLE": "OUR TEAM"
+    },
+    "CONTACT" : {
+      "TITLE": "CONTACT US"
     }
 }
 
