@@ -144,7 +144,7 @@ img {
 }
 
 .size-special {
-  height: 31.25rem;
+  height: 28.125rem;
   width: 37.5rem;
 }
 
@@ -165,3 +165,6 @@ img {
 .background-image-1 {
   background-image: url('assets/img/img1.jpg');
 }
+
+
+/* --------------------------- */

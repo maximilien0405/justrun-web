@@ -1,7 +1,7 @@
 <!-- HEADER COMPONENT ------------------------>
 
 <div class="flex flex-col justify-between lg:mt-14 xl:flex-row">
-  <div class="mx-auto mb-12 text-center xl:my-auto w-96 xl:text-left xl:mx-0">
+  <div class="mx-auto mb-20 text-center xl:my-auto w-96 xl:text-left xl:mx-0">
     <h1 class="title">{{ 'THE-GAME.TITLE' | translate}}</h1>
     <p class="mt-5 subtitle">{{ 'THE-GAME.SUBTITLE' | translate }}</p>
     <button class="flex items-center w-40 h-12 mx-auto mt-8 text-sm font-medium text-white transition duration-75 rounded-md cursor-pointer xl:mx-0 border-lign hover:bg-blue_button_hover bg-blue_button shadow-blue-button shadow-gray border-blue_border focus:outline-none">
@@ -9,21 +9,24 @@
     </button>
   </div>
   <div class="flex">
-    <div class="p-12 border-cadre rounded-xl size-special border-gray_background_light bg-img_background"></div>
+    <div class="mx-auto xl:m-0 border-cadre rounded-xl size-special border-gray_background_light bg-img_background">
+      <iframe class="w-full h-full" src="https://www.youtube.com/embed/_lJOGsYIT9k?autoplay=1&mute=1&controls=1">
+      </iframe> 
+    </div>
   </div>
 </div>
 
 <!-- 3 BOXS --------------------------------->
 
-<div class="flex flex-col items-start mt-20 mb-20 md:mb-20 md:items-end md:mt-36">
-  <h2 class="md:text-right small-title">{{ 'THE-GAME.MIDDLE-TITLE' | translate}}</h2>
-  <p class="w-full mt-4 md:text-right lg:w-2/3 paragraph">{{ 'THE-GAME.MIDDLE-PARAGRAPH' | translate}}</p>
+<div class="flex flex-col items-start mt-20 mb-20 md:mb-20 xl:items-end lg:items-center xl:mt-36">
+  <h2 class="xl:text-right lg:text-center small-title">{{ 'THE-GAME.MIDDLE-TITLE' | translate}}</h2>
+  <p class="w-full mt-4 xl:text-right lg:w-2/3 paragraph lg:text-center">{{ 'THE-GAME.MIDDLE-PARAGRAPH' | translate}}</p>
 </div>
 
-<div class="grid gap-10 mb-14 md:grid-flow-col md:grid-cols-3 md:mb-0">
+<div class="grid grid-cols-1 gap-12 mb-16 lg:grid-flow-col lg:grid-cols-3 lg:mb-14">
   <div>
       <div class="relative h-80 bg-img_background border-cadre rounded-xl background-image-1 border-gray_background_light" alt="">
-        <div class="absolute flex items-center h-10 px-4 text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
+        <div class="absolute flex items-center h-10 px-4 text-sm lg:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
           {{ 'THE-GAME.BOX-1-TITLE' | translate}}
         </div>
       </div>
@@ -32,7 +35,7 @@
 
   <div>
       <div class="relative h-80 bg-img_background border-cadre rounded-xl background-image-1 border-gray_background_light" alt="">
-        <div class="absolute flex items-center h-10 px-4 text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
+        <div class="absolute flex items-center h-10 px-4 text-sm lg:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
           {{ 'THE-GAME.BOX-2-TITLE' | translate}}
         </div>
       </div>
@@ -41,7 +44,7 @@
 
   <div>
     <div class="relative h-80 bg-img_background border-cadre rounded-xl background-image-1 border-gray_background_light" alt="">
-      <div class="absolute flex items-center h-10 px-4 text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
+      <div class="absolute flex items-center h-10 px-4 text-sm lg:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
         {{ 'THE-GAME.BOX-3-TITLE' | translate}}
       </div>
     </div>
