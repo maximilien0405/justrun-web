@@ -1,3 +1,34 @@
 <div class="flex items-center justify-center w-full rounded-md h-36 bg-gray_background_light shadow-gray">
   <h1 class="small-title">{{ 'CONTACT.TITLE' | translate }}</h1>
 </div>
+
+<p class="w-full md:text-center md:w-2/3 md:mx-auto mt-14 mb-14 paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptates nobis eaque vel atque, pariatur sint cupiditate dolores deserunt qui. Deserunt at, harum voluptatibus m!</p>
+
+
+
+<div class="flex flex-col w-full md:flex-row">
+  <div class="grid w-full grid-flow-row gap-6 mx-auto mb-16 md:w-2/3 md:mb-0">
+    <div class="grid grid-flow-row gap-6 md:grid-flow-col md:grid-cols-2">
+      <div>
+        <p class="mb-2 small-paragraph">Name</p>
+        <input type="text" class="w-full p-3 text-white rounded-md h-11 bg-gray_background_light focus:border-blue_border focus:border-lign focus:shadow-blue-border-lign shadow-gray">
+      </div>
+      <div>
+        <p class="mb-2 small-paragraph">E-Mail</p>
+        <input type="email" class="w-full p-3 text-white rounded-md h-11 bg-gray_background_light focus:border-blue_border focus:border-lign focus:shadow-blue-border-lign shadow-gray">
+      </div>
+    </div>
+    
+    <div>
+      <p class="mb-2 small-paragraph">Subject</p>
+      <input type="text" class="w-full p-3 text-white rounded-md h-11 bg-gray_background_light focus:border-blue_border focus:border-lign focus:shadow-blue-border-lign shadow-gray">
+    </div>
+    <div>
+      <p class="mb-2 small-paragraph">Message</p>
+      <textarea name="" id="" cols="30" rows="10" class="w-full h-48 p-3 text-white rounded-md bg-gray_background_light focus:border-blue_border focus:border-lign focus:shadow-blue-border-lign shadow-gray"></textarea>
+    </div>
+    <button class="flex items-center w-full h-12 mx-auto text-sm font-medium text-white transition duration-75 rounded-md cursor-pointer xl:mx-0 border-lign hover:bg-blue_button_hover bg-blue_button shadow-gray border-blue_border focus:outline-none">
+      <p class="mx-auto">SEND MESSAGE</p>
+    </button>
+  </div>
+</div>
