@@ -5,30 +5,40 @@
 <p class="w-full md:text-center md:w-2/3 md:mx-auto mt-14 mb-14 paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptates nobis eaque vel atque, pariatur sint cupiditate dolores deserunt qui. Deserunt at, harum voluptatibus m!</p>
 
 
-<form action="https://formspree.io/f/xpzkdbqk" method="POST">
-  <div class="flex flex-col w-full md:flex-row">
-      <div class="grid w-full grid-flow-row gap-6 mx-auto mb-16 md:w-2/3 md:mb-0">
-        <div class="grid grid-flow-row gap-6 md:grid-flow-col md:grid-cols-2">
-          <div>
-            <p class="mb-2 small-paragraph">{{ 'CONTACT.FORM-NAME' | translate }}</p>
-            <input type="text" name="name" class="w-full p-3 text-white rounded-md focus:outline-none h-11 bg-gray_background_light focus:border-blue_border focus:border-lign focus:shadow-blue-border-lign shadow-gray">
+
+<div class="flex flex-col justify-between w-full h-full xl:flex-row">
+  <form action="https://formspree.io/f/xpzkdbqk" method="POST" class="w-full xl:w-2/3">
+    <div class="flex flex-col mr-0 xl:mr-14 md:flex-row">
+        <div class="grid w-full grid-flow-row gap-6 mb-16 md:mb-0">
+          <div class="grid grid-flow-row gap-6 md:grid-flow-col md:grid-cols-2">
+            <div>
+              <p class="mb-2 small-paragraph">{{ 'CONTACT.FORM-NAME' | translate }}</p>
+              <input type="text" name="name" class="w-full p-3 rounded-md text-md focus:outline-none h-11 bg-gray_background_light focus:border-blue_border focus:border-lign focus:shadow-blue-border-lign shadow-gray">
+            </div>
+            <div>
+              <p class="mb-2 small-paragraph">{{ 'CONTACT.FORM-EMAIL' | translate }}</p>
+              <input type="email" name="_replyto" class="w-full p-3 text-white rounded-md focus:outline-none h-11 bg-gray_background_light focus:border-blue_border focus:border-lign focus:shadow-blue-border-lign shadow-gray">
+            </div>
           </div>
           <div>
-            <p class="mb-2 small-paragraph">{{ 'CONTACT.FORM-EMAIL' | translate }}</p>
-            <input type="email" name="_replyto" class="w-full p-3 text-white rounded-md focus:outline-none h-11 bg-gray_background_light focus:border-blue_border focus:border-lign focus:shadow-blue-border-lign shadow-gray">
+            <p class="mb-2 small-paragraph">{{ 'CONTACT.FORM-SUBJECT' | translate }}</p>
+            <input type="text" name="subject" class="w-full p-3 text-white rounded-md focus:outline-none h-11 bg-gray_background_light focus:border-blue_border focus:border-lign focus:shadow-blue-border-lign shadow-gray">
           </div>
+          <div>
+            <p class="mb-2 small-paragraph">{{ 'CONTACT.FORM-MESSAGE' | translate }}</p>
+            <textarea name="message" id="" cols="30" rows="10" class="w-full h-48 p-3 text-white rounded-md focus:outline-none bg-gray_background_light focus:border-blue_border focus:border-lign focus:shadow-blue-border-lign shadow-gray"></textarea>
+          </div>
+          <button type="submit" class="flex items-center w-full h-12 mx-auto text-sm font-medium text-white transition duration-75 rounded-md cursor-pointer xl:mx-0 border-lign hover:bg-blue_button_hover bg-blue_button shadow-gray border-blue_border focus:outline-none">
+            <p class="mx-auto">{{ 'CONTACT.FORM-BUTTON' | translate }}</p>
+          </button>
         </div>
-        <div>
-          <p class="mb-2 small-paragraph">{{ 'CONTACT.FORM-SUBJECT' | translate }}</p>
-          <input type="text" name="subject" class="w-full p-3 text-white rounded-md focus:outline-none h-11 bg-gray_background_light focus:border-blue_border focus:border-lign focus:shadow-blue-border-lign shadow-gray">
-        </div>
-        <div>
-          <p class="mb-2 small-paragraph">{{ 'CONTACT.FORM-MESSAGE' | translate }}</p>
-          <textarea name="message" id="" cols="30" rows="10" class="w-full h-48 p-3 text-white rounded-md focus:outline-none bg-gray_background_light focus:border-blue_border focus:border-lign focus:shadow-blue-border-lign shadow-gray"></textarea>
-        </div>
-        <button type="submit" class="flex items-center w-full h-12 mx-auto text-sm font-medium text-white transition duration-75 rounded-md cursor-pointer xl:mx-0 border-lign hover:bg-blue_button_hover bg-blue_button shadow-gray border-blue_border focus:outline-none">
-          <p class="mx-auto">{{ 'CONTACT.FORM-BUTTON' | translate }}</p>
-        </button>
-      </div>
+    </div>
+  </form>
+
+  <div class="mr-14 border-blue_border w-lign border-l-lign shadow-blue-button"></div>
+
+  <div class="w-1/3 p-5 bg-gray_light_hover">
+    <p class="text-md text-gray_subtitle">Lorem, ipsum dolor.</p>
+
   </div>
-</form>
+</div>
