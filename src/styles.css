@@ -87,6 +87,13 @@ html, body {
   }
 }
 
+@media (max-width: 1280px) {
+  .size-special {
+    height: 21.875rem !important;
+    width: 37.5rem;
+  }
+}
+
 .shadow-blue-button {
   box-shadow: 0rem 0rem 0.9375rem 0rem #12606D;
 }
