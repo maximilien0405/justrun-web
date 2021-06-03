@@ -28,7 +28,12 @@
       "TITLE": "OUR TEAM"
     },
     "CONTACT" : {
-      "TITLE": "CONTACT US"
+      "TITLE": "CONTACT US",
+      "FORM-NAME" : "Name",
+      "FORM-EMAIL" : "Email",
+      "FORM-SUBJECT" : "Subject",
+      "FORM-MESSAGE" : "Message",
+      "FORM-BUTTON" : "SEND MESSAGE"
     }
 }
 

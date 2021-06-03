@@ -28,6 +28,11 @@
       "TITLE": "NOTRE ÉQUIPE"
     },
     "CONTACT" : {
-      "TITLE": "CONTACT"
+      "TITLE": "CONTACT",
+      "FORM-NAME" : "Nom",
+      "FORM-EMAIL" : "Email",
+      "FORM-SUBJECT" : "Sujet",
+      "FORM-MESSAGE" : "Message",
+      "FORM-BUTTON" : "ENVOYER LE MESSAGE"
     }
 }
