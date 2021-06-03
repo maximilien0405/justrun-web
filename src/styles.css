@@ -75,7 +75,7 @@ html, body {
   box-shadow: 0rem 0rem 0.625rem #12606D, inset 0rem 0rem 0.625rem #12606D;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .shadow-blue-border {
     box-shadow: none !important;
   }
