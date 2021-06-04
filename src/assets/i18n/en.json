@@ -33,7 +33,8 @@
       "FORM-EMAIL" : "Email",
       "FORM-SUBJECT" : "Subject",
       "FORM-MESSAGE" : "Message",
-      "FORM-BUTTON" : "SEND MESSAGE"
+      "FORM-BUTTON" : "SEND MESSAGE",
+      "OTHER" : "You can also contact us on our social networks :"
     }
 }
 

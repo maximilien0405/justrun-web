@@ -36,6 +36,7 @@ module.exports = {
       },
       height: {
         '18': '4.6875rem',
+        'lign':'0.0625rem',
       },
       width: {
         '15': '3.75rem',

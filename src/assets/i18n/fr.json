@@ -33,6 +33,7 @@
       "FORM-EMAIL" : "Email",
       "FORM-SUBJECT" : "Sujet",
       "FORM-MESSAGE" : "Message",
-      "FORM-BUTTON" : "ENVOYER LE MESSAGE"
+      "FORM-BUTTON" : "ENVOYER LE MESSAGE",
+      "OTHER" : "Vous pouvez également nous contacter sur nos réseaux sociaux :"
     }
 }
