@@ -29,6 +29,7 @@
     },
     "CONTACT" : {
       "TITLE": "CONTACT",
+      "PARAGRAPH": "Vous souhaitez nous contacter ? Vous pouvez nous joindre en remplissant le formulaire ci-dessous et nous tacheront de vous répondre au plus vite.",
       "FORM-NAME" : "Nom",
       "FORM-EMAIL" : "Email",
       "FORM-SUBJECT" : "Sujet",

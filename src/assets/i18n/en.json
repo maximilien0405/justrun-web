@@ -29,6 +29,7 @@
     },
     "CONTACT" : {
       "TITLE": "CONTACT US",
+      "PARAGRAPH": "Want to get in touch?  You can reach us by filling out the form below and we will try to answer you as soon as possible.",
       "FORM-NAME" : "Name",
       "FORM-EMAIL" : "Email",
       "FORM-SUBJECT" : "Subject",
