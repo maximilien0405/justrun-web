@@ -9,9 +9,13 @@
     </button>
   </div>
   <div class="flex">
-    <div class="mx-auto xl:m-0 border-cadre rounded-xl size-special border-gray_background_light bg-img_background">
-      <iframe class="w-full h-full" src="https://www.youtube.com/embed/1aDbkW2zI_M?&controls=1">
-      </iframe>
+    <div click="displayFrame()" class="flex items-center justify-center mx-auto transition duration-75 bg-center bg-cover cursor-pointer border-cadre border-gray_background_light hover:opacity-90 xl:m-0 rounded-xl size-special bg-gray_background_light shadow-gray img-home">
+      <div class="flex items-center justify-center w-20 h-20 transition duration-75 rounded-full opacity-100 cursor-pointer bg-gray_background_light">     
+        <img src="../../assets/logos/play-button.svg" alt="" class="w-8 h-8">
+        <div class="absolute flex items-center h-10 px-4 text-sm font-medium text-white rounded-md lg:text-xs xl:text-sm -bottom-4 bg-blue_button border-blue_border border-lign">
+          GAMECUP TRAILER 2021
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -25,7 +29,7 @@
 
 <div class="grid grid-cols-1 gap-12 mb-16 sm:grid-cols-2 lg:grid-flow-col lg:grid-cols-3 lg:mb-14">
   <div>
-      <div class="relative bg-center bg-cover h-80 bg-img_background border-cadre rounded-xl background-image-1 border-gray_background_light" alt="">
+      <div class="relative bg-center bg-cover h-80 border-cadre rounded-xl background-image-1 border-gray_background_light" alt="">
         <div class="absolute flex items-center h-10 px-4 text-sm md:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
           {{ 'THE-GAME.BOX-1-TITLE' | translate}}
         </div>
@@ -34,7 +38,7 @@
   </div>
 
   <div>
-      <div class="relative bg-center bg-cover h-80 bg-img_background border-cadre rounded-xl background-image-2 border-gray_background_light" alt="">
+      <div class="relative bg-center bg-cover h-80 border-cadre rounded-xl background-image-2 border-gray_background_light" alt="">
         <div class="absolute flex items-center h-10 px-4 text-sm md:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
           {{ 'THE-GAME.BOX-2-TITLE' | translate}}
         </div>
@@ -43,7 +47,7 @@
   </div>
 
   <div class="hidden lg:block">
-    <div class="relative bg-center bg-cover h-80 bg-img_background border-cadre rounded-xl background-image-3 border-gray_background_light" alt="">
+    <div class="relative bg-center bg-cover h-80 border-cadre rounded-xl background-image-3 border-gray_background_light" alt="">
       <div class="absolute flex items-center h-10 px-4 text-sm md:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
         {{ 'THE-GAME.BOX-3-TITLE' | translate}}
       </div>
@@ -56,7 +60,7 @@
 
 
 <div class="block lg:hidden">
-  <div class="relative bg-center bg-cover h-80 bg-img_background border-cadre rounded-xl background-image-1 border-gray_background_light" alt="">
+  <div class="relative bg-center bg-cover h-80 border-cadre rounded-xl background-image-1 border-gray_background_light" alt="">
     <div class="absolute flex items-center h-10 px-4 text-sm lg:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
       {{ 'THE-GAME.BOX-3-TITLE' | translate}}
     </div>

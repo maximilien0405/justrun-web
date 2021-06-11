@@ -6,9 +6,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TheGameComponent implements OnInit {
 
+  public frameShow:boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  displayFrame() {
+    this.frameShow = true;
   }
 
 }

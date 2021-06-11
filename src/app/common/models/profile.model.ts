@@ -7,6 +7,7 @@ export interface Profile {
   socialInsta: string,
   socialLinkedin: string,
   socialFacebook: string,
+  socialArtStation: string,
   socialEmail: string,
   socialWebsite: string,
 }

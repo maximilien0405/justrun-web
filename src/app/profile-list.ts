@@ -10,6 +10,7 @@ export const PROFILE: Profile[] = [
       socialInsta: "",
       socialLinkedin: "",
       socialFacebook: "",
+      socialArtStation: "",
       socialEmail: "",
       socialWebsite: "",
     },

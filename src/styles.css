@@ -9,6 +9,12 @@
   box-sizing: border-box;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 16px !important;
 }
@@ -183,3 +189,8 @@ img {
 
 
 /* --------------------------- */
+
+.img-home {
+  background-image: url('./assets/img/img3.png');
+}
+
