@@ -2,6 +2,211 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}    
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}    
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+.no-select {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-select: none;
+}
+
+.note-sharing-blur {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: calc(100vh);
+    display: flex;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.705);
+    animation: fadeIn ease 1.0s;
+    -webkit-animation: fadeIn ease 1.0s;
+    -moz-animation: fadeIn ease 1.0s;
+    -o-animation: fadeIn ease 1.0s;
+    -ms-animation: fadeIn ease 1.0s;
+}
+.note-sharing {
+    position: absolute;    
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 290px;
+    background: white;
+    text-align: center;
+    padding-top: 17px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    border-radius: 24px;
+
+    z-index: 3;
+
+    animation: fadeIn ease 1.0s;
+    -webkit-animation: fadeIn ease 1.0s;
+    -moz-animation: fadeIn ease 1.0s;
+    -o-animation: fadeIn ease 1.0s;
+    -ms-animation: fadeIn ease 1.0s;
+}
+
+.note-sharing-bottom {
+    top: 305px;
+    display: flex;
+    padding: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.note-sharing h2 {
+    margin: 0px;
+    margin-top: 10px;
+}
+
+.close {
+    background: blue;
+    border-radius: 26px;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    position: absolute;
+    right: 0;
+    margin-right: 20px
+}
+.close-image {
+    width: 16px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.content {
+    text-align: left;
+}
+.content p {
+    margin: 0px;
+    font-size: 13px;
+    margin-left: 3px;
+    margin-bottom: 9px;
+}
+input {
+    color: white;
+    border: none;
+    outline: none;
+    background: none;
+    width: 240px;
+    height: 29px;
+    font-size: 15px;
+}
+::placeholder {
+    color: rgb(213, 213, 213);
+}
+
+.footer {
+    display: flex;
+}
+.footer p {
+    font-size: 16px;
+    margin: auto;
+    margin-top: 3px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+.confirm-button {
+    cursor: pointer;
+    margin-left: auto;
+    background: blue;
+    border-radius: 26px;
+    height: 27px;
+    width: 27px;
+    display: flex;
+    position: absolute;
+    right: 0;
+    margin-right: 28px;
+    box-shadow: 0px 1px 20px -8px rgba(0, 0, 0, 0.75);
+    margin-top: 1px;
+}
+.confirm-button img {
+    width: 18px;
+    margin: auto;
+    transition: transform .5s; /* Animation */
+}
+.confirm-button img:hover {
+    transform: scale(1.1);
+}
+
+.link-button {
+    position: relative;
+    left: 0;
+    margin: auto;
+}
+
+.input-container {
+    display: flex;
+    padding: 5px;
+    width: 95%;
+    height: 30px;
+    border: none;
+    top: 0;
+    bottom: 0;
+    outline: none;
+    color: white;
+    border-radius: 11px;
+    font-size: 14px;
+    background: blue;
+    padding-left: 10px;
+    margin-left: 0px;
+    margin-bottom: 15px;
+}
+
+.permission-switch {
+    display: flex;
+}
+.permission-switch .label {
+    margin: auto;
+    margin-left: 3px;
+}
+.permission-switch .toggle-container {
+    margin: auto;
+    margin-right: 0px;
+    font-size: 13px;
+    background: blue;
+    width: 34px;
+    height: 24px;
+    border-radius: 20px;
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+.permission-switch .toggle {
+    background: white;
+    border-radius: 100%;
+    height: 16px;
+    width: 16px;
+    margin-top: 4px;
+}
+
+
+
 * {
   font-family: 'Rubik', sans-serif;
   -moz-box-sizing: border-box;

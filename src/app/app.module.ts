@@ -15,6 +15,8 @@ import { GameLevelDesignComponent } from './our-team/game-level-design/game-leve
 import { DevelopmentComponent } from './our-team/development/development.component';
 import { DrawersComponent } from './our-team/drawers/drawers.component';
 import { ModelersComponent } from './our-team/modelers/modelers.component';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -38,6 +40,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    BrowserAnimationsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
