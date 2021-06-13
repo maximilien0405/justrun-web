@@ -1,3 +1,12 @@
+<div *ngIf="frameShow == true" class="hidden w-full h-full xl:flex">
+  <div class="flex items-center align-middle popup-sharing-blur" (click)="hide()">
+    <div class="w-3/4 popup-sharing h-3/4">
+      <iframe class="w-full h-full rounded-md border-cadre border-gray_background_light" src="https://www.youtube.com/embed/1aDbkW2zI_M?&controls=1" allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</div>
+
 <!-- HEADER COMPONENT ------------------------>
 
 <div class="flex flex-col justify-between lg:mt-14 xl:flex-row">
@@ -8,9 +17,12 @@
       <p class="mx-auto">{{ 'BUYBUTTON' | translate }}</p>
     </button>
   </div>
-  <div class="flex">
+
+  <!------- DESKTOP --------->
+
+  <div class="hidden xl:flex">
     <div (click)="displayFrame()" class="flex items-center justify-center mx-auto transition duration-75 bg-center bg-cover cursor-pointer border-cadre border-gray_background_light hover:opacity-90 xl:m-0 rounded-xl size-special bg-gray_background_light shadow-gray img-home">
-      <div class="flex items-center justify-center w-20 h-20 transition duration-75 rounded-full opacity-100 cursor-pointer bg-gray_background_light">     
+      <div class="flex items-center justify-center w-20 h-20 transition duration-75 rounded-full opacity-100 cursor-pointer bg-gray_background_light">
         <img src="../../assets/logos/play-button.svg" alt="" class="w-8 h-8">
         <div class="absolute flex items-center h-10 px-4 text-sm font-medium text-white rounded-md lg:text-xs xl:text-sm -bottom-4 bg-blue_button border-blue_border border-lign">
           GAMECUP TRAILER 2021
@@ -18,31 +30,16 @@
       </div>
     </div>
   </div>
-</div>
 
+  <!------- MOBILE --------->
 
-<div *ngIf="frameShow == true">
-  <div class="note-sharing-blur" (click)="hide()">
-  </div>
-  <div class="note-sharing">
-      <h2>Partager la note</h2>
-      <p>Partagez cette note avec d'autres personnes</p>
-      
-      <div class="content">
-          <p>Invitation</p>
-  
-          <div class="input-container">
-              
-              <input placeholder="Email, Username.." [(ngModel)]="email" autofocus>
-          </div>
-          <div class="permission-switch">
-              <p class="label">Permission d'éditer</p>
-          </div>
-      </div>
+  <div class="flex xl:hidden">
+    <div class="flex items-center justify-center mx-auto transition duration-75 bg-center bg-cover cursor-pointer border-cadre border-gray_background_light hover:opacity-90 xl:m-0 rounded-xl size-special bg-gray_background_light shadow-gray img-home">
+        <iframe class="w-full h-full rounded-md" src="https://www.youtube.com/embed/1aDbkW2zI_M?&controls=1" allowfullscreen>
+        </iframe>
+    </div>
   </div>
 </div>
-
-
 
 <!-- 3 BOXS --------------------------------->
 

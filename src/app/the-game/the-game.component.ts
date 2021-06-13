@@ -14,7 +14,7 @@ import { trigger, transition, style, animate, state, keyframes } from '@angular/
         background: 'rgb(69 162 240 / 75%)',
 
       })),
-      transition('* => *', animate(1000))
+      transition('* => *', animate(500))
     ])
   ]
 })
@@ -46,7 +46,7 @@ export class TheGameComponent implements OnInit {
     if(this.email == undefined) {
       return
     }
-    
+
   }
 
   changeState(): void {
