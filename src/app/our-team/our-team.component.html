@@ -2,75 +2,62 @@
   <h1 class="small-title">{{ 'TEAM.TITLE' | translate }}</h1>
 </div>
 
-<p class="w-full md:text-center md:w-2/3 md:mx-auto mt-14 mb-14 paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptates nobis eaque vel atque, pariatur sint cupiditate dolores deserunt qui. Deserunt at, harum voluptatibus m!</p>
+<p class="w-full md:text-center md:w-2/3 md:mx-auto mt-14 mb-14 paragraph">{{ 'TEAM.PARAGRAPH' | translate }}</p>
 
+<div class="flex-row inline-block mx-auto rounded-md bg-gray_background_light">
 
+  <!-- Button Project Management -->
+  <button *ngIf="!showProjectManagement" (click)="changeMenu('project-management')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 rounded-md cursor-pointer shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+    <p class="mx-auto text-sm">{{ 'TEAM.MENU.1' | translate }}</p>
+  </button>
+  <button *ngIf="showProjectManagement" (click)="changeMenu('project-management')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 text-white transition duration-75 rounded-md cursor-pointer shadow-gray focus:outline-none bg-blue_button border-lign border-blue_border">
+    <p class="mx-auto text-sm">{{ 'TEAM.MENU.1' | translate }}</p>
+  </button>
 
+  <!-- Button Creative team   -->
+  <button *ngIf="!showCreativeTeam" (click)="changeMenu('creative-team')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 rounded-md cursor-pointer shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+    <p class="mx-auto text-sm">{{ 'TEAM.MENU.2' | translate }}</p>
+  </button>
+  <button *ngIf="showCreativeTeam" (click)="changeMenu('creative-team')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 text-white transition duration-75 rounded-md cursor-pointer shadow-gray focus:outline-none bg-blue_button border-lign border-blue_border">
+    <p class="mx-auto text-sm">{{ 'TEAM.MENU.2' | translate }}</p>
+  </button>
 
+  <!-- Button Game Designer  -->
+  <button *ngIf="!showGameLevelDesign" (click)="changeMenu('game-level-design')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 rounded-md cursor-pointer shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+    <p class="mx-auto text-sm">{{ 'TEAM.MENU.3' | translate }}</p>
+  </button>
+  <button *ngIf="showGameLevelDesign" (click)="changeMenu('game-level-design')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 text-white transition duration-75 rounded-md cursor-pointer shadow-gray focus:outline-none bg-blue_button border-lign border-blue_border">
+    <p class="mx-auto text-sm">{{ 'TEAM.MENU.3' | translate }}</p>
+  </button>
 
-<div class="grid w-full grid-flow-col grid-cols-1 grid-rows-3 gap-6 md:grid-rows-2 xl:grid-rows-1 md:grid-cols-2 xl:grid-cols-3">
-  <div class="rounded-md p-9 bg-gray_background_light shadow-gray">
-    <div class="flex flex-row w-full pb-5">
-      <div class="w-24 h-24"><img src="../../assets/img/max.jpg" class="w-full h-full rounded-md" alt=""></div>
-      <div class="flex flex-col">
-        <p class="mb-1 ml-5 text-lg font-medium text-white">Maximilien Z.</p>
-        <p class="mb-1 ml-5 small-paragraph">- Chef de projet</p>
-        <div class="flex flex-row w-full ml-5">
-          <a href="https://discord.com/invite/AsXv6GKW5V" target="_blank">
-            <div class="flex flex-col items-center justify-center w-8 h-8 align-middle transition duration-75 rounded-md cursor-pointer hover:bg-gray_light_hover">
-              <img src="../assets/logos/discord.svg" class="w-5 h-5">
-            </div>
-          </a>
-          <a href="https://www.instagram.com/justrunthegame/" target="_blank">
-            <div class="flex flex-col items-center justify-center w-8 h-8 align-middle transition duration-75 rounded-md cursor-pointer hover:bg-gray_light_hover">
-              <img src="../assets/logos/insta.svg" class="w-5 h-5" alt="">
-            </div>
-          </a>
-          <a href="https://twitter.com/JustRun_Game" target="_blank">
-            <div class="flex flex-col items-center justify-center w-8 h-8 align-middle transition duration-75 rounded-md cursor-pointer hover:bg-gray_light_hover">
-              <img src="../assets/logos/twitter.svg" class="w-5 h-5" alt="">
-            </div>
-          </a>
-        </div>
-      </div>
+  <!-- Button Developpement  -->
+  <button *ngIf="!showDeveloment" (click)="changeMenu('development')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 rounded-md cursor-pointer shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+    <p class="mx-auto text-sm">{{ 'TEAM.MENU.4' | translate }}</p>
+  </button>
+  <button *ngIf="showDeveloment" (click)="changeMenu('development')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 text-white transition duration-75 rounded-md cursor-pointer shadow-gray focus:outline-none bg-blue_button border-lign border-blue_border">
+    <p class="mx-auto text-sm">{{ 'TEAM.MENU.4' | translate }}</p>
+  </button>
 
-    </div>
-    <div class="flex flex-col w-full">
-      <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, aliquid!
-      </p>
-    </div>
+  <!-- Button Modelers  -->
+  <button *ngIf="!showModelers" (click)="changeMenu('modelers')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 rounded-md cursor-pointer shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+    <p class="mx-auto text-sm">{{ 'TEAM.MENU.5' | translate }}</p>
+  </button>
+  <button *ngIf="showModelers" (click)="changeMenu('modelers')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 text-white transition duration-75 rounded-md cursor-pointer shadow-gray focus:outline-none bg-blue_button border-lign border-blue_border">
+    <p class="mx-auto text-sm">{{ 'TEAM.MENU.5' | translate }}</p>
+  </button>
 
-  </div>
-  <div class="rounded-md p-9 bg-gray_background_light shadow-gray">
-    <div class="flex flex-row w-full pb-5">
-      <div class="w-24 h-24"><img src="../../assets/img/max.jpg" class="w-full h-full rounded-md border-lign border-blue_border" alt=""></div>
-      <div class="flex flex-col">
-        <p class="mb-1 ml-5 text-lg font-medium text-white">Maximilien Z.</p>
-        <p class="mb-1 ml-5 small-paragraph">- Chef de projet</p>
-        <div class="flex flex-row w-full ml-5">
-          <a href="https://discord.com/invite/AsXv6GKW5V" target="_blank">
-            <div class="flex flex-col items-center justify-center w-8 h-8 align-middle transition duration-75 rounded-md cursor-pointer hover:bg-gray_light_hover">
-              <img src="../assets/logos/discord.svg" class="w-5 h-5">
-            </div>
-          </a>
-          <a href="https://www.instagram.com/justrunthegame/" target="_blank">
-            <div class="flex flex-col items-center justify-center w-8 h-8 align-middle transition duration-75 rounded-md cursor-pointer hover:bg-gray_light_hover">
-              <img src="../assets/logos/insta.svg" class="w-5 h-5" alt="">
-            </div>
-          </a>
-          <a href="https://twitter.com/JustRun_Game" target="_blank">
-            <div class="flex flex-col items-center justify-center w-8 h-8 align-middle transition duration-75 rounded-md cursor-pointer hover:bg-gray_light_hover">
-              <img src="../assets/logos/twitter.svg" class="w-5 h-5" alt="">
-            </div>
-          </a>
-        </div>
-      </div>
-
-    </div>
-    <div class="flex flex-col w-full">
-      <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, aliquid!
-      </p>
-    </div>
-
-  </div>
+  <!-- Button Drawers  -->
+  <button *ngIf="!showDrawers" (click)="changeMenu('drawers')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 rounded-md cursor-pointer shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+    <p class="mx-auto text-sm">{{ 'TEAM.MENU.6' | translate }}</p>
+  </button>
+  <button *ngIf="showDrawers" (click)="changeMenu('drawers')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 text-white transition duration-75 rounded-md cursor-pointer shadow-gray focus:outline-none bg-blue_button border-lign border-blue_border">
+    <p class="mx-auto text-sm">{{ 'TEAM.MENU.6' | translate }}</p>
+  </button>
 </div>
+
+<app-project-management *ngIf="showProjectManagement"></app-project-management>
+<app-creative-team *ngIf="showCreativeTeam"></app-creative-team>
+<app-game-level-design *ngIf="showGameLevelDesign"></app-game-level-design>
+<app-development *ngIf="showDeveloment"></app-development>
+<app-modelers *ngIf="showModelers"></app-modelers>
+<app-drawers *ngIf="showDrawers"></app-drawers>

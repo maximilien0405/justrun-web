@@ -25,7 +25,16 @@
       "TITLE": "MÉDIAS"
     },
     "TEAM" : {
-      "TITLE": "NOTRE ÉQUIPE"
+      "TITLE": "NOTRE ÉQUIPE",
+      "PARAGRAPH": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptates nobis eaque vel atque, pariatur sint cupiditate dolores deserunt qui. Deserunt at, harum voluptatibus m!",
+      "MENU" : {
+        "1" : "Gestion de projet",
+        "2" : "Creative team",
+        "3" : "Game/level design",
+        "4" : "Développement",
+        "5" : "Modélisateurs",
+        "6" : "Dessinateurs"
+      }
     },
     "CONTACT" : {
       "TITLE": "CONTACT",
