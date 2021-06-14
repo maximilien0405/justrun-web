@@ -48,34 +48,22 @@
   <div class="absolute flex-row hidden pb-2 ml-48 lg:inline-block px-special top-9 bg-gray_background_dark">
 
     <!-- Button The Game -->
-    <button *ngIf="url !== '/'" routerLink="" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 rounded-md cursor-pointer shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
-      <p class="mx-auto text-sm">{{ 'NAV.MENU-1' | translate }}</p>
-    </button>
-    <button *ngIf="url === '/'" routerLink="" class="box-border items-center inline-block h-10 px-5 text-base leading-10 text-white transition duration-75 rounded-md cursor-pointer shadow-gray border-lign focus:outline-none bg-gray_light_hover border-blue_border shadow-blue-button">
+    <button [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/'}" routerLink="" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border rounded-md cursor-pointer border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
       <p class="mx-auto text-sm">{{ 'NAV.MENU-1' | translate }}</p>
     </button>
 
     <!-- Button Medias -->
-    <button *ngIf="url !== '/medias'" routerLink="medias" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 rounded-md cursor-pointer shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
-      <p class="mx-auto text-sm">{{ 'NAV.MENU-2' | translate }}</p>
-    </button>
-    <button *ngIf="url === '/medias'" routerLink="medias" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 text-white transition duration-75 rounded-md cursor-pointer shadow-gray border-lign focus:outline-none bg-gray_light_hover border-blue_border shadow-blue-button">
+    <button [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/medias'}" routerLink="medias" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border rounded-md cursor-pointer border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
       <p class="mx-auto text-sm">{{ 'NAV.MENU-2' | translate }}</p>
     </button>
 
     <!-- Our team -->
-    <button *ngIf="url !== '/our-team'" routerLink="our-team" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 rounded-md cursor-pointer shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
-      <p class="mx-auto text-sm">{{ 'NAV.MENU-3' | translate }}</p>
-    </button>
-    <button *ngIf="url === '/our-team'" routerLink="our-team" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 text-white transition duration-75 rounded-md cursor-pointer shadow-gray border-lign focus:outline-none bg-gray_light_hover border-blue_border shadow-blue-button">
+    <button [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/our-team'}" routerLink="our-team" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border rounded-md cursor-pointer border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
       <p class="mx-auto text-sm">{{ 'NAV.MENU-3' | translate }}</p>
     </button>
 
     <!-- Contact us -->
-    <button *ngIf="url !== '/contact-us'" routerLink="contact-us" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 rounded-md cursor-pointer shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
-      <p class="mx-auto text-sm">{{ 'NAV.MENU-4' | translate }}</p>
-    </button>
-    <button *ngIf="url === '/contact-us'" routerLink="contact-us" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 text-white transition duration-75 rounded-md cursor-pointer shadow-gray border-lign focus:outline-none bg-gray_light_hover border-blue_border shadow-blue-button">
+    <button [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/contact-us'}" routerLink="contact-us" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border rounded-md cursor-pointer border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
       <p class="mx-auto text-sm">{{ 'NAV.MENU-4' | translate }}</p>
     </button>
   </div>
@@ -83,7 +71,7 @@
   <!---- BUY BUTTON (desktop only) --------->
 
   <div class="absolute hidden md:block top-9 right-9 border-l-big border-b-big border-gray_background_dark">
-    <a href="" target="_blank">
+    <a href="https://discord.com/invite/AsXv6GKW5V" target="_blank">
       <button class="flex items-center text-sm font-bold lea­­­ding-snug text-center text-white align-middle transition duration-75 border-lign hover:bg-blue_button_hover rounded-md cursor-pointer h-18 w-18 bg-blue_button shadow-blue-button shadow-gray border-blue_border px-2 focus:outline-none">
         {{ 'BUYBUTTON' | translate }}
       </button>
