@@ -27,16 +27,16 @@
     <!---- DROPDOWN NAVIGATION (mobile) -------------->
     <div *ngIf="displayDropdown" [class.dropdown-height]="displayDropdown == true" class="absolute z-50 h-1 px-3 py-3 rounded-md lg:hidden transition-start md:right-button right-6 w-72 top-24 md:top-special bg-gray_background_light shadow-gray">
 
-      <div (click)="dropdown()" [class.text-white]="url === '/'" [class.bg-gray_light_hover]="url === '/'" routerLink="" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover">
+      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/'}" routerLink="" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover">
         {{ 'NAV.MENU-1' | translate }}
       </div>
-      <div (click)="dropdown()" [class.text-white]="url === '/medias'" [class.bg-gray_light_hover]="url === '/medias'" routerLink="medias" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover">
+      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/medias'}" routerLink="medias" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover">
         {{ 'NAV.MENU-2' | translate }}
       </div>
-      <div (click)="dropdown()" [class.text-white]="url === '/our-team'" [class.bg-gray_light_hover]="url === '/our-team'" routerLink="our-team" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover">
+      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/our-team'}" routerLink="our-team" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover">
         {{ 'NAV.MENU-3' | translate }}
       </div>
-      <div (click)="dropdown()" [class.text-white]="url === '/contact-us'" [class.bg-gray_light_hover]="url === '/contact-us'" routerLink="contact-us" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover">
+      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/contact-us'}" routerLink="contact-us" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover">
         {{ 'NAV.MENU-4' | translate }}
       </div>
     </div>
