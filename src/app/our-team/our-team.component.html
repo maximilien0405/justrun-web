@@ -38,9 +38,9 @@
   </div>
 </div>
 
-<app-project-management *ngIf="showProjectManagement"></app-project-management>
-<app-creative-team *ngIf="showCreativeTeam"></app-creative-team>
-<app-game-level-design *ngIf="showGameLevelDesign"></app-game-level-design>
-<app-development *ngIf="showDeveloment"></app-development>
-<app-modelers *ngIf="showModelers"></app-modelers>
-<app-drawers *ngIf="showDrawers"></app-drawers>
+<app-project-management [allProfiles]='allProfiles' *ngIf="showProjectManagement"></app-project-management>
+<app-creative-team [allProfiles]='allProfiles' *ngIf="showCreativeTeam"></app-creative-team>
+<app-game-level-design [allProfiles]='allProfiles' *ngIf="showGameLevelDesign"></app-game-level-design>
+<app-development [allProfiles]='allProfiles' *ngIf="showDeveloment"></app-development>
+<app-modelers [allProfiles]='allProfiles' *ngIf="showModelers"></app-modelers>
+<app-drawers [allProfiles]='allProfiles' *ngIf="showDrawers"></app-drawers>

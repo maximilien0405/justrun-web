@@ -1,66 +1,34 @@
 <div class="grid w-full grid-flow-col grid-cols-1 grid-rows-3 gap-6 md:grid-rows-2 xl:grid-rows-1 md:grid-cols-2 xl:grid-cols-3">
-  <div class="rounded-md p-9 bg-gray_background_light shadow-gray">
+
+  <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray" *ngFor="let i of allProfiles">
     <div class="flex flex-row w-full pb-5">
-      <div class="w-24 h-24"><img src="../../assets/img/max.jpg" class="w-full h-full rounded-md" alt=""></div>
+      <div class="w-24 h-24"><img [src]="i.pdp" class="w-full h-full rounded-md border-lign border-blue_border" alt=""></div>
       <div class="flex flex-col">
-        <p class="mb-1 ml-5 text-lg font-medium text-white">Maximilien Z.</p>
-        <p class="mb-1 ml-5 small-paragraph">- Chef de projet</p>
+        <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
+        <p class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.role }}</p>
+
         <div class="flex flex-row w-full ml-5">
-          <a href="https://discord.com/invite/AsXv6GKW5V" target="_blank">
-            <div class="flex flex-col items-center justify-center w-8 h-8 align-middle transition duration-75 rounded-md cursor-pointer hover:bg-gray_light_hover">
-              <img src="../assets/logos/discord.svg" class="w-5 h-5">
+          <a [href]="i.socialOneLink" target="_blank">
+            <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+              <img [src]="i.socialOneImg" class="w-4 h-4">
             </div>
           </a>
-          <a href="https://www.instagram.com/justrunthegame/" target="_blank">
-            <div class="flex flex-col items-center justify-center w-8 h-8 align-middle transition duration-75 rounded-md cursor-pointer hover:bg-gray_light_hover">
-              <img src="../assets/logos/insta.svg" class="w-5 h-5" alt="">
+
+          <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
+            <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+              <img [src]="i.socialTwoImg" class="w-4 h-4" alt="">
             </div>
           </a>
-          <a href="https://twitter.com/JustRun_Game" target="_blank">
-            <div class="flex flex-col items-center justify-center w-8 h-8 align-middle transition duration-75 rounded-md cursor-pointer hover:bg-gray_light_hover">
-              <img src="../assets/logos/twitter.svg" class="w-5 h-5" alt="">
+          <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
+            <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+              <img [src]="i.socialThreeImg" class="w-4 h-4" alt="">
             </div>
           </a>
         </div>
       </div>
-
     </div>
     <div class="flex flex-col w-full">
-      <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, aliquid!
-      </p>
+      <p class="paragraph !text-base">{{ i.presentation }}</p>
     </div>
-
-  </div>
-  <div class="rounded-md p-9 bg-gray_background_light shadow-gray">
-    <div class="flex flex-row w-full pb-5">
-      <div class="w-24 h-24"><img src="../../assets/img/max.jpg" class="w-full h-full rounded-md border-lign border-blue_border" alt=""></div>
-      <div class="flex flex-col">
-        <p class="mb-1 ml-5 text-lg font-medium text-white">Maximilien Z.</p>
-        <p class="mb-1 ml-5 small-paragraph">- Chef de projet</p>
-        <div class="flex flex-row w-full ml-5">
-          <a href="https://discord.com/invite/AsXv6GKW5V" target="_blank">
-            <div class="flex flex-col items-center justify-center w-8 h-8 align-middle transition duration-75 rounded-md cursor-pointer hover:bg-gray_light_hover">
-              <img src="../assets/logos/discord.svg" class="w-5 h-5">
-            </div>
-          </a>
-          <a href="https://www.instagram.com/justrunthegame/" target="_blank">
-            <div class="flex flex-col items-center justify-center w-8 h-8 align-middle transition duration-75 rounded-md cursor-pointer hover:bg-gray_light_hover">
-              <img src="../assets/logos/insta.svg" class="w-5 h-5" alt="">
-            </div>
-          </a>
-          <a href="https://twitter.com/JustRun_Game" target="_blank">
-            <div class="flex flex-col items-center justify-center w-8 h-8 align-middle transition duration-75 rounded-md cursor-pointer hover:bg-gray_light_hover">
-              <img src="../assets/logos/twitter.svg" class="w-5 h-5" alt="">
-            </div>
-          </a>
-        </div>
-      </div>
-
-    </div>
-    <div class="flex flex-col w-full">
-      <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, aliquid!
-      </p>
-    </div>
-
   </div>
 </div>

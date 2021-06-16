@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
+import { Profile } from '../common/models/profile.model';
+import { PROFILE } from '../profile-list';
 @Component({
   selector: 'app-our-team',
   templateUrl: './our-team.component.html',
@@ -7,6 +9,7 @@ import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 export class OurTeamComponent implements OnInit {
 
   url = "";
+  allProfiles = PROFILE;
 
   showProjectManagement = true;
   showCreativeTeam = false;
@@ -27,7 +30,6 @@ export class OurTeamComponent implements OnInit {
   }
 
   changeMenu(menu: string) {
-
     this.showProjectManagement = false;
     this.showCreativeTeam = false;
     this.showGameLevelDesign = false;
