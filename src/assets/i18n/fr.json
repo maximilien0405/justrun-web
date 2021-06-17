@@ -22,11 +22,12 @@
       "BOX-3-TEXT": "Évoluez au sein d'un environnement stressant tout en évitant de vous faire tuer par l’armée de robots qui garde le bâtiment."
     },
     "MEDIAS" : {
-      "TITLE": "MÉDIAS"
+      "TITLE": "MÉDIAS",
+      "PARAGRAPH": "Voici ci-dessous quelques rendus de notre jeu. Vous y trouverez des images, vidéos ou encore des musique réalisées avec amour par notre équipe."
     },
     "TEAM" : {
       "TITLE": "NOTRE ÉQUIPE",
-      "PARAGRAPH": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptates nobis eaque vel atque, pariatur sint cupiditate dolores deserunt qui. Deserunt at, harum voluptatibus m!",
+      "PARAGRAPH": "Notre équipe est maintenant composée de 19 personnes différentes, de tous âges et de tous horizons. Nous sommes tous bénévoles, et travaillons autour d'une même passion : les jeux vidéo.",
       "MENU" : {
         "1" : "Gestion de projet",
         "2" : "Creative team",

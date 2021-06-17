@@ -22,11 +22,12 @@
       "BOX-3-TEXT": "Evolve in a stressful environment while avoiding being killed by the army of robots that guard the building."
     },
     "MEDIAS" : {
-      "TITLE": "MEDIAS"
+      "TITLE": "MEDIAS",
+      "PARAGRAPH": "Here are some screenshots of our game. You will find pictures, videos and music made with love by our team. "
     },
     "TEAM" : {
       "TITLE": "OUR TEAM",
-      "PARAGRAPH": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptates nobis eaque vel atque, pariatur sint cupiditate dolores deserunt qui. Deserunt at, harum voluptatibus m!",
+      "PARAGRAPH": "Our team is now composed of 19 different people of all ages and backgrounds.  We are all volunteers, and work around the same passion: video games.",
       "MENU" : {
         "1" : "Project management",
         "2" : "Creative team",
