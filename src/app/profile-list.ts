@@ -10,7 +10,7 @@ export const PROFILE: Profile[] = [
       roleEN: "Project Manager",
       pdp: "../../../assets/img/pdp/max.jpg",
       group: "project-management",
-      presentationFR: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ommomom omoimoim omimoim.",
+      presentationFR: "Oui c'est moi le grand chef, nan j'vous jure ! Je suis prèsque certain que c'est moi, prèsque..",
       presentationEN: "adadeaeddaedaed aedaedadaed aedaedaedaedada aedadaedaed ade aed aed aed ad aed ea.",
       /*socialOneLink: "https://www.maximilien-zimmermann.ch",
       socialOneImg: "../assets/social/website.svg",*/
@@ -38,8 +38,8 @@ export const PROFILE: Profile[] = [
     },
     {
       userName: "Antoine R.",
-      roleFR: "Contributeur Externe",
-      roleEN: "External Contributor",
+      roleFR: "Contributeur",
+      roleEN: "Contributor",
       pdp: "../../../assets/img/pdp/antoine.jpg",
       group: "project-management",
       presentationFR: "Grâce à lui vous allez pouvoir terminer un projet de qualité tout en prenant vos pauses cafés.",
