@@ -8,6 +8,7 @@ export class CreativeTeamComponent implements OnInit {
 
   @Input() allProfiles: any;
 
+
   constructor() { }
 
   ngOnInit(): void {

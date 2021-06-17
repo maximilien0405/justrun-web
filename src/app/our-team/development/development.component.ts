@@ -8,6 +8,7 @@ export class DevelopmentComponent implements OnInit {
 
   @Input() allProfiles: any;
 
+
   constructor() { }
 
   ngOnInit(): void {

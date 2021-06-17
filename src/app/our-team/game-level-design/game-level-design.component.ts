@@ -8,6 +8,7 @@ export class GameLevelDesignComponent implements OnInit {
 
   @Input() allProfiles: any;
 
+
   constructor() { }
 
   ngOnInit(): void {

@@ -8,6 +8,7 @@ export class ModelersComponent implements OnInit {
 
   @Input() allProfiles: any;
 
+
   constructor() { }
 
   ngOnInit(): void {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { Profile } from '../common/models/profile.model';
 import { PROFILE } from '../profile-list';

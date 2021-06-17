@@ -8,6 +8,7 @@ export class DrawersComponent implements OnInit {
 
   @Input() allProfiles: any;
 
+
   constructor() { }
 
   ngOnInit(): void {

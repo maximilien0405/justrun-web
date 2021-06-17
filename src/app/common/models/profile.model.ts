@@ -1,9 +1,11 @@
 export interface Profile {
   userName: string,
-  role: string,
+  roleFR: string,
+  roleEN: string,
   pdp: string,
   group: string,
-  presentation: string,
+  presentationFR: string,
+  presentationEN: string,
   socialOneLink: string,
   socialOneImg: string,
   socialTwoLink: string,
