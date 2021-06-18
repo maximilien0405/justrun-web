@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { Image } from '../common/models/image.model';
 import { IMAGEcolONE, IMAGEcolTWO, IMAGEcolTHREE } from '../image-list';
 
@@ -9,13 +10,46 @@ import { IMAGEcolONE, IMAGEcolTWO, IMAGEcolTHREE } from '../image-list';
 })
 export class MediasComponent implements OnInit {
 
+  url = "";
+
+  showDrawings = true;
+  showModels = false;
+  showVideos = false;
+  showDocs = false;
+
+
   imagesListOne = IMAGEcolONE;
   imagesListTwo = IMAGEcolTWO;
   imagesListThree = IMAGEcolTHREE;
 
-  constructor() { }
+  constructor(private router: Router) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.url = this.router.url;
+      }
+    });
+  }
 
   ngOnInit(): void {
   }
 
+  changeMenu(menu: string) {
+    this.showDrawings = false;
+    this.showModels = false;
+    this.showVideos = false;
+    this.showDocs = false
+
+    if(menu == "drawings") {
+      this.showDrawings = true;
+    }
+    else if(menu == "models") {
+      this.showModels = true;
+    }
+    else if(menu == "videos") {
+      this.showVideos = true;
+    }
+    else if(menu == "docs") {
+      this.showDocs = true;
+    }
+  }
 }

@@ -17,6 +17,10 @@ import { DrawersComponent } from './our-team/drawers/drawers.component';
 import { ModelersComponent } from './our-team/modelers/modelers.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DrawingsComponent } from './medias/drawings/drawings.component';
+import { ModelsComponent } from './medias/models/models.component';
+import { VideosComponent } from './medias/videos/videos.component';
+import { DocsComponent } from './medias/docs/docs.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -35,6 +39,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     DevelopmentComponent,
     DrawersComponent,
     ModelersComponent,
+    DrawingsComponent,
+    ModelsComponent,
+    VideosComponent,
+    DocsComponent,
   ],
   imports: [
     BrowserModule,
