@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-videos',
-  templateUrl: './videos.component.html',
-  styleUrls: ['./videos.component.css']
+  templateUrl: './videos.component.html'
 })
 export class VideosComponent implements OnInit {
 
