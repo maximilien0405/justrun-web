@@ -4,43 +4,105 @@
 
 <p class="w-full md:text-center md:w-2/3 md:mx-auto mt-14 mb-14 paragraph">{{ 'TEAM.PARAGRAPH' | translate }}</p>
 
-<div class="items-center justify-center w-full align-middle xl:flex">
-  <div class="inline-block rounded-md mb-14 bg-gray_background_light shadow-gray">
-    <!-- Button Project Management -->
-    <button [ngClass]="{'text-white bg-blue_button hover:bg-blue_button border-lign !border-blue_border hover:!text-white': showProjectManagement == true}" (click)="changeMenu('project-management')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 border rounded-md cursor-pointer border-gray_background_light text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
-      <p class="mx-auto text-sm">{{ 'TEAM.MENU.1' | translate }}</p>
-    </button>
+<h1 class="p-4 pt-0 pl-0 mb-2 text-xl text-white">Project management</h1>
+<div class="w-full h-1 my-auto mb-10 border-t-lign border-blue_border shadow-blue-border-lign"></div>
 
-    <!-- Button Creative team   -->
-    <button [ngClass]="{'text-white bg-blue_button hover:bg-blue_button border-lign !border-blue_border hover:!text-white': showCreativeTeam == true}" (click)="changeMenu('creative-team')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 border rounded-md cursor-pointer border-gray_background_light text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
-      <p class="mx-auto text-sm">{{ 'TEAM.MENU.2' | translate }}</p>
-    </button>
+<div class="grid w-full grid-cols-3 grid-rows-1 gap-6">
+  <div *ngFor="let i of allProfiles">
+    <div *ngIf="i.group == 'project-management' ">
+      <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+        <div class="flex flex-row w-full pb-5">
+          <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-md border-lign border-blue_border" alt=""></div>
+          <div class="flex flex-col">
+            <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
+            <!-- <p *ngIf="lang === 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+            <p *ngIf="lang === 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p> -->
 
-    <!-- Button Game Designer  -->
-    <button [ngClass]="{'text-white bg-blue_button hover:bg-blue_button border-lign !border-blue_border hover:!text-white': showGameLevelDesign == true}" (click)="changeMenu('game-level-design')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 border rounded-md cursor-pointer border-gray_background_light text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
-      <p class="mx-auto text-sm">{{ 'TEAM.MENU.3' | translate }}</p>
-    </button>
+            <p class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
 
-    <!-- Button Developpement  -->
-    <button [ngClass]="{'text-white bg-blue_button hover:bg-blue_button border-lign !border-blue_border hover:!text-white': showDeveloment == true}" (click)="changeMenu('development')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 border rounded-md cursor-pointer border-gray_background_light text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
-      <p class="mx-auto text-sm">{{ 'TEAM.MENU.4' | translate }}</p>
-    </button>
+            <div class="flex flex-row w-full ml-5">
+              <a [href]="i.socialOneLink" target="_blank">
+                <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                  <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
+                </div>
+              </a>
 
-    <!-- Button Modelers  -->
-    <button [ngClass]="{'text-white bg-blue_button hover:bg-blue_button border-lign !border-blue_border hover:!text-white': showModelers == true}" (click)="changeMenu('modelers')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 border rounded-md cursor-pointer border-gray_background_light text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
-      <p class="mx-auto text-sm">{{ 'TEAM.MENU.5' | translate }}</p>
-    </button>
+              <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
+                <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                  <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
+                </div>
+              </a>
+              <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
+                <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                  <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col w-full">
+          <!--<p *ngIf="lang === 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+          <p *ngIf="lang === 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>-->
+          <p class="paragraph !text-base">"{{ i.presentationFR }}"</p>
 
-    <!-- Button Drawers  -->
-    <button [ngClass]="{'text-white bg-blue_button hover:bg-blue_button border-lign !border-blue_border hover:!text-white': showDrawers == true}" (click)="changeMenu('drawers')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 border rounded-md cursor-pointer border-gray_background_light text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
-      <p class="mx-auto text-sm">{{ 'TEAM.MENU.6' | translate }}</p>
-    </button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
+<h1 class="p-4 pt-0 pl-0 mb-2 text-xl text-white">Creative team</h1>
+<div class="w-full h-1 my-auto mb-10 border-t-lign border-blue_border shadow-blue-border-lign"></div>
+
+<div class="grid w-full grid-flow-col grid-cols-1 gap-6 grid-rows-10 xl:grid-flow-row xl:grid-cols-3 xl:grid-rows-10">
+  <div *ngFor="let i of allProfiles">
+    <div *ngIf="i.group == 'creative-team'">
+      <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+        <div class="flex flex-row w-full pb-5">
+          <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-md border-lign border-blue_border" alt=""></div>
+          <div class="flex flex-col">
+            <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
+            <!-- <p *ngIf="lang === 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+            <p *ngIf="lang === 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p> -->
+
+            <p class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+
+            <div class="flex flex-row w-full ml-5">
+              <a [href]="i.socialOneLink" target="_blank">
+                <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                  <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
+                </div>
+              </a>
+
+              <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
+                <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                  <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
+                </div>
+              </a>
+              <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
+                <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                  <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col w-full">
+          <!--<p *ngIf="lang === 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+          <p *ngIf="lang === 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>-->
+          <p class="paragraph !text-base">"{{ i.presentationFR }}"</p>
+
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+
+
+<!--
 <app-project-management [allProfiles]='allProfiles' *ngIf="showProjectManagement"></app-project-management>
 <app-creative-team [allProfiles]='allProfiles' *ngIf="showCreativeTeam"></app-creative-team>
 <app-game-level-design [allProfiles]='allProfiles' *ngIf="showGameLevelDesign"></app-game-level-design>
 <app-development [allProfiles]='allProfiles' *ngIf="showDeveloment"></app-development>
 <app-modelers [allProfiles]='allProfiles' *ngIf="showModelers"></app-modelers>
-<app-drawers [allProfiles]='allProfiles' *ngIf="showDrawers"></app-drawers>
+<app-drawers [allProfiles]='allProfiles' *ngIf="showDrawers"></app-drawers>-->
