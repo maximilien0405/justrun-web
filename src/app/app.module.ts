@@ -20,7 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DrawingsComponent } from './medias/drawings/drawings.component';
 import { ModelsComponent } from './medias/models/models.component';
 import { VideosComponent } from './medias/videos/videos.component';
-import { DocsComponent } from './medias/docs/docs.component';
+import { MusicsComponent } from './medias/musics/musics.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -42,7 +42,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     DrawingsComponent,
     ModelsComponent,
     VideosComponent,
-    DocsComponent,
+    MusicsComponent,
   ],
   imports: [
     BrowserModule,

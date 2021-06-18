@@ -4,7 +4,7 @@
 
 <p class="w-full md:text-center md:w-2/3 md:mx-auto mt-14 mb-14 paragraph">{{ 'MEDIAS.PARAGRAPH' | translate }}</p>
 
-<div class="items-center justify-center w-full align-middle xl:flex">
+<div class="flex items-center justify-center w-full align-middle">
   <div class="inline-block rounded-md mb-14 bg-gray_background_light shadow-gray">
     <!-- Button Drawings -->
     <button [ngClass]="{'text-white bg-blue_button hover:bg-blue_button border-lign !border-blue_border hover:!text-white': showDrawings == true}" (click)="changeMenu('drawings')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 border rounded-md cursor-pointer border-gray_background_light text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
@@ -21,8 +21,8 @@
       <p class="mx-auto text-sm">{{ 'MEDIAS.MENU.3' | translate }}</p>
     </button>
 
-    <!-- Button Documents -->
-    <button [ngClass]="{'text-white bg-blue_button hover:bg-blue_button border-lign !border-blue_border hover:!text-white': showDocs == true}" (click)="changeMenu('docs')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 border rounded-md cursor-pointer border-gray_background_light text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+    <!-- Button Musiques -->
+    <button [ngClass]="{'text-white bg-blue_button hover:bg-blue_button border-lign !border-blue_border hover:!text-white': showMusics == true}" (click)="changeMenu('musics')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 border rounded-md cursor-pointer border-gray_background_light text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
       <p class="mx-auto text-sm">{{ 'MEDIAS.MENU.4' | translate }}</p>
     </button>
   </div>

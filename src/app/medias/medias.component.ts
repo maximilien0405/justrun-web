@@ -15,7 +15,7 @@ export class MediasComponent implements OnInit {
   showDrawings = true;
   showModels = false;
   showVideos = false;
-  showDocs = false;
+  showMusics = false;
 
 
   imagesListOne = IMAGEcolONE;
@@ -37,7 +37,7 @@ export class MediasComponent implements OnInit {
     this.showDrawings = false;
     this.showModels = false;
     this.showVideos = false;
-    this.showDocs = false
+    this.showMusics = false
 
     if(menu == "drawings") {
       this.showDrawings = true;
@@ -48,8 +48,8 @@ export class MediasComponent implements OnInit {
     else if(menu == "videos") {
       this.showVideos = true;
     }
-    else if(menu == "docs") {
-      this.showDocs = true;
+    else if(menu == "musics") {
+      this.showMusics = true;
     }
   }
 }
