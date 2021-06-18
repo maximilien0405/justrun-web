@@ -23,7 +23,13 @@
     },
     "MEDIAS" : {
       "TITLE": "MÉDIAS",
-      "PARAGRAPH": "Voici ci-dessous quelques rendus de notre jeu. Vous y trouverez des images, vidéos ou encore des musique réalisées avec amour par notre équipe."
+      "PARAGRAPH": "Voici ci-dessous quelques rendus de notre jeu. Vous y trouverez des images, vidéos ou encore des musique réalisées avec amour par notre équipe.",
+      "MENU" : {
+        "1" : "Croquis",
+        "2" : "Modélisations",
+        "3" : "Vidéos",
+        "4" : "Documents"
+      }
     },
     "TEAM" : {
       "TITLE": "NOTRE ÉQUIPE",
@@ -31,9 +37,9 @@
       "MENU" : {
         "1" : "Gestion de projet",
         "2" : "Creative team",
-        "3" : "Game/level design",
+        "3" : "Game & level design",
         "4" : "Développement",
-        "5" : "Modélisateurs",
+        "5" : "Modélisateurs & Animateurs",
         "6" : "Dessinateurs"
       }
     },

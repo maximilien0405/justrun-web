@@ -23,7 +23,13 @@
     },
     "MEDIAS" : {
       "TITLE": "MEDIAS",
-      "PARAGRAPH": "Here are some screenshots of our game. You will find pictures, videos and music made with love by our team. "
+      "PARAGRAPH": "Here are some screenshots of our game. You will find pictures, videos and music made with love by our team. ",
+      "MENU" : {
+        "1" : "Drawings",
+        "2" : "3D models",
+        "3" : "Videos",
+        "4" : "Documents"
+      }
     },
     "TEAM" : {
       "TITLE": "OUR TEAM",
@@ -31,9 +37,9 @@
       "MENU" : {
         "1" : "Project management",
         "2" : "Creative team",
-        "3" : "Game/level design",
+        "3" : "Game & level design",
         "4" : "Development",
-        "5" : "Modelers",
+        "5" : "Modelers & Animators",
         "6" : "Drawers"
       }
     },
