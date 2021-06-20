@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { Profile } from '../common/models/profile.model';
+import { LangService } from '../lang.service';
 import { PROFILE } from '../profile-list';
 @Component({
   selector: 'app-our-team',
@@ -11,6 +12,8 @@ export class OurTeamComponent implements OnInit {
   url = "";
   allProfiles = PROFILE;
 
+  public lang = localStorage.getItem('lang')
+
   showProjectManagement = true;
   showCreativeTeam = false;
   showGameLevelDesign = false;
@@ -18,15 +21,21 @@ export class OurTeamComponent implements OnInit {
   showModelers = false;
   showDrawers = false;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private globalSrv: LangService) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.url = this.router.url;
       }
     });
+
+    globalSrv.itemValue.subscribe((nextValue) => {
+      this.lang = nextValue;
+      this.reloadData();
+   })
   }
 
   ngOnInit(): void {
+    this.lang = "FR";
   }
 
   changeMenu(menu: string) {
@@ -56,4 +65,9 @@ export class OurTeamComponent implements OnInit {
       this.showModelers = true;
     }
   }
+
+  reloadData() {
+    this.allProfiles = [...this.allProfiles];
+  }
+
 }

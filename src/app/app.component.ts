@@ -1,19 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { LangService } from './lang.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styles: ['']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   url = "";
-  public lang: string = "FR";
+  public lang = localStorage.getItem('lang')
+
   displayDropdown: boolean = false;
   rotateHamburger: boolean = false;
 
-  constructor(private router: Router, public translate: TranslateService) {
+  constructor(private router: Router, public translate: TranslateService, private globalSrv: LangService) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.url = this.router.url;
@@ -44,14 +46,13 @@ export class AppComponent {
     }
   }
 
-  public changeLang(lang: string) {
-    this.lang = lang;
+  changeLang(lang: string) {
+    this.globalSrv.theItem = lang; // this change will broadcast to every subscriber like below component
   }
 
   dropdown() {
     this.displayDropdown = !this.displayDropdown;
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 }

@@ -9,10 +9,13 @@ export class DrawingsComponent implements OnInit {
   @Input() imagesListOne: any;
   @Input() imagesListTwo: any;
   @Input() imagesListThree: any;
+  @Input() displayFrame: any;
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+
 
 }

@@ -102,7 +102,7 @@
   </div>
 
   <!--------------- CONTENT ----------------------------------------------------->
-  
+
   <div class="max-w-6xl mx-auto">
     <router-outlet></router-outlet>
   </div>
@@ -121,7 +121,7 @@
           <span [class.lang-selected]="lang === 'FR'" class="w-full text-center text-gray_subtitle text-normal group-hover:text-gray_subtitle_hover">FR</span>
         </div>
 
-        <div class="h-full w-lign bg-gray_subtitle" style="box-shadow: 0px 0px 15px rgba(18, 96, 109, 0.7);"></div>
+        <div class="h-full bg-gray-400 w-lign" style="box-shadow: 0px 0px 15px rgba(18, 96, 109, 0.7);"></div>
 
         <div (click)="translate.use('en') && changeLang('EN')" class="flex items-center w-1/2 h-full transition duration-75 hover:bg-gray_light_hover rounded-r-md group">
           <span [class.lang-selected]="lang === 'EN'" class="w-full text-center text-gray_subtitle text-normal group-hover:text-gray_subtitle_hover">EN</span>
