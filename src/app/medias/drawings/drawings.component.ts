@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-drawings',
@@ -7,16 +7,30 @@ import { Component, OnInit, Input } from '@angular/core';
 export class DrawingsComponent implements OnInit {
 
   @Input() imagesList1: any;
-  @Input() displayFrame: any;
-
-  @Input() drawingImage:any;
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.drawingImage)
   }
 
+  public frameShow:boolean = false;
+  imageLink:string = "";
+  imageDescription:string = "";
 
+  displayFrame(link:string, description:string) {
+    this.frameShow = true;
+    this.imageLink = link;
+    this.imageDescription = description;
+  }
 
+  @Input() tile: any;
+  @Output() hideSharingView = new EventEmitter<boolean>();
+  showLinkButtonLabel = false;
+  showSendButtonLabel = false;
+  email = "";
+  active = "1";
+
+  hide() {
+    this.frameShow = false
+  }
 }

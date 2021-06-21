@@ -41,16 +41,4 @@ export class TheGameComponent implements OnInit {
   hide() {
     this.frameShow = false
   }
-
-  sendInvitation() {
-    if(this.email == undefined) {
-      return
-    }
-
-  }
-
-  changeState(): void {
-    (this.active == "0") ? this.active = "1" : this.active = "0";
-  }
-
 }

@@ -29,39 +29,6 @@ export class MediasComponent implements OnInit {
   showVideos = false;
   showMusics = false;
 
-  drawingImage:string = "";
-
-  linkOfImage:string = "";
-
-  public frameShow:boolean = false;
-
-  displayFrame() {
-    this.frameShow = true;
-  }
-
-  @Input() tile: any;
-  @Output() hideSharingView = new EventEmitter<boolean>();
-  showLinkButtonLabel = false;
-  showSendButtonLabel = false;
-  email = "";
-  active = "1";
-
-  hide() {
-    this.frameShow = false
-  }
-
-  sendInvitation() {
-    if(this.email == undefined) {
-      return
-    }
-
-  }
-
-  changeState(): void {
-    (this.active == "0") ? this.active = "1" : this.active = "0";
-  }
-
-
   imagesList1 = IMAGEList1;
   imagesList2 = IMAGEList2;
   imagesList3 = IMAGEList3;

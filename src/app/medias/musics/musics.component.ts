@@ -6,8 +6,6 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MusicsComponent implements OnInit {
 
-  @Input() displayFrame: any;
-
   constructor() { }
 
   ngOnInit(): void {
