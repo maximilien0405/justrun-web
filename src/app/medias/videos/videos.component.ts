@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class VideosComponent implements OnInit {
 
   @Input() displayFrame: any;
+  @Input() imagesList3: any;
 
   constructor() { }
 

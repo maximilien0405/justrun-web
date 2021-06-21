@@ -6,14 +6,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DrawingsComponent implements OnInit {
 
-  @Input() imagesListOne: any;
-  @Input() imagesListTwo: any;
-  @Input() imagesListThree: any;
+  @Input() imagesList1: any;
   @Input() displayFrame: any;
+
+  @Input() drawingImage:any;
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.drawingImage)
   }
 
 

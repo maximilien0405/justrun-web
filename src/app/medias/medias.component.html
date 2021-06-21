@@ -1,7 +1,7 @@
 <div *ngIf="frameShow == true" class="hidden w-full h-full xl:flex">
   <div class="flex items-center align-middle popup-sharing-blur" (click)="hide()">
     <div class="w-3/5 popup-sharing h-3/4">
-      <img [src]="linkOfImage" class="w-full h-full" alt="">
+      <img [src]="drawingImage" class="w-full h-full" alt="">
     </div>
   </div>
 </div>
@@ -36,6 +36,6 @@
   </div>
 </div>
 
-<app-drawings [imagesListOne]='imagesListOne' [imagesListTwo]="imagesListTwo" [imagesListThree]="imagesListThree" *ngIf="showDrawings" [displayFrame]="displayFrame('../../../assets/img/img2.png')"></app-drawings>
-<app-models *ngIf="showModels" [displayFrame]="displayFrame('../../../assets/img/img2.png')"></app-models>
-<app-videos *ngIf="showVideos" [displayFrame]="displayFrame('../../../assets/img/img3.png')"></app-videos>
+<app-drawings *ngIf="showDrawings" [displayFrame]="displayFrame()" [imagesList1]='imagesList1' [drawingImage]="drawingImage"></app-drawings>
+<app-models *ngIf="showModels" [displayFrame]="displayFrame()" [imagesList2]='imagesList2'></app-models>
+<app-videos *ngIf="showVideos" [displayFrame]="displayFrame()" [imagesList3]='imagesList3'></app-videos>

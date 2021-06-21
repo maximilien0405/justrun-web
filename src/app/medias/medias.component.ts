@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { Image } from '../common/models/image.model';
-import { IMAGEcolONE, IMAGEcolTWO, IMAGEcolTHREE } from '../image-list';
+import { IMAGEList1, IMAGEList2, IMAGEList3 } from '../image-list';
 import { trigger, transition, style, animate, state, keyframes } from '@angular/animations';
 @Component({
   selector: 'app-medias',
@@ -29,13 +29,14 @@ export class MediasComponent implements OnInit {
   showVideos = false;
   showMusics = false;
 
+  drawingImage:string = "";
+
   linkOfImage:string = "";
 
   public frameShow:boolean = false;
 
-  displayFrame(link:string) {
+  displayFrame() {
     this.frameShow = true;
-    this.linkOfImage = link;
   }
 
   @Input() tile: any;
@@ -61,9 +62,9 @@ export class MediasComponent implements OnInit {
   }
 
 
-  imagesListOne = IMAGEcolONE;
-  imagesListTwo = IMAGEcolTWO;
-  imagesListThree = IMAGEcolTHREE;
+  imagesList1 = IMAGEList1;
+  imagesList2 = IMAGEList2;
+  imagesList3 = IMAGEList3;
 
   constructor(private router: Router) {
     this.router.events.subscribe((event) => {

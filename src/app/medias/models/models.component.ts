@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ModelsComponent implements OnInit {
 
   @Input() displayFrame: any;
+  @Input() imagesList2: any;
 
   constructor() { }
 

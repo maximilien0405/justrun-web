@@ -1,6 +1,42 @@
 import { Image } from './common/models/image.model'
 
-export const IMAGEcolONE: Image[] = [
+export const IMAGEList1: Image[] = [
+    {
+      image: "../../../assets/img/img1.png",
+      description: "Lorem ipsum dolor sit amet",
+    },
+    {
+      image: "../../../assets/img/img2.png",
+        description: "Lorem ipsum dolor sit amet",
+    },
+    {
+      image: "../../../assets/img/img3.png",
+        description: "Lorem ipsum dolor sit amet",
+    },
+    {
+      image: "../../../assets/img/img1.png",
+      description: "Lorem ipsum dolor sit amet",
+    },
+    {
+      image: "../../../assets/img/img2.png",
+        description: "Lorem ipsum dolor sit amet",
+    },
+    {
+      image: "../../../assets/img/img3.png",
+        description: "Lorem ipsum dolor sit amet",
+    },
+    {
+      image: "../../../assets/img/img1.png",
+      description: "Lorem ipsum dolor sit amet",
+    },
+    {
+      image: "../../../assets/img/img2.png",
+        description: "Lorem ipsum dolor sit amet",
+    },
+    {
+      image: "../../../assets/img/img3.png",
+        description: "Lorem ipsum dolor sit amet",
+    },
     {
       image: "../../../assets/img/img1.png",
       description: "Lorem ipsum dolor sit amet",
@@ -15,32 +51,104 @@ export const IMAGEcolONE: Image[] = [
     },
 ];
 
-export const IMAGEcolTWO: Image[] = [
+export const IMAGEList2: Image[] = [
   {
-    image: "../../../assets/img/pdp/max.jpg",
+    image: "../../../assets/img/img1.png",
     description: "Lorem ipsum dolor sit amet",
   },
   {
-      image: "../../../assets/img/pdp/max.jpg",
+    image: "../../../assets/img/img2.png",
       description: "Lorem ipsum dolor sit amet",
   },
   {
-      image: "../../../assets/img/pdp/max.jpg",
+    image: "../../../assets/img/img3.png",
+      description: "Lorem ipsum dolor sit amet",
+  },
+  {
+    image: "../../../assets/img/img1.png",
+    description: "Lorem ipsum dolor sit amet",
+  },
+  {
+    image: "../../../assets/img/img2.png",
+      description: "Lorem ipsum dolor sit amet",
+  },
+  {
+    image: "../../../assets/img/img3.png",
+      description: "Lorem ipsum dolor sit amet",
+  },
+  {
+    image: "../../../assets/img/img1.png",
+    description: "Lorem ipsum dolor sit amet",
+  },
+  {
+    image: "../../../assets/img/img2.png",
+      description: "Lorem ipsum dolor sit amet",
+  },
+  {
+    image: "../../../assets/img/img3.png",
+      description: "Lorem ipsum dolor sit amet",
+  },
+  {
+    image: "../../../assets/img/img1.png",
+    description: "Lorem ipsum dolor sit amet",
+  },
+  {
+    image: "../../../assets/img/img2.png",
+      description: "Lorem ipsum dolor sit amet",
+  },
+  {
+    image: "../../../assets/img/img3.png",
       description: "Lorem ipsum dolor sit amet",
   },
 ];
 
-export const IMAGEcolTHREE: Image[] = [
+export const IMAGEList3: Image[] = [
   {
-    image: "../../../assets/img/pdp/max.jpg",
+    image: "../../../assets/img/img1.png",
     description: "Lorem ipsum dolor sit amet",
   },
   {
-      image: "../../../assets/img/pdp/max.jpg",
+    image: "../../../assets/img/img2.png",
       description: "Lorem ipsum dolor sit amet",
   },
   {
-      image: "../../../assets/img/pdp/max.jpg",
+    image: "../../../assets/img/img3.png",
+      description: "Lorem ipsum dolor sit amet",
+  },
+  {
+    image: "../../../assets/img/img1.png",
+    description: "Lorem ipsum dolor sit amet",
+  },
+  {
+    image: "../../../assets/img/img2.png",
+      description: "Lorem ipsum dolor sit amet",
+  },
+  {
+    image: "../../../assets/img/img3.png",
+      description: "Lorem ipsum dolor sit amet",
+  },
+  {
+    image: "../../../assets/img/img1.png",
+    description: "Lorem ipsum dolor sit amet",
+  },
+  {
+    image: "../../../assets/img/img2.png",
+      description: "Lorem ipsum dolor sit amet",
+  },
+  {
+    image: "../../../assets/img/img3.png",
+      description: "Lorem ipsum dolor sit amet",
+  },
+  {
+    image: "../../../assets/img/img1.png",
+    description: "Lorem ipsum dolor sit amet",
+  },
+  {
+    image: "../../../assets/img/img2.png",
+      description: "Lorem ipsum dolor sit amet",
+  },
+  {
+    image: "../../../assets/img/img3.png",
       description: "Lorem ipsum dolor sit amet",
   },
 ];
