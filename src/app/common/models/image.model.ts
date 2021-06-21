@@ -1,4 +1,5 @@
 export interface Image {
     image: string,
-    description: string,
+    descriptionFR: string,
+    descriptionEN: string,
 }

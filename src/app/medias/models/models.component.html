@@ -9,7 +9,7 @@
 
 <div class="flex flex-wrap mx-auto">
   <ng-template ngFor let-i [ngForOf]="imagesList2">
-    <div (click)="displayFrame(i.image, i.description)" class="flex-grow px-0 py-2 transition duration-75 cursor-pointer sm:p-2.5 shadow-gray hover:opacity-90">
+    <div (click)="displayFrame(i.image, i.descriptionFR)" class="flex-grow px-0 py-2 transition duration-75 cursor-pointer sm:p-2.5 shadow-gray hover:opacity-90">
       <img class="block object-cover h-64 min-w-full rounded-md border-cadre border-gray_light_hover" [src]="i.image" alt="">
     </div>
   </ng-template>
