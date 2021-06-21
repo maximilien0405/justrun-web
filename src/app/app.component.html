@@ -1,7 +1,3 @@
-<!--<div class="relative z-50 w-full overflow-hidden" style="padding-top:56.25%;">
-  <iframe class="absolute top-0 bottom-0 left-0 right-0 w-full h-full" src="https://www.youtube.com/embed/1aDbkW2zI_M?&controls=1"></iframe>
-</div>-->
-
 <div class="w-full rounded-lg md:border-lign md:border-blue_border shadow-blue-border md:p-32">
 
   <!---- LOGO (desktop) -------------->
@@ -14,13 +10,13 @@
 
   <!---- LOGO (mobile) + MENU ITEM (mobile) -------------->
 
-  <div class="z-50 flex flex-row justify-between mb-12 md:mb-0">
+  <div class="flex flex-row justify-between mb-12 md:mb-0">
     <a routerLink="/">
       <img src="../assets/logos/logo-tight.png" class="h-16 md:hidden" alt="" style="min-width: 4rem !important;">
     </a>
     <div class="w-full h-1 my-auto mt-5 md:hidden border-t-lign border-blue_border shadow-blue-border-lign mx-7"></div>
 
-    <div class="md:border-l-big md:border-gray_background_dark md:absolute md:top-9 md:right-button">
+    <div class="z-50 md:border-l-big md:border-gray_background_dark md:absolute md:top-9 md:right-button">
       <button (click)="dropdown()" class="box-border flex items-center justify-center text-base leading-10 align-middle transition duration-75 rounded-md cursor-pointer lg:hidden size-button-hamburger min-w-20 shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
         <svg [class.rotate-menu]="displayDropdown == true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 transition duration-special " fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
