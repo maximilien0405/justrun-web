@@ -9,12 +9,6 @@ import { TheGameComponent } from './the-game/the-game.component';
 import { MediasComponent } from './medias/medias.component';
 import { OurTeamComponent } from './our-team/our-team.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-import { ProjectManagementComponent } from './our-team/project-management/project-management.component';
-import { CreativeTeamComponent } from './our-team/creative-team/creative-team.component';
-import { GameLevelDesignComponent } from './our-team/game-level-design/game-level-design.component';
-import { DevelopmentComponent } from './our-team/development/development.component';
-import { DrawersComponent } from './our-team/drawers/drawers.component';
-import { ModelersComponent } from './our-team/modelers/modelers.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DrawingsComponent } from './medias/drawings/drawings.component';
@@ -33,12 +27,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     MediasComponent,
     OurTeamComponent,
     ContactUsComponent,
-    ProjectManagementComponent,
-    CreativeTeamComponent,
-    GameLevelDesignComponent,
-    DevelopmentComponent,
-    DrawersComponent,
-    ModelersComponent,
     DrawingsComponent,
     ModelsComponent,
     VideosComponent,
