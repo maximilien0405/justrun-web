@@ -25,7 +25,7 @@
     </div>
 
     <!---- DROPDOWN NAVIGATION (mobile) -------------->
-    <div *ngIf="displayDropdown" [class.dropdown-height]="displayDropdown == true" class="absolute z-50 h-1 px-3 py-3 rounded-md lg:hidden transition-start md:right-button right-6 w-72 top-24 md:top-special bg-gray_background_light shadow-gray">
+    <div *ngIf="displayDropdown" [class.dropdown-height]="displayDropdown == true" class="absolute z-10 h-1 px-3 py-3 rounded-md lg:hidden transition-start md:right-button right-6 w-72 top-24 md:top-special bg-gray_background_light shadow-gray">
 
       <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/'}" routerLink="" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover">
         {{ 'NAV.MENU-1' | translate }}
