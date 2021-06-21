@@ -14,6 +14,13 @@ export class OurTeamComponent implements OnInit {
 
   public lang = localStorage.getItem('lang')
 
+  showProjectManagement = false;
+  showCreativeTeam = false;
+  showGameLevelDesign = false;
+  showDeveloment = false;
+  showModelers = false;
+  showDrawers = false;
+
   constructor(private router: Router, private globalSrv: LangService) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -29,6 +36,27 @@ export class OurTeamComponent implements OnInit {
 
   ngOnInit(): void {
     this.lang = "FR";
+  }
+
+  changeMenu(menu: string) {
+    if(menu == "project-management") {
+      this.showProjectManagement = !this.showProjectManagement;
+    }
+    else if(menu == "creative-team") {
+      this.showCreativeTeam = !this.showCreativeTeam;
+    }
+    else if(menu == "development") {
+      this.showDeveloment = !this.showDeveloment;
+    }
+    else if(menu == "drawers") {
+      this.showDrawers = !this.showDrawers;
+    }
+    else if(menu == "game-level-design") {
+      this.showGameLevelDesign = !this.showGameLevelDesign;
+    }
+    else if(menu == "modelers") {
+      this.showModelers = !this.showModelers;
+    }
   }
 
   reloadData() {

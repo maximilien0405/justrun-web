@@ -249,3 +249,7 @@ img {
     -o-animation: fadeIn ease 0.5s;
     -ms-animation: fadeIn ease 0.5s;
 }
+
+.icon-new {
+  transform: rotate(180deg);
+}
