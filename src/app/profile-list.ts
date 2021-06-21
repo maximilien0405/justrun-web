@@ -176,7 +176,7 @@ export const PROFILE: Profile[] = [
       socialOneLink: "https://github.com/nemerod",
       socialOneImg: "../assets/social/github.svg",
       socialTwoLink: "https://twitter.com/nemerodDSCP",
-      socialTwoImg: "../assets/social/twitter.svg",
+      socialTwoImg: "../assets/social/twitter.png",
       socialThreeLink: "https://steamcommunity.com/id/ORIATEC/",
       socialThreeImg: "../assets/social/steam.svg",
     },
