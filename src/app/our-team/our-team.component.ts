@@ -29,13 +29,17 @@ export class OurTeamComponent implements OnInit {
     });
 
     globalSrv.itemValue.subscribe((nextValue) => {
+      debugger
+      console.log(this.allProfiles)
       this.lang = nextValue;
       this.reloadData();
    })
   }
 
   ngOnInit(): void {
-    this.lang = "FR";
+    this.allProfiles = PROFILE;
+    this.lang = localStorage.getItem('lang');
+    this.reloadData();
   }
 
   changeMenu(menu: string) {
