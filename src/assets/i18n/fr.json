@@ -1,15 +1,16 @@
 {
     "NAV": {
-        "MENU-1" : "Le jeu",
-        "MENU-2" : "Médias",
-        "MENU-3" : "Notre équipe",
-        "MENU-4" : "Contact"
+        "MENU-1" : "Accueil",
+        "MENU-2" : "Le jeu",
+        "MENU-3" : "Médias",
+        "MENU-4" : "Notre équipe",
+        "MENU-5" : "Contact"
     },
     "BUYBUTTON" : "VOIR PLUS",
     "FOOTER": {
         "COPYRIGHT": "Copyright© 2021  -  Tous droits réservés"
     },
-    "THE-GAME" : {
+    "HOME" : {
       "TITLE": "OBJECTIF : S'ÉCHAPPER DE LA TOUR",
       "SUBTITLE": "Retracez vos souvenirs, découvrez vos capacités et combattez pour votre liberté.",
       "MIDDLE-TITLE" : "Parfois, l'unique solution est de fuir",
@@ -20,6 +21,10 @@
       "BOX-2-TEXT": "Équipé de votre arme multi-fonction, faites évoluer vos compétences tout le long du jeu. Combattez l’ennemi et découvrez la vérité.",
       "BOX-3-TITLE": "AMBIANCE STRESSANTE",
       "BOX-3-TEXT": "Évoluez au sein d'un environnement stressant tout en évitant de vous faire tuer par l’armée de robots qui garde le bâtiment."
+    },
+    "THE-GAME" : {
+      "TITLE": "LE JEU",
+      "PARAGRAPH": "lorem ipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsum"
     },
     "MEDIAS" : {
       "TITLE": "MÉDIAS",

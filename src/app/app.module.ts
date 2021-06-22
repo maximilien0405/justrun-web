@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DrawingsComponent } from './medias/drawings/drawings.component';
 import { ModelsComponent } from './medias/models/models.component';
 import { VideosComponent } from './medias/videos/videos.component';
+import { HomeComponent } from './home/home.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -29,6 +30,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     DrawingsComponent,
     ModelsComponent,
     VideosComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

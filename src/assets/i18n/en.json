@@ -1,15 +1,16 @@
 {
     "NAV": {
-        "MENU-1" : "The game",
-        "MENU-2" : "Medias",
-        "MENU-3" : "Our team",
-        "MENU-4" : "Contact us"
+        "MENU-1" : "Home",
+        "MENU-2" : "The game",
+        "MENU-3" : "Medias",
+        "MENU-4" : "Our team",
+        "MENU-5" : "Contact us"
     },
     "BUYBUTTON" : "SEE MORE",
     "FOOTER": {
         "COPYRIGHT": "Copyright© 2021  -  All rights reserved"
     },
-    "THE-GAME" : {
+    "HOME" : {
       "TITLE": "OBJECTIVE: ESCAPE THE TOWER",
       "SUBTITLE": "Recover your memories, discover your abilities and fight for your freedom.",
       "MIDDLE-TITLE" : "Sometimes, the only solution is to run",
@@ -20,6 +21,10 @@
       "BOX-2-TEXT": "Equipped with your multi-function weapon, upgrade your skills throughout the game. Fight the enemy and discover the truth.",
       "BOX-3-TITLE": "STRESSFUL ATMOSPHERE",
       "BOX-3-TEXT": "Evolve in a stressful environment while avoiding being killed by the army of robots that guard the building."
+    },
+    "THE-GAME" : {
+      "TITLE": "THE GAME",
+      "PARAGRAPH": "lorem ipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsum"
     },
     "MEDIAS" : {
       "TITLE": "MEDIAS",
