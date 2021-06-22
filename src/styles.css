@@ -253,3 +253,7 @@ img {
 .icon-new {
   transform: rotate(180deg);
 }
+
+.pad-special {
+  padding-top: 5rem !important;
+}

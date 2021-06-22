@@ -4,28 +4,38 @@
 
   <div class="absolute hidden md:inline-block left-9 top-9 border-r-big border-b-big border-gray_background_dark">
     <a routerLink="/">
-      <img src="../assets/logos/logo-tight.png" class="w-18" alt="">
+      <img src="../assets/logos/oldlogo-tight.png" class="w-18" alt="">
     </a>
   </div>
 
   <!---- LOGO (mobile) + MENU ITEM (mobile) -------------->
 
-  <div class="flex flex-row justify-between mb-12 md:mb-0">
-    <a routerLink="/">
-      <img src="../assets/logos/logo-tight.png" class="h-16 md:hidden" alt="" style="min-width: 4rem !important;">
+  <div class="flex flex-row justify-between mb-14 md:mb-0">
+    <div *ngIf="url !== '/'" class="absolute top-0 left-0 z-0 flex justify-center w-full h-56 bg-gray_background_light rounded-b-md shadow-gray md:hidden">
+    
+      <h1 *ngIf="url === '/medias'" class="mt-32 small-title">{{ 'MEDIAS.TITLE' | translate }}</h1>
+      <h1 *ngIf="url === '/contact-us'" class="mt-32 small-title">{{ 'CONTACT.TITLE' | translate }}</h1>
+      <h1 *ngIf="url === '/our-team'" class="mt-32 small-title">{{ 'TEAM.TITLE' | translate }}</h1>
+
+    </div>
+
+    <a routerLink="/" class="z-50">
+      <img src="../assets/logos/logo-tight.png" class="!z-50 h-16 md:hidden" alt="" style="min-width: 4rem !important;">
     </a>
-    <div class="w-full h-1 my-auto mt-5 md:hidden border-t-lign border-blue_border shadow-blue-border-lign mx-7"></div>
+    <div class="z-50 w-full h-1 my-auto mt-5 md:hidden border-t-lign border-blue_border shadow-blue-border-lign mx-7"></div>
 
     <div class="z-50 md:border-l-big md:border-gray_background_dark md:absolute md:top-9 md:right-button">
-      <button (click)="dropdown()" class="box-border flex items-center justify-center text-base leading-10 align-middle transition duration-75 rounded-md cursor-pointer lg:hidden size-button-hamburger min-w-20 shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+      <button (click)="dropdown()" [ngClass]="{'!bg-gray_background_dark' : url !== '/'}" class="box-border flex items-center justify-center text-base leading-10 align-middle transition duration-75 rounded-md cursor-pointer lg:hidden size-button-hamburger min-w-20 shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light">
         <svg [class.rotate-menu]="displayDropdown == true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 transition duration-special " fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
+
+
     </div>
 
     <!---- DROPDOWN NAVIGATION (mobile) -------------->
-    <div *ngIf="displayDropdown" [class.dropdown-height]="displayDropdown == true" class="absolute z-10 h-1 px-3 py-3 rounded-md lg:hidden transition-start md:right-button right-6 w-72 top-24 md:top-special bg-gray_background_light shadow-gray">
+    <div *ngIf="displayDropdown" [class.dropdown-height]="displayDropdown == true" class="absolute z-50 h-1 px-3 py-3 rounded-md lg:hidden transition-start md:right-button right-6 w-72 top-24 md:top-special bg-gray_background_light shadow-gray">
 
       <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/'}" routerLink="" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover">
         {{ 'NAV.MENU-1' | translate }}
@@ -99,7 +109,7 @@
 
   <!--------------- CONTENT ----------------------------------------------------->
 
-  <div class="max-w-6xl mx-auto">
+  <div [ngClass]="{'pad-special' : url !== '/'}" class="max-w-6xl mx-auto ">
     <router-outlet></router-outlet>
   </div>
 </div>
