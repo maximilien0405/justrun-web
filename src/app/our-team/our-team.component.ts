@@ -30,7 +30,6 @@ export class OurTeamComponent implements OnInit {
 
     globalSrv.itemValue.subscribe((nextValue) => {
       this.reloadData();
-      console.log(nextValue)
       if (nextValue == 'EN') {
         this.lang = 'EN'
       } else if(nextValue == 'FR') {

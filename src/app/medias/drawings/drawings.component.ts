@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { LangService } from '../../lang.service';
 
 @Component({
@@ -12,17 +13,34 @@ export class DrawingsComponent implements OnInit {
 
   constructor(private globalSrv: LangService) {
     globalSrv.itemValue.subscribe((nextValue) => {
-      this.lang = nextValue;
       this.reloadData();
+      if (nextValue == 'en') {
+        this.lang = nextValue
+      } else if(nextValue == 'en') {
+        this.lang = nextValue
+      }
    })
+  }
+
+  ngOnInit(): void {
+    this.lang = localStorage.getItem('lang')
+    console.log(this.lang)
+
+    if(this.lang == 'EN') {
+      this.lang = 'EN'
+    }
+    else if(this.lang == 'fr') {
+      this.lang = 'FR'
+    } else {
+      this.lang = 'FR'
+    }
+
+    console.log(this.lang)
+
   }
 
   reloadData() {
     this.imagesList1 = [...this.imagesList1];
-  }
- 
-  ngOnInit(): void {
-    this.lang = "FR";
   }
 
   public frameShow:boolean = false;
