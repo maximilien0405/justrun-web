@@ -11,7 +11,7 @@
   <!---- LOGO (mobile) + MENU ITEM (mobile) -------------->
 
   <div class="flex flex-row justify-between mb-14 md:mb-0">
-    <div *ngIf="url !== '/'" class="absolute top-0 left-0 z-0 flex justify-center w-full h-56 bg-gray_background_light rounded-b-md shadow-gray md:hidden">
+    <div *ngIf="url !== '/'" class="absolute top-0 left-0 z-0 flex justify-center w-full h-56 bg-gray_light_hover rounded-b-md shadow-gray md:hidden">
     
       <h1 *ngIf="url === '/medias'" class="mt-32 small-title">{{ 'MEDIAS.TITLE' | translate }}</h1>
       <h1 *ngIf="url === '/contact-us'" class="mt-32 small-title">{{ 'CONTACT.TITLE' | translate }}</h1>
@@ -25,13 +25,18 @@
     <div class="z-50 w-full h-1 my-auto mt-5 md:hidden border-t-lign border-blue_border shadow-blue-border-lign mx-7"></div>
 
     <div class="z-50 md:border-l-big md:border-gray_background_dark md:absolute md:top-9 md:right-button">
-      <button (click)="dropdown()" [ngClass]="{'!bg-gray_background_dark' : url !== '/'}" class="box-border flex items-center justify-center text-base leading-10 align-middle transition duration-75 rounded-md cursor-pointer lg:hidden size-button-hamburger min-w-20 shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light">
+      
+      <button *ngIf="url !== '/'" (click)="dropdown()" [ngClass]="{'' : url !== '/'}" class="box-border flex items-center justify-center text-base leading-10 align-middle transition duration-75 rounded-md cursor-pointer lg:hidden size-button-hamburger min-w-20 shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_dark md:bg-gray_background_light">
         <svg [class.rotate-menu]="displayDropdown == true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 transition duration-special " fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
-
-
+      
+      <button *ngIf="url === '/'"  (click)="dropdown()" class="box-border flex items-center justify-center text-base leading-10 align-middle transition duration-75 rounded-md cursor-pointer lg:hidden size-button-hamburger min-w-20 shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light">
+        <svg [class.rotate-menu]="displayDropdown == true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 transition duration-special " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
     </div>
 
     <!---- DROPDOWN NAVIGATION (mobile) -------------->
@@ -109,7 +114,7 @@
 
   <!--------------- CONTENT ----------------------------------------------------->
 
-  <div [ngClass]="{'pad-special' : url !== '/'}" class="max-w-6xl mx-auto ">
+  <div [ngClass]="{'pad-special': url !== '/'}" class="max-w-6xl mx-auto md:!pt-0">
     <router-outlet></router-outlet>
   </div>
 </div>
