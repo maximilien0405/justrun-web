@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
+import { LangService } from '../../lang.service';
 
 @Component({
   selector: 'app-videos',
@@ -8,20 +8,33 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class VideosComponent implements OnInit {
 
   @Input() imagesList3: any;
+  public lang = localStorage.getItem('lang')
 
-  constructor() { }
+  constructor(private globalSrv: LangService) {
+    globalSrv.itemValue.subscribe((nextValue) => {
+      this.lang = nextValue;
+      this.reloadData();
+   })
+  }
+
+  reloadData() {
+    this.imagesList3 = [...this.imagesList3];
+  }
 
   ngOnInit(): void {
+    this.lang = "FR";
   }
 
   public frameShow:boolean = false;
   imageLink:string = "";
-  imageDescription:string = "";
+  imageDescriptionFR:string = "";
+  imageDescriptionEN:string = "";
 
-  displayFrame(link:string, description:string) {
+  displayFrame(link:string, descriptionFR:string, descriptionEN:string) {
     this.frameShow = true;
     this.imageLink = link;
-    this.imageDescription = description;
+    this.imageDescriptionFR = descriptionFR;
+    this.imageDescriptionEN = descriptionEN;
   }
 
   @Input() tile: any;
