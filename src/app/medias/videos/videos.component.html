@@ -1,22 +1,29 @@
 <div *ngIf="frameShow == true" class="flex w-full h-full">
   <div class="hidden md:flex popup-sharing-blur" (click)="hide()">
     <div class="w-full h-auto px-4 md:px-0 md:w-3/5 md:h-3/5 popup-sharing">
-      <img class="w-full h-full mt-24 rounded-t-md border-cadre border-gray_background_light !border-b-0" [src]="imageLink" alt="">
+      <iframe class="w-full h-full mt-24 rounded-t-md border-cadre border-gray_background_light !border-b-0" src="{{ imageLink }}" allowfullscreen>
+      </iframe>
       <p *ngIf="lang === 'FR'" class="p-5 text-base text-center text-white bg-gray_background_light rounded-b-md">{{ imageDescriptionFR }}</p>
       <p *ngIf="lang === 'EN'" class="p-5 text-base text-center text-white bg-gray_background_light rounded-b-md">{{ imageDescriptionEN }}</p>
     </div>
   </div>
 </div>
+<p class="text-white">{{ imageLink }}</p>
 
 <div class="flex flex-wrap mx-auto">
   <ng-template ngFor let-i [ngForOf]="imagesList3">
       <!-- Desktop -->
-      <div (click)="displayFrame(i.image, i.descriptionFR, i.descriptionEN)" class="hidden md:flex flex-grow px-0 py-2 transition duration-75 cursor-pointer sm:p-2.5 shadow-gray hover:opacity-90">
-        <img class="block object-cover h-64 min-w-full rounded-md rounded-b-none border-cadre border-gray_light_hover md:rounded-b-md" [src]="i.image" alt="">
+      <div (click)="displayFrame(i.image, i.descriptionFR, i.descriptionEN)" class="relative hidden md:flex flex-grow px-0 py-2 transition duration-75 cursor-pointer sm:p-2.5 shadow-gray hover:opacity-90">
+        <img class="block object-cover h-64 min-w-full rounded-md rounded-b-none border-cadre border-gray_light_hover md:rounded-b-md" [src]="i.cover" alt="">
+        
+      
       </div>
+
+      
       <!-- Mobile -->
       <div class="flex md:hidden flex-col flex-grow px-0 py-2 transition duration-75 cursor-pointer sm:p-2.5 shadow-gray hover:opacity-90">
-        <img class="block object-cover h-64 min-w-full rounded-md rounded-b-none border-cadre border-gray_light_hover md:rounded-b-md" [src]="i.image" alt="">
+        <iframe class="block object-cover h-64 min-w-full rounded-md rounded-b-none border-cadre border-gray_light_hover md:rounded-b-md" [src]="i.image" allowfullscreen>
+        </iframe>
         <p *ngIf="lang === 'FR'" class="block p-2 text-base text-center text-white md:hidden bg-gray_background_light rounded-b-md">{{ i.descriptionFR }}</p>
         <p *ngIf="lang === 'EN'" class="block p-2 text-base text-center text-white md:hidden bg-gray_background_light rounded-b-md">{{ i.descriptionEN }}</p>
       </div>

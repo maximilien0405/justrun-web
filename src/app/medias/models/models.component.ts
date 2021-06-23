@@ -11,19 +11,29 @@ export class ModelsComponent implements OnInit {
   public lang = localStorage.getItem('lang')
 
   constructor(private globalSrv: LangService) {
+   
     globalSrv.itemValue.subscribe((nextValue) => {
-      this.lang = nextValue;
-      this.reloadData();
+      if (nextValue == 'EN') {
+        this.lang = 'EN'
+      } else if(nextValue == 'FR') {
+        this.lang = 'FR'
+      }
    })
+  }
+
+  ngOnInit(): void {
+    if(this.lang == 'EN') {
+      this.lang = 'EN'
+    }
+    else if(this.lang == 'FR') {
+      this.lang = 'FR'
+    } else {
+      this.lang = 'FR'
+    }
   }
   
   reloadData() {
     this.imagesList2 = [...this.imagesList2];
-  }
-
- 
-  ngOnInit(): void {
-    this.lang = "FR";
   }
 
   public frameShow:boolean = false;
