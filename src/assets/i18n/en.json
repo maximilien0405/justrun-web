@@ -24,7 +24,14 @@
     },
     "THE-GAME" : {
       "TITLE": "THE GAME",
-      "PARAGRAPH": "lorem ipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsumipsum"
+      "PARAGRAPH": "lorem Evolve in a stressful environment while avoiding being killed by the army of robots that guard the building.",
+      "MENU" : {
+        "1" : "Presentation",
+        "2" : "Storyline",
+        "3" : "Artistic direction",
+        "4" : "Gameplay & mechanics",
+        "5" : "Enemies & Special abilities"
+      }
     },
     "MEDIAS" : {
       "TITLE": "MEDIAS",

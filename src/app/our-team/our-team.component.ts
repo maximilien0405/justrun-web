@@ -14,7 +14,7 @@ export class OurTeamComponent implements OnInit {
 
   public lang = localStorage.getItem('lang')
 
-  showProjectManagement = false;
+  showProjectManagement = true;
   showCreativeTeam = false;
   showGameLevelDesign = false;
   showDeveloment = false;
@@ -52,21 +52,51 @@ export class OurTeamComponent implements OnInit {
   changeMenu(menu: string) {
     if(menu == "project-management") {
       this.showProjectManagement = !this.showProjectManagement;
+      this.showCreativeTeam = false;
+      this.showDeveloment = false;
+      this.showDrawers = false;
+      this.showGameLevelDesign = false;
+      this.showModelers = false;
     }
     else if(menu == "creative-team") {
       this.showCreativeTeam = !this.showCreativeTeam;
+      this.showProjectManagement = false;
+      this.showDeveloment = false;
+      this.showDrawers = false;
+      this.showGameLevelDesign = false;
+      this.showModelers = false;
     }
     else if(menu == "development") {
       this.showDeveloment = !this.showDeveloment;
+      this.showProjectManagement = false;
+      this.showCreativeTeam = false;
+      this.showDrawers = false;
+      this.showGameLevelDesign = false;
+      this.showModelers = false;
     }
     else if(menu == "drawers") {
       this.showDrawers = !this.showDrawers;
+      this.showProjectManagement = false;
+      this.showCreativeTeam = false;
+      this.showDeveloment = false;
+      this.showGameLevelDesign = false;
+      this.showModelers = false;
     }
     else if(menu == "game-level-design") {
       this.showGameLevelDesign = !this.showGameLevelDesign;
+      this.showProjectManagement = false;
+      this.showCreativeTeam = false;
+      this.showDeveloment = false;
+      this.showDrawers = false;
+      this.showModelers = false;
     }
     else if(menu == "modelers") {
       this.showModelers = !this.showModelers;
+      this.showProjectManagement = false;
+      this.showCreativeTeam = false;
+      this.showDeveloment = false;
+      this.showDrawers = false;
+      this.showGameLevelDesign = false;
     }
   }
 
