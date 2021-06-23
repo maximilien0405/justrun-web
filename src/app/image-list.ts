@@ -1,4 +1,6 @@
-import { Image } from './common/models/image.model'
+import { Image } from './common/models/image.model';
+import { Video } from './common/models/video.model';
+
 
 export const IMAGEList1: Image[] = [
     {
@@ -124,62 +126,23 @@ export const IMAGEList2: Image[] = [
   },
 ];
 
-export const IMAGEList3: Image[] = [
+export const IMAGEList3: Video[] = [
   {
-    image: "../../../assets/img/img1.png",
-    descriptionFR: "FR----------Lorem ipsum dolor sit amet",
+    image: "https://www.youtube.com/embed/Hqt1D01T4ZI",
+    cover: "../../../assets/cover/img3.png",
+    descriptionFR: "FR---------- Lorem ipsum dolor sit amet",
     descriptionEN: "EN----------Lorem ipsum dolor sit amet",
   },
   {
-    image: "../../../assets/img/img2.png",
+    image: "https://www.youtube.com/embed/BP_ta9sWS5A&controls=1",
+    cover: "",
     descriptionFR: "FR---------Lorem ipsum dolor sit amet",
     descriptionEN: "EN---------Lorem ipsum dolor sit amet",
   },
   {
-    image: "../../../assets/img/img3.png",
+    image: "https://www.youtube.com/embed/1aDbkW2zI_M&controls=1",
+    cover: "",
     descriptionFR: "FR---------Lorem ipsum dolor sit amet",
     descriptionEN: "EN---------Lorem ipsum dolor sit amet",
-  },    {
-    image: "../../../assets/img/img1.png",
-    descriptionFR: "FR----------Lorem ipsum dolor sit amet",
-    descriptionEN: "EN----------Lorem ipsum dolor sit amet",
-  },
-  {
-    image: "../../../assets/img/img2.png",
-    descriptionFR: "FR---------Lorem ipsum dolor sit amet",
-    descriptionEN: "EN---------Lorem ipsum dolor sit amet",
-  },
-  {
-    image: "../../../assets/img/img3.png",
-    descriptionFR: "FR---------Lorem ipsum dolor sit amet",
-    descriptionEN: "EN---------Lorem ipsum dolor sit amet",
-  },    {
-    image: "../../../assets/img/img1.png",
-    descriptionFR: "FR----------Lorem ipsum dolor sit amet",
-    descriptionEN: "EN----------Lorem ipsum dolor sit amet",
-  },
-  {
-    image: "../../../assets/img/img2.png",
-    descriptionFR: "FR---------Lorem ipsum dolor sit amet",
-    descriptionEN: "EN---------Lorem ipsum dolor sit amet",
-  },
-  {
-    image: "../../../assets/img/img3.png",
-    descriptionFR: "FR---------Lorem ipsum dolor sit amet",
-    descriptionEN: "EN---------Lorem ipsum dolor sit amet",
-  },    {
-    image: "../../../assets/img/img1.png",
-    descriptionFR: "FR----------Lorem ipsum dolor sit amet",
-    descriptionEN: "EN----------Lorem ipsum dolor sit amet",
-  },
-  {
-    image: "../../../assets/img/img2.png",
-    descriptionFR: "FR---------Lorem ipsum dolor sit amet",
-    descriptionEN: "EN---------Lorem ipsum dolor sit amet",
-  },
-  {
-    image: "../../../assets/img/img3.png",
-    descriptionFR: "FR---------Lorem ipsum dolor sit amet",
-    descriptionEN: "EN---------Lorem ipsum dolor sit amet",
-  },
+  }, 
 ];
