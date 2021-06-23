@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { LangService } from './lang.service';
-import { fadeAnimation } from './animations/fade.animation';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styles: [''],
-  animations: [fadeAnimation]
 })
 export class AppComponent implements OnInit {
   url = "";
@@ -54,10 +53,6 @@ export class AppComponent implements OnInit {
   dropdown() {
     this.displayDropdown = !this.displayDropdown;
   }
-
-  // public getRouterOutletState(outlet) {
-  //   return outlet.isActivated ? outlet.activatedRoute : '';
-  // }
 
   ngOnInit(): void {}
 }
