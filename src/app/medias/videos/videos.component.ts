@@ -37,13 +37,6 @@ export class VideosComponent implements OnInit {
     this.imageDescriptionEN = descriptionEN;
   }
 
-  @Input() tile: any;
-  @Output() hideSharingView = new EventEmitter<boolean>();
-  showLinkButtonLabel = false;
-  showSendButtonLabel = false;
-  email = "";
-  active = "1";
-
   hide() {
     this.frameShow = false
   }

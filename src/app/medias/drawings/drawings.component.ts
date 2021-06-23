@@ -12,31 +12,25 @@ export class DrawingsComponent implements OnInit {
   public lang = localStorage.getItem('lang')
 
   constructor(private globalSrv: LangService) {
+   
     globalSrv.itemValue.subscribe((nextValue) => {
-      this.reloadData();
-      if (nextValue == 'en') {
-        this.lang = nextValue
-      } else if(nextValue == 'en') {
-        this.lang = nextValue
+      if (nextValue == 'EN') {
+        this.lang = 'EN'
+      } else if(nextValue == 'FR') {
+        this.lang = 'FR'
       }
    })
   }
 
   ngOnInit(): void {
-    this.lang = localStorage.getItem('lang')
-    console.log(this.lang)
-
     if(this.lang == 'EN') {
       this.lang = 'EN'
     }
-    else if(this.lang == 'fr') {
+    else if(this.lang == 'FR') {
       this.lang = 'FR'
     } else {
       this.lang = 'FR'
     }
-
-    console.log(this.lang)
-
   }
 
   reloadData() {
@@ -54,13 +48,6 @@ export class DrawingsComponent implements OnInit {
     this.imageDescriptionFR = descriptionFR;
     this.imageDescriptionEN = descriptionEN;
   }
-
-  @Input() tile: any;
-  @Output() hideSharingView = new EventEmitter<boolean>();
-  showLinkButtonLabel = false;
-  showSendButtonLabel = false;
-  email = "";
-  active = "1";
 
   hide() {
     this.frameShow = false

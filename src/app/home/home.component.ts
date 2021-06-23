@@ -32,13 +32,6 @@ export class HomeComponent implements OnInit {
     this.frameShow = true;
   }
 
-  @Input() tile: any;
-  @Output() hideSharingView = new EventEmitter<boolean>();
-  showLinkButtonLabel = false;
-  showSendButtonLabel = false;
-  email = "";
-  active = "1";
-
   hide() {
     this.frameShow = false
   }
