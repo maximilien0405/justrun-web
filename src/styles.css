@@ -39,6 +39,7 @@ html, body {
   letter-spacing: 1%;
   color: white;
   line-height: 120%;
+  font-weight: bold;
 }
 
 .small-title {
@@ -256,4 +257,42 @@ img {
 
 .pad-special {
   padding-top: 5rem !important;
+}
+
+@font-face {
+  font-family: 'nidus_sansregular';
+  src: url('assets/font/nindus/nidsans-webfont-webfont.woff2') format('woff2'),
+       url('assets/font/nindus/nidsans-webfont-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'phage_roughregular';
+  src: url('assets/font/phage/phage_rough-webfont.woff2') format('woff2'),
+       url('assets/font/phage/phage_rough-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'outageregular';
+  src: url('assets/font/outage/outage-webfont.woff2') format('woff2'),
+       url('assets/font/outage/outage-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'outagecut';
+  src: url('assets/font/outage/outage_cut-webfont.woff2') format('woff2'),
+       url('assets/font/outage/outage_cut-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font {
+  font-family: 'outagecut' !important;
 }

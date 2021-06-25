@@ -2,8 +2,8 @@
     "NAV": {
         "MENU-1" : "Accueil",
         "MENU-2" : "Le jeu",
-        "MENU-3" : "Médias",
-        "MENU-4" : "Notre équipe",
+        "MENU-3" : "MÉdias",
+        "MENU-4" : "Notre Équipe",
         "MENU-5" : "Contact"
     },
     "BUYBUTTON" : "VOIR PLUS",
@@ -38,8 +38,8 @@
       "PARAGRAPH": "Voici ci-dessous quelques rendus de notre jeu. Vous y trouverez des images, vidéos ou encore des musique réalisées avec amour par notre équipe.",
       "MENU" : {
         "1" : "Croquis",
-        "2" : "Modélisations",
-        "3" : "Vidéos"
+        "2" : "ModÉlisations",
+        "3" : "VidÉos"
       }
     },
     "TEAM" : {
@@ -49,8 +49,8 @@
         "1" : "Chefs de projet",
         "2" : "Creative team",
         "3" : "Game & level designer",
-        "4" : "Développeurs",
-        "5" : "Modélisateurs & Animateurs",
+        "4" : "DÉveloppeurs",
+        "5" : "ModÉlisateurs & Animateurs",
         "6" : "Dessinateurs"
       }
     },

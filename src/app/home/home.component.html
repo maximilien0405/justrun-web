@@ -11,11 +11,11 @@
 
 <div class="flex flex-col justify-between lg:mt-14 xl:flex-row">
   <div class="mx-auto mb-20 text-center xl:my-auto w-96 xl:text-left xl:mx-0">
-    <h1 class="title">{{ 'HOME.TITLE' | translate}}</h1>
+    <h1 class="title font">{{ 'HOME.TITLE' | translate}}</h1>
     <p class="mt-5 subtitle">{{ 'HOME.SUBTITLE' | translate }}</p>
     <a href="https://discord.com/invite/AsXv6GKW5V" target="_blank">
      <button class="flex items-center w-40 h-12 mx-auto mt-8 text-sm font-medium text-white transition duration-75 rounded-md cursor-pointer xl:mx-0 border-lign hover:bg-blue_button_hover bg-blue_button shadow-blue-button shadow-gray border-blue_border focus:outline-none">
-        <p class="mx-auto">{{ 'BUYBUTTON' | translate }}</p>
+        <p class="mx-auto font">{{ 'BUYBUTTON' | translate }}</p>
       </button>
     </a>
   </div>
@@ -26,7 +26,7 @@
     <div (click)="displayFrame()" class="flex items-center justify-center mx-auto transition duration-75 bg-center bg-cover cursor-pointer border-cadre border-gray_background_light hover:opacity-90 xl:m-0 rounded-xl size-special bg-gray_background_light shadow-gray img-home">
       <div class="flex items-center justify-center w-20 h-20 transition duration-75 rounded-full opacity-100 cursor-pointer bg-gray_background_light">
         <img src="../../assets/logos/play-button.svg" alt="" class="w-8 h-8">
-        <div class="absolute flex items-center h-10 px-4 text-sm font-medium text-white rounded-md lg:text-xs xl:text-sm -bottom-4 bg-blue_button border-blue_border border-lign">
+        <div class="absolute flex items-center h-10 px-4 text-sm font-medium text-white rounded-md font lg:text-xs xl:text-sm -bottom-4 bg-blue_button border-blue_border border-lign">
           GAMECUP TRAILER 2021
         </div>
       </div>
@@ -46,14 +46,14 @@
 <!-- 3 BOXS --------------------------------->
 
 <div class="flex flex-col items-start mt-20 mb-20 md:mb-20 xl:items-end lg:items-center xl:mt-36">
-  <h2 class="xl:text-right lg:text-center small-title">{{ 'HOME.MIDDLE-TITLE' | translate}}</h2>
+  <h2 class="xl:text-right lg:text-center small-title font">{{ 'HOME.MIDDLE-TITLE' | translate}}</h2>
   <p class="w-full mt-4 xl:text-right lg:w-2/3 paragraph lg:text-center">{{ 'HOME.MIDDLE-PARAGRAPH' | translate}}</p>
 </div>
 
 <div class="grid grid-cols-1 gap-12 mb-16 sm:grid-cols-2 lg:grid-flow-col lg:grid-cols-3 lg:mb-14">
   <div>
       <div class="relative bg-center bg-cover h-80 border-cadre rounded-xl background-image-1 border-gray_background_light shadow-gray" alt="">
-        <div class="absolute flex items-center h-10 px-4 text-sm md:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
+        <div class="font absolute flex items-center h-10 px-4 text-sm md:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
           {{ 'HOME.BOX-1-TITLE' | translate}}
         </div>
       </div>
@@ -62,7 +62,7 @@
 
   <div>
       <div class="relative bg-center bg-cover h-80 border-cadre rounded-xl background-image-2 border-gray_background_light shadow-gray" alt="">
-        <div class="absolute flex items-center h-10 px-4 text-sm md:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
+        <div class="font absolute flex items-center h-10 px-4 text-sm md:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
           {{ 'HOME.BOX-2-TITLE' | translate}}
         </div>
       </div>
@@ -71,7 +71,7 @@
 
   <div class="hidden lg:block">
     <div class="relative bg-center bg-cover h-80 border-cadre rounded-xl background-image-3 border-gray_background_light shadow-gray" alt="">
-      <div class="absolute flex items-center h-10 px-4 text-sm md:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
+      <div class="font absolute flex items-center h-10 px-4 text-sm md:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
         {{ 'HOME.BOX-3-TITLE' | translate}}
       </div>
     </div>
@@ -84,7 +84,7 @@
 
 <div class="block lg:hidden">
   <div class="relative bg-center bg-cover h-80 border-cadre rounded-xl background-image-3 border-gray_background_light shadow-gray" alt="">
-    <div class="absolute flex items-center h-10 px-4 text-sm lg:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
+    <div class="font absolute flex items-center h-10 px-4 text-sm lg:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
       {{ 'HOME.BOX-3-TITLE' | translate}}
     </div>
   </div>

@@ -1,5 +1,5 @@
 <div class="items-center justify-center hidden w-full rounded-md md:flex h-36 bg-gray_background_light shadow-gray">
-  <h1 class="small-title">{{ 'TEAM.TITLE' | translate }}</h1>
+  <h1 class="small-title font">{{ 'TEAM.TITLE' | translate }}</h1>
 </div>
 
 <p class="w-full md:text-center md:w-2/3 md:mx-auto mt-14 mb-14 paragraph">{{ 'TEAM.PARAGRAPH' | translate }}</p>
@@ -294,10 +294,10 @@
 
 <!--------------------- DESKTOP BOX DISPLAY ------------------------->
 <div class="hidden lg:block">
-  <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white">{{ 'TEAM.MENU.1' | translate }}</h1>
+  <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.1' | translate }}</h1>
   <div class="w-full h-1 my-auto mb-12 border-t-lign border-blue_border shadow-blue-border-lign"></div>
 
-  <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-12 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
+  <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-16 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
       <div *ngIf="i.group == 'project-management'">
         <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
@@ -341,10 +341,10 @@
     </ng-template>
   </div>
 
-  <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white">{{ 'TEAM.MENU.2' | translate }}</h1>
+  <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.2' | translate }}</h1>
   <div class="w-full h-1 my-auto mb-12 border-t-lign border-blue_border shadow-blue-border-lign"></div>
 
-  <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-12 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
+  <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-16 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
       <div *ngIf="i.group == 'creative-team'">
         <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
@@ -384,10 +384,10 @@
     </ng-template>
   </div>
 
-  <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white">{{ 'TEAM.MENU.3' | translate }}</h1>
+  <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.3' | translate }}</h1>
   <div class="w-full h-1 my-auto mb-12 border-t-lign border-blue_border shadow-blue-border-lign"></div>
 
-  <div class="grid w-full grid-cols-1 grid-rows-2 gap-6 mb-12 lg:grid-rows-1 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
+  <div class="grid w-full grid-cols-1 grid-rows-2 gap-6 mb-16 lg:grid-rows-1 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
       <div *ngIf="i.group == 'game-level-design'">
         <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
@@ -427,10 +427,10 @@
     </ng-template>
   </div>
 
-  <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white">{{ 'TEAM.MENU.4' | translate }}</h1>
+  <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.4' | translate }}</h1>
   <div class="w-full h-1 my-auto mb-12 border-t-lign border-blue_border shadow-blue-border-lign"></div>
 
-  <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-12 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
+  <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-16 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
       <div *ngIf="i.group == 'developpement'">
         <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
@@ -470,10 +470,10 @@
     </ng-template>
   </div>
 
-  <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white">{{ 'TEAM.MENU.5' | translate }}</h1>
+  <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.5' | translate }}</h1>
   <div class="w-full h-1 my-auto mb-12 border-t-lign border-blue_border shadow-blue-border-lign"></div>
 
-  <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-12 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
+  <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-16 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
       <div *ngIf="i.group == 'modelers'">
         <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
@@ -513,7 +513,7 @@
     </ng-template>
   </div>
 
-  <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white">{{ 'TEAM.MENU.6' | translate }}</h1>
+  <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.6' | translate }}</h1>
   <div class="w-full h-1 my-auto mb-12 border-t-lign border-blue_border shadow-blue-border-lign"></div>
 
   <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">

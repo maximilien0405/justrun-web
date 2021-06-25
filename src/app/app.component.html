@@ -13,10 +13,10 @@
   <div class="flex flex-row justify-between mb-14 md:mb-0">
     <div *ngIf="url !== '/'" class="absolute top-0 left-0 z-0 flex justify-center w-full h-56 bg-gray_light_hover rounded-b-md shadow-gray md:hidden">
 
-      <h1 *ngIf="url === '/the-game'" class="mt-32 small-title">{{ 'THE-GAME.TITLE' | translate }}</h1>
-      <h1 *ngIf="url === '/medias'" class="mt-32 small-title">{{ 'MEDIAS.TITLE' | translate }}</h1>
-      <h1 *ngIf="url === '/contact-us'" class="mt-32 small-title">{{ 'CONTACT.TITLE' | translate }}</h1>
-      <h1 *ngIf="url === '/our-team'" class="mt-32 small-title">{{ 'TEAM.TITLE' | translate }}</h1>
+      <h1 *ngIf="url === '/the-game'" class="mt-32 small-title font">{{ 'THE-GAME.TITLE' | translate }}</h1>
+      <h1 *ngIf="url === '/medias'" class="mt-32 small-title font">{{ 'MEDIAS.TITLE' | translate }}</h1>
+      <h1 *ngIf="url === '/contact-us'" class="mt-32 small-title font">{{ 'CONTACT.TITLE' | translate }}</h1>
+      <h1 *ngIf="url === '/our-team'" class="mt-32 small-title font">{{ 'TEAM.TITLE' | translate }}</h1>
 
     </div>
 
@@ -43,19 +43,19 @@
     <!---- DROPDOWN NAVIGATION (mobile) -------------->
     <div *ngIf="displayDropdown" [class.dropdown-height]="displayDropdown == true" class="absolute z-50 h-1 px-3 py-3 rounded-md lg:hidden transition-start md:right-button right-6 w-72 top-24 md:top-special bg-gray_background_light shadow-gray">
 
-      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/'}" routerLink="" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover">
+      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/'}" routerLink="" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover font">
         {{ 'NAV.MENU-1' | translate }}
       </div>
-      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/the-game'}" routerLink="the-game" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover">
+      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/the-game'}" routerLink="the-game" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover font">
         {{ 'NAV.MENU-2' | translate }}
       </div>
-      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/medias'}" routerLink="medias" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover">
+      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/medias'}" routerLink="medias" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover font">
         {{ 'NAV.MENU-3' | translate }}
       </div>
-      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/our-team'}" routerLink="our-team" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover">
+      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/our-team'}" routerLink="our-team" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover font">
         {{ 'NAV.MENU-4' | translate }}
       </div>
-      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/contact-us'}" routerLink="contact-us" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover">
+      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/contact-us'}" routerLink="contact-us" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover font">
         {{ 'NAV.MENU-5' | translate }}
       </div>
     </div>
@@ -68,27 +68,27 @@
 
     <!-- Button Home -->
     <button [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/'}" routerLink="" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border rounded-md cursor-pointer border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
-      <p class="mx-auto text-sm">{{ 'NAV.MENU-1' | translate }}</p>
+      <p class="mx-auto text-sm font">{{ 'NAV.MENU-1' | translate }}</p>
     </button>
 
     <!-- Button The-game -->
     <button [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/the-game'}" routerLink="the-game" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border rounded-md cursor-pointer border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
-      <p class="mx-auto text-sm">{{ 'NAV.MENU-2' | translate }}</p>
+      <p class="mx-auto text-sm font">{{ 'NAV.MENU-2' | translate }}</p>
     </button>
 
     <!-- Button Medias -->
     <button [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/medias'}" routerLink="medias" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border rounded-md cursor-pointer border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
-      <p class="mx-auto text-sm">{{ 'NAV.MENU-3' | translate }}</p>
+      <p class="mx-auto text-sm font">{{ 'NAV.MENU-3' | translate }}</p>
     </button>
 
     <!-- Our team -->
     <button [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/our-team'}" routerLink="our-team" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border rounded-md cursor-pointer border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
-      <p class="mx-auto text-sm">{{ 'NAV.MENU-4' | translate }}</p>
+      <p class="mx-auto text-sm font">{{ 'NAV.MENU-4' | translate }}</p>
     </button>
 
     <!-- Contact us -->
     <button [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/contact-us'}" routerLink="contact-us" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border rounded-md cursor-pointer border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
-      <p class="mx-auto text-sm">{{ 'NAV.MENU-5' | translate }}</p>
+      <p class="mx-auto text-sm font">{{ 'NAV.MENU-5' | translate }}</p>
     </button>
   </div>
 
@@ -96,7 +96,7 @@
 
   <div class="absolute hidden md:block top-9 right-9 border-l-big border-b-big border-gray_background_dark">
     <a href="https://discord.com/invite/AsXv6GKW5V" target="_blank">
-      <button class="flex items-center text-sm font-bold lea­­­ding-snug text-center text-white align-middle transition duration-75 border-lign hover:bg-blue_button_hover rounded-md cursor-pointer h-18 w-18 bg-blue_button shadow-blue-button shadow-gray border-blue_border px-2 focus:outline-none">
+      <button class="flex items-center text-sm font-bold font lea­­­ding-snug text-center text-white align-middle transition duration-75 border-lign hover:bg-blue_button_hover rounded-md cursor-pointer h-18 w-18 bg-blue_button shadow-blue-button shadow-gray border-blue_border px-2 focus:outline-none">
         {{ 'BUYBUTTON' | translate }}
       </button>
     </a>
@@ -138,13 +138,13 @@
       <!---- Change language --------->
       <div class="flex flex-row items-center justify-between w-24 h-10 text-sm transition duration-75 rounded-md cursor-pointer select-none bg-gray_background_light text-gray_subtitle shadow-gray">
         <div (click)="translate.use('fr') && changeLang('FR')" class="flex items-center w-1/2 h-full transition duration-75 rounded-l-md hover:bg-gray_light_hover group">
-          <span class="w-full text-center text-gray_subtitle text-normal group-hover:text-gray_subtitle_hover">FR</span>
+          <span class="w-full text-center text-gray_subtitle text-normal group-hover:text-gray_subtitle_hover font">FR</span>
         </div>
 
         <div class="h-full bg-gray-400 w-lign" style="box-shadow: 0px 0px 15px rgba(18, 96, 109, 0.7);"></div>
 
         <div (click)="translate.use('en') && changeLang('EN')" class="flex items-center w-1/2 h-full transition duration-75 hover:bg-gray_light_hover rounded-r-md group">
-          <span class="w-full text-center text-gray_subtitle text-normal group-hover:text-gray_subtitle_hover">EN</span>
+          <span class="w-full text-center text-gray_subtitle text-normal group-hover:text-gray_subtitle_hover font">EN</span>
         </div>
       </div>
 
