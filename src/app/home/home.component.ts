@@ -35,5 +35,4 @@ export class HomeComponent implements OnInit {
   hide() {
     this.frameShow = false
   }
-
 }

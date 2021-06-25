@@ -26,6 +26,13 @@
       "TITLE": "LE JEU",
       "PARAGRAPH": "De son scénario unique à son gameplay passionnant, apprenez-en plus sur le vaste univers de notre jeu. Bonne lecture !",
       "MENU" : {
+        "1" : "PrÉsentation",
+        "2" : "ScÉnario",
+        "3" : "Direction artistique",
+        "4" : "Gameplay & mÉcanique",
+        "5" : "Ennemis"
+      },
+      "MENU-M" : {
         "1" : "Présentation",
         "2" : "Scénario",
         "3" : "Direction artistique",
@@ -51,6 +58,14 @@
         "3" : "Game & level designer",
         "4" : "DÉveloppeurs",
         "5" : "ModÉlisateurs & Animateurs",
+        "6" : "Dessinateurs"
+      },
+      "MENU-M" : {
+        "1" : "Chefs de projet",
+        "2" : "Creative team",
+        "3" : "Game & level designer",
+        "4" : "Développeurs",
+        "5" : "Modélisateurs & Animateurs",
         "6" : "Dessinateurs"
       }
     },

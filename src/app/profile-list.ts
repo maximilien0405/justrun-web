@@ -18,7 +18,7 @@ export const PROFILE: Profile[] = [
       socialOneImg: "../assets/social/linkedin.svg",
       socialTwoLink: "mailto:maximilien.zimmermann@ik.me",
       socialTwoImg: "../assets/social/mail.svg",
-      socialThreeLink: "https://www.behance.net/maximilzimmerm1",
+      socialThreeLink: "https://www.behance.net/max-zim",
       socialThreeImg: "../assets/social/behance.svg",
     },
     {

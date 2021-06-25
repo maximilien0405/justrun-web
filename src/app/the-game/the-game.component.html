@@ -1,27 +1,27 @@
 <div class="items-center justify-center hidden w-full rounded-md md:flex h-36 bg-gray_background_light shadow-gray">
-  <h1 class="small-title">{{ 'THE-GAME.TITLE' | translate }}</h1>
+  <h1 class="small-title font">{{ 'THE-GAME.TITLE' | translate }}</h1>
 </div>
 
 <p class="w-full md:text-center md:w-2/3 md:mx-auto mt-14 mb-14 paragraph">{{ 'THE-GAME.PARAGRAPH' | translate }}</p>
 
 <div class="hidden lg:block">
-  <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white">{{ 'THE-GAME.MENU.1' | translate }}</h1>
+  <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'THE-GAME.MENU.1' | translate }}</h1>
   <div class="w-full h-1 my-auto mb-12 border-t-lign border-blue_border shadow-blue-border-lign"></div>
   <app-presentation></app-presentation>
 
-  <h1 class="p-4 pt-0 pl-0 mt-12 mb-1 text-xl text-white">{{ 'THE-GAME.MENU.2' | translate }}</h1>
+  <h1 class="p-4 pt-0 pl-0 mt-12 mb-1 text-xl text-white font">{{ 'THE-GAME.MENU.2' | translate }}</h1>
   <div class="w-full h-1 my-auto mb-12 border-t-lign border-blue_border shadow-blue-border-lign"></div>
   <app-storyline></app-storyline>
 
-  <h1 class="p-4 pt-0 pl-0 mt-12 mb-1 text-xl text-white">{{ 'THE-GAME.MENU.3' | translate }}</h1>
+  <h1 class="p-4 pt-0 pl-0 mt-12 mb-1 text-xl text-white font">{{ 'THE-GAME.MENU.3' | translate }}</h1>
   <div class="w-full h-1 my-auto mb-12 border-t-lign border-blue_border shadow-blue-border-lign"></div>
   <app-art-dir></app-art-dir>
 
-  <h1 class="p-4 pt-0 pl-0 mt-12 mb-1 text-xl text-white">{{ 'THE-GAME.MENU.4' | translate }}</h1>
+  <h1 class="p-4 pt-0 pl-0 mt-12 mb-1 text-xl text-white font">{{ 'THE-GAME.MENU.4' | translate }}</h1>
   <div class="w-full h-1 my-auto mb-12 border-t-lign border-blue_border shadow-blue-border-lign"></div>
   <app-gameplay></app-gameplay>
 
-  <h1 class="p-4 pt-0 pl-0 mt-12 mb-1 text-xl text-white">{{ 'THE-GAME.MENU.5' | translate }}</h1>
+  <h1 class="p-4 pt-0 pl-0 mt-12 mb-1 text-xl text-white font">{{ 'THE-GAME.MENU.5' | translate }}</h1>
   <div class="w-full h-1 my-auto mb-12 border-t-lign border-blue_border shadow-blue-border-lign"></div>
   <app-enemies></app-enemies>
 </div>
@@ -29,7 +29,7 @@
 <div class="block lg:hidden">
   <a (click)="changeMenu('presentation')" class="cursor-pointer">
     <div [ngClass]="{'!bg-gray_light_hover': showPresentation}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
-      <h1 class="py-4 text-xl text-white">{{ 'THE-GAME.MENU.1' | translate }}</h1>
+      <h1 class="py-4 text-xl text-white">{{ 'THE-GAME.MENU-M.1' | translate }}</h1>
       <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showPresentation == false}" class="w-6 h-6 transition duration-75" alt="">
     </div>
   </a>
@@ -40,7 +40,7 @@
 
   <a (click)="changeMenu('storyline')" class="cursor-pointer">
     <div [ngClass]="{'!bg-gray_light_hover': showStoryline}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
-      <h1 class="py-4 text-xl text-white">{{ 'THE-GAME.MENU.2' | translate }}</h1>
+      <h1 class="py-4 text-xl text-white">{{ 'THE-GAME.MENU-M.2' | translate }}</h1>
       <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showStoryline == false}" class="w-6 h-6 transition duration-75" alt="">
     </div>
   </a>
@@ -51,7 +51,7 @@
 
   <a (click)="changeMenu('artistic-direction')" class="cursor-pointer">
     <div [ngClass]="{'!bg-gray_light_hover': showArtisticDirection}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
-      <h1 class="py-4 text-xl text-white">{{ 'THE-GAME.MENU.3' | translate }}</h1>
+      <h1 class="py-4 text-xl text-white">{{ 'THE-GAME.MENU-M.3' | translate }}</h1>
       <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showArtisticDirection == false}" class="w-6 h-6 transition duration-75" alt="">
     </div>
   </a>
@@ -62,7 +62,7 @@
 
   <a (click)="changeMenu('gameplay')" class="cursor-pointer">
     <div [ngClass]="{'!bg-gray_light_hover': showGameplay}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
-      <h1 class="py-4 text-xl text-white">{{ 'THE-GAME.MENU.4' | translate }}</h1>
+      <h1 class="py-4 text-xl text-white">{{ 'THE-GAME.MENU-M.4' | translate }}</h1>
       <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showGameplay == false}" class="w-6 h-6 transition duration-75" alt="">
     </div>
   </a>
@@ -73,7 +73,7 @@
 
   <a (click)="changeMenu('enemies')" class="cursor-pointer">
     <div [ngClass]="{'!bg-gray_light_hover': showEnemies}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
-      <h1 class="py-4 text-xl text-white">{{ 'THE-GAME.MENU.5' | translate }}</h1>
+      <h1 class="py-4 text-xl text-white">{{ 'THE-GAME.MENU-M.5' | translate }}</h1>
       <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showEnemies == false}" class="w-6 h-6 transition duration-75" alt="">
     </div>
   </a>
