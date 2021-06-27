@@ -24,8 +24,8 @@ export class MediasComponent implements OnInit {
 
   url = "";
 
-  showDrawings = true;
-  showModels = false;
+  showDrawings = false;
+  showModels = true;
   showVideos = false;
 
   imagesList1 = IMAGEList1;

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { LangService } from '../../lang.service';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-videos',
@@ -10,8 +11,10 @@ export class VideosComponent implements OnInit {
   @Input() imagesList3: any;
   public lang = localStorage.getItem('lang')
 
-  constructor(private globalSrv: LangService) {
-   
+  safeURL: any;
+
+  constructor(private globalSrv: LangService, private _sanitizer: DomSanitizer) {
+
     globalSrv.itemValue.subscribe((nextValue) => {
       if (nextValue == 'EN') {
         this.lang = 'EN'
@@ -43,7 +46,7 @@ export class VideosComponent implements OnInit {
 
   displayFrame(link:string, descriptionFR:string, descriptionEN:string) {
     this.frameShow = true;
-    this.imageLink = link;
+    this.imageLink = this._sanitizer.bypassSecurityTrustResourceUrl(link) as string;
     this.imageDescriptionFR = descriptionFR;
     this.imageDescriptionEN = descriptionEN;
   }
