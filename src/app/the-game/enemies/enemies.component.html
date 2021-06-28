@@ -2,26 +2,73 @@
 
 <div *ngIf="lang == 'FR'">
   <p class="paragraph">Durant le jeu, le joueur peut se retrouver face à plus de 10 ennemis différents. Chacun d'entre eux possède ses propres caractéristiques et méthodes d'attaque. Voici 3 d'entre eux :</p>
-
-  <ul class="mt-4 mb-4 ml-8 list-disc paragraph">
-    <li><b>S-019 /</b> Robot chirurgical à plusieurs bras qui tente d'attraper le joueur, lors de ses premières tentatives il fait de petits dégâts et finit par immobiliser le joueur. Pour s'en débarrasser, le joueur doit marteler un bouton. Le bouton à marteler ne sera pas toujours le même pour chaque robot de ce type. <br><br></li>
-    <li><b>A-402 (Mode militaire) /</b> Robot modulaire aux proportions humaines. Il tire des balles à l'aide d'un pistolet. Des tirs rapides mais peu de dégâts. <br> <br></li>
-    <li><b>A-373 /</b> Il tire une balle toutes les 5 secondes comme un sniper. Quelques balles suffisent à éliminer le joueur.</li>
-  </ul>
-
-  <img class="w-full mt-5 mb-5" src="" alt="">
+  <br><br>
+  <div class="grid grid-cols-1 gap-12 lg:grid-flow-col lg:grid-cols-3">
+    <div>
+        <div class="relative bg-center bg-cover h-80 border-cadre rounded-xl background-image-robot-1 border-gray_background_light shadow-gray" alt="">
+          <div class="font absolute flex items-center h-10 px-4 text-sm md:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
+            S-019
+          </div>
+        </div>
+        <p class="mt-5 small-paragraph">Robot chirurgical à plusieurs bras qui tente d'attraper le joueur.</p>
+    </div>
+  
+    <div>
+        <div class="relative bg-center bg-cover h-80 border-cadre rounded-xl background-image-robot-2 border-gray_background_light shadow-gray" alt="">
+          <div class="font absolute flex items-center h-10 px-4 text-sm md:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
+            A-373
+          </div>
+        </div>
+        <p class="mt-5 small-paragraph">Robot araignée tirant une balle toutes les 5 secondes comme un sniper.</p>
+    </div>
+  
+    <div>
+      <div class="relative bg-center bg-cover h-80 border-cadre rounded-xl background-image-robot-3 border-gray_background_light shadow-gray" alt="">
+        <div class="font absolute flex items-center h-10 px-4 text-sm md:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
+          A-402
+        </div>
+      </div>
+      <p class="mt-5 small-paragraph">Robot modulaire tirant des balles rapides avec son pistolet intégré.</p>
+    </div>
+  
+  
+  </div>
 </div>
 
 <!-------------- LANGUE EN ------------>
 
 <div *ngIf="lang == 'EN'">
 <p class="paragraph">During the game, the player can come face to face with more than 10 different enemies. Each one has its own characteristics and methods of attack. Here are 3 of them:</p>
+<br><br>
+<div class="grid grid-cols-1 gap-12 lg:grid-flow-col lg:grid-cols-3">
+  <div>
+      <div class="relative bg-center bg-cover h-80 border-cadre rounded-xl background-image-robot-1 border-gray_background_light shadow-gray" alt="">
+        <div class="font absolute flex items-center h-10 px-4 text-sm md:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
+          S-019
+        </div>
+      </div>
+      <p class="mt-5 small-paragraph">Multi-armed surgical robot that tries to catch the player.</p>
+  </div>
 
-  <ul class="mt-4 mb-4 ml-8 list-disc paragraph">
-    <li><b>S-019 /</b> Multi-armed surgical robot trying to catch the player, during its first attempts it does small damages and finally immobilizes the player. To get rid of it, the player must hammer a button. The button to hammer will not always be the same for each robot of this type. <br><br></li>
-    <li><b>A-402 (Military Mode) /</b> Modular robot with human proportions. It shoots bullets with a pistol. Quick shots but little damage. <br> <br></li>
-    <li><b>A-373 /</b> Shoots a bullet every 5 seconds like a sniper. A few bullets are enough to eliminate the player.</li>
-  </ul>
+  <div>
+      <div class="relative bg-center bg-cover h-80 border-cadre rounded-xl background-image-robot-2 border-gray_background_light shadow-gray" alt="">
+        <div class="font absolute flex items-center h-10 px-4 text-sm md:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
+          A-373
+        </div>
+      </div>
+      <p class="mt-5 small-paragraph">Spider robot firing a bullet every 5 seconds like a sniper.</p>
+  </div>
 
-  <img class="w-full mt-5 mb-5" src="" alt="">
+  <div>
+    <div class="relative bg-center bg-cover h-80 border-cadre rounded-xl background-image-robot-3 border-gray_background_light shadow-gray" alt="">
+      <div class="font absolute flex items-center h-10 px-4 text-sm md:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
+        A-402
+      </div>
+    </div>
+    <p class="mt-5 small-paragraph">Modular robot shooting fast bullets with its integrated gun.</p>
+  </div>
+
+
+</div>
+
 </div>
