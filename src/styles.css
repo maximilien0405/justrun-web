@@ -306,3 +306,23 @@ img {
 .font {
   font-family: 'outagecut' !important;
 }
+
+.background-image-robot-1 {
+  background-image: url('./assets/img/pages/robot1.png');
+}
+
+.background-image-robot-2 {
+  background-image: url('./assets/img/pages/robot2.png');
+}
+
+.background-image-robot-3 {
+  background-image: url('./assets/img/pages/robot3.png');
+}
+
+.background-image-arme-1 {
+  background-image: url('./assets/img/pages/arme1.png');
+}
+
+.background-image-arme-2 {
+  background-image: url('./assets/img/pages/arme2.png');
+}

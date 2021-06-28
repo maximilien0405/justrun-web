@@ -1,34 +1,36 @@
 <!-------------- LANGUE FR ------------>
 
 <div *ngIf="lang == 'FR'">
-  <p class="paragraph">L'une des choses qui rendent le jeu unique et intéressant est la mise en place d'une atmosphère stressante. Voici quelques éléments qui vous y aideront :</p>
-  <ul class="mt-4 mb-4 ml-8 list-disc paragraph">
-    <li>Les bruits de fond (ennemis, explosions, etc...).</li>
-    <li>Bruits de pas et de respiration du joueur</li>
-    <li>Une augmentation de la difficulté.</li>
-    <li>Des décors plus visibles, avec des lumières clignotantes, des objets cassés, etc.</li>
-  </ul>
-  <p class="paragraph">En descendant dans la tour, le joueur aura l'occasion de découvrir plus de 27 étages différents, chacun unique dans son environnement et sa dynamique.<br><br>
-    Certains étages seront entièrement dédiés au combat, tandis que d'autres seront plus calmes et permettront au joueur d'en apprendre davantage sur le lore du jeu.<br><br>
+  <p class="paragraph">
+    En descendant dans la tour, le joueur aura l'occasion de découvrir plus de 27 étages différents, chacun unique dans son environnement et sa dynamique de jeu.<br><br>
+    Certains étages seront entièrement dédiés au combat, tandis que d'autres seront plus calmes et permettront au joueur d'en apprendre davantage sur le lore.<br><br>
+
+    Les compétences spéciales du joueur sont débloquées au cours du jeu, et s'améliorent au fil de la descente des étages. Au programme, 4 compétences, chacune avec sa propre utilité. <br><br>
+
+    L'une des choses qui rendent le jeu unique et intéressant est la mise en place d'une atmosphère stressante. Avec par exemple des bruits de fond, des bruits de pas, une dificulté accrue, etc..
 
     Le joueur disposera d'une arme avec deux modes :
   </p>
-  <ul class="mt-4 mb-4 ml-8 list-decimal paragraph">
-    <li><b>Blaster</b> : Peu de dégâts, mais tir plus rapide. Munitions infinies.</li>
-    <li><b>Fusil à pompe</b> : Dégâts conséquents. Tir plus lent avec des munitions limitées.</li>
-  </ul>
-  <p class="paragraph">Il pourra également se battre au corps à corps pour étourdir un robot, ou glisser vers l'avant pour éviter les ennemis.
-  </p>
-  
-  <p class="paragraph">Les compétences spéciales du joueur sont débloquées au cours du jeu, et s'améliorent au fil de la descente des étages. Voici un résumé rapide des capacités spéciales proposées :
-  </p>
 
-  <ul class="mt-4 mb-4 ml-8 list-disc paragraph">
-    <li><b>X-ray /</b>Permet au joueur de voir à travers les murs. Cela peut être utilisé pour prévoir les attaques des ennemis, ou pour découvrir des pièces cachées.</li><br> 
-    <li><b>Hack /</b>Permet au joueur de faire une diversion en piratant un ennemi. Une fois piraté, le joueur peut créer une diversion en contrôlant l'ennemi.</li><br> 
-    <li><b>Ultra velocity /</b>Permet au joueur de ralentir son environnement, afin d'esquiver ou d'attaquer les ennemis.</li><br> 
-    <li><b>Energy Shield /</b>Permet au joueur de se protéger en créant un bouclier devant lui, le protégeant des balles ou des attaques de corps à corps.</li>
-  </ul>
+  <div class="grid grid-cols-1 gap-12 mt-10 mb-10 lg:grid-flow-col lg:grid-cols-2">
+    <div>
+        <div class="relative bg-center bg-cover h-80 border-cadre rounded-xl background-image-arme-1 border-gray_background_light shadow-gray" alt="">
+          <div class="font absolute flex items-center h-10 px-4 text-sm md:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
+            Blaster
+          </div>
+        </div>
+        <p class="mt-5 small-paragraph">Peu de dégâts, mais tir plus rapide. Munitions infinies.</p>
+    </div>
+  
+    <div>
+        <div class="relative bg-center bg-cover h-80 border-cadre rounded-xl background-image-arme-2 border-gray_background_light shadow-gray" alt="">
+          <div class="font absolute flex items-center h-10 px-4 text-sm md:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
+            Fusil a pompe
+          </div>
+        </div>
+        <p class="mt-5 small-paragraph">Dégâts conséquents. Tir plus lent avec des munitions limitées.</p>
+    </div>  
+  </div>
 </div>
 
 <!-------------- LANGUE EN ------------>
