@@ -33,11 +33,11 @@
         </svg>
       </button>
 
-      <button *ngIf="url === '/'"  (click)="dropdown()" class="box-border flex items-center justify-center text-base leading-10 align-middle transition duration-75 rounded-md cursor-pointer lg:hidden size-button-hamburger min-w-20 shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light">
+      <div *ngIf="url === '/'"  (click)="dropdown()" class="box-border flex items-center justify-center text-base leading-10 align-middle transition duration-75 rounded-md cursor-pointer lg:hidden size-button-hamburger min-w-20 shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light">
         <svg [class.rotate-menu]="displayDropdown == true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 transition duration-special " fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
-      </button>
+      </div>
     </div>
 
     <!---- DROPDOWN NAVIGATION (mobile) -------------->

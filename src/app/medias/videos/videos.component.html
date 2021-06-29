@@ -1,7 +1,7 @@
 <div *ngIf="frameShow == true" class="flex w-full h-full">
   <div class="hidden lg:flex popup-sharing-blur" (click)="hide()">
     <div class="w-full h-auto px-4 md:px-0 md:w-3/5 md:h-3/5 popup-sharing">
-      <iframe class="w-full h-full mt-24 rounded-t-md border-cadre border-gray_background_light !border-b-0" [src]="imageLink" allowfullscreen>
+      <iframe title="Vidéo preview" class="w-full h-full mt-24 rounded-t-md border-cadre border-gray_background_light !border-b-0" [src]="imageLink" allowfullscreen>
       </iframe>
       <p *ngIf="lang === 'FR'" class="p-5 text-base text-center text-white bg-gray_background_light rounded-b-md">{{ imageDescriptionFR }}</p>
       <p *ngIf="lang === 'EN'" class="p-5 text-base text-center text-white bg-gray_background_light rounded-b-md">{{ imageDescriptionEN }}</p>
@@ -25,21 +25,21 @@
   <!-- Mobile + tablet -->
 
   <div class="flex lg:hidden flex-col flex-grow px-0 py-2 transition duration-75 cursor-pointer sm:p-2.5 shadow-gray hover:opacity-90">
-    <iframe class="block object-cover h-64 min-w-full rounded-md rounded-b-none border-cadre border-gray_light_hover md:rounded-b-md" src="https://www.youtube.com/embed/1aDbkW2zI_M" allowfullscreen>
+    <iframe title="Trailer GameCup 2021" class="block object-cover h-64 min-w-full rounded-md rounded-b-none border-cadre border-gray_light_hover md:rounded-b-md" src="https://www.youtube.com/embed/1aDbkW2zI_M" allowfullscreen>
     </iframe>
     <p *ngIf="lang === 'FR'" class="block p-2 text-base text-center text-white md:hidden bg-gray_background_light rounded-b-md">JustRun - Trailer GameCup 2021</p>
     <p *ngIf="lang === 'EN'" class="block p-2 text-base text-center text-white md:hidden bg-gray_background_light rounded-b-md">JustRun - GameCup trailer 2021</p>
   </div>
 
   <div class="flex lg:hidden flex-col flex-grow px-0 py-2 transition duration-75 cursor-pointer sm:p-2.5 shadow-gray hover:opacity-90">
-    <iframe class="block object-cover h-64 min-w-full rounded-md rounded-b-none border-cadre border-gray_light_hover md:rounded-b-md" src="https://www.youtube.com/embed/BP_ta9sWS5A" allowfullscreen>
+    <iframe title="Thw Tower" class="block object-cover h-64 min-w-full rounded-md rounded-b-none border-cadre border-gray_light_hover md:rounded-b-md" src="https://www.youtube.com/embed/BP_ta9sWS5A" allowfullscreen>
     </iframe>
     <p *ngIf="lang === 'FR'" class="block p-2 text-base text-center text-white md:hidden bg-gray_background_light rounded-b-md">JustRun - La tour</p>
     <p *ngIf="lang === 'EN'" class="block p-2 text-base text-center text-white md:hidden bg-gray_background_light rounded-b-md">JustRun - The tower</p>
   </div>
 
   <div class="flex lg:hidden flex-col flex-grow px-0 py-2 transition duration-75 cursor-pointer sm:p-2.5 shadow-gray hover:opacity-90">
-    <iframe class="block object-cover h-64 min-w-full rounded-md rounded-b-none border-cadre border-gray_light_hover md:rounded-b-md" src="https://www.youtube.com/embed/Hqt1D01T4ZI" allowfullscreen>
+    <iframe title="New music" class="block object-cover h-64 min-w-full rounded-md rounded-b-none border-cadre border-gray_light_hover md:rounded-b-md" src="https://www.youtube.com/embed/Hqt1D01T4ZI" allowfullscreen>
     </iframe>
     <p *ngIf="lang === 'FR'" class="block p-2 text-base text-center text-white md:hidden bg-gray_background_light rounded-b-md">JustRun - Nouvelle musique</p>
     <p *ngIf="lang === 'EN'" class="block p-2 text-base text-center text-white md:hidden bg-gray_background_light rounded-b-md">JustRun - New music</p>
