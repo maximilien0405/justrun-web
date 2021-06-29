@@ -22,6 +22,7 @@ import { trigger, transition, style, animate, state, keyframes } from '@angular/
 export class HomeComponent implements OnInit {
 
   public frameShow:boolean = false;
+  public mobileFrame:boolean = false;
 
   constructor() { }
 
@@ -34,5 +35,10 @@ export class HomeComponent implements OnInit {
 
   hide() {
     this.frameShow = false
+  }
+
+  displayMobileFrame() {
+    this.mobileFrame = true;
+    console.log("test")
   }
 }
