@@ -3,7 +3,7 @@
 @import 'tailwindcss/utilities';
 
 * {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Rubik', 'Arial', sans-serif;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -292,7 +292,6 @@ img {
        url('assets/font/outage/outage-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
 }
 
 @font-face {
