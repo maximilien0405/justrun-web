@@ -261,7 +261,7 @@ img {
     height: calc(100vh);
     display: flex;
     z-index: 2;
-    background: rgba(0, 0, 0, 0.705);
+    background: rgba(0, 0, 0, 0.905);
     animation: fadeIn ease 0.5s;
     -webkit-animation: fadeIn ease 0.5s;
     -moz-animation: fadeIn ease 0.5s;

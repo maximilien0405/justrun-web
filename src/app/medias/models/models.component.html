@@ -1,6 +1,6 @@
 <div *ngIf="frameShow == true" class="flex w-full h-full">
   <div class="hidden md:flex popup-sharing-blur" (click)="hide()">
-    <div class="w-full h-auto px-4 md:px-0 md:w-3/5 md:h-3/5 popup-sharing">
+    <div class="w-full h-auto px-4 md:px-0 md:w-max md:h-3/5 popup-sharing">
       <img class="w-full h-full mt-24 rounded-t-md border-cadre border-gray_background_light !border-b-0" [src]="imageLink" alt="">
       <p *ngIf="lang === 'FR'" class="p-5 text-base text-center text-white bg-gray_background_light rounded-b-md">{{ imageDescriptionFR }}</p>
       <p *ngIf="lang === 'EN'" class="p-5 text-base text-center text-white bg-gray_background_light rounded-b-md">{{ imageDescriptionEN }}</p>
