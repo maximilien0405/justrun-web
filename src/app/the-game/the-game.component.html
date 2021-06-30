@@ -9,6 +9,10 @@
   <div class="w-full h-1 my-auto mb-12 border-t-lign border-blue_border shadow-blue-border-lign"></div>
   <app-presentation></app-presentation>
 
+  <h1 class="p-4 pt-0 pl-0 mt-12 mb-1 text-xl text-white font">{{ 'THE-GAME.MENU.4' | translate }}</h1>
+  <div class="w-full h-1 my-auto mb-12 border-t-lign border-blue_border shadow-blue-border-lign"></div>
+  <app-gameplay></app-gameplay>
+
   <h1 class="p-4 pt-0 pl-0 mt-12 mb-1 text-xl text-white font">{{ 'THE-GAME.MENU.2' | translate }}</h1>
   <div class="w-full h-1 my-auto mb-12 border-t-lign border-blue_border shadow-blue-border-lign"></div>
   <app-storyline></app-storyline>
@@ -16,10 +20,6 @@
   <h1 class="p-4 pt-0 pl-0 mt-12 mb-1 text-xl text-white font">{{ 'THE-GAME.MENU.3' | translate }}</h1>
   <div class="w-full h-1 my-auto mb-12 border-t-lign border-blue_border shadow-blue-border-lign"></div>
   <app-art-dir></app-art-dir>
-
-  <h1 class="p-4 pt-0 pl-0 mt-12 mb-1 text-xl text-white font">{{ 'THE-GAME.MENU.4' | translate }}</h1>
-  <div class="w-full h-1 my-auto mb-12 border-t-lign border-blue_border shadow-blue-border-lign"></div>
-  <app-gameplay></app-gameplay>
 
   <h1 class="p-4 pt-0 pl-0 mt-12 mb-1 text-xl text-white font">{{ 'THE-GAME.MENU.5' | translate }}</h1>
   <div class="w-full h-1 my-auto mb-12 border-t-lign border-blue_border shadow-blue-border-lign"></div>
@@ -36,6 +36,17 @@
 
   <div *ngIf="showPresentation" class="mb-12">
     <app-presentation></app-presentation>
+  </div>
+
+  <a (click)="changeMenu('gameplay')" class="cursor-pointer">
+    <div [ngClass]="{'!bg-gray_light_hover': showGameplay}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+      <h1 class="py-4 text-xl text-white">{{ 'THE-GAME.MENU-M.4' | translate }}</h1>
+      <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showGameplay == false}" class="w-6 h-6 transition duration-75" alt="">
+    </div>
+  </a>
+
+  <div *ngIf="showGameplay" class="mb-12">
+    <app-gameplay></app-gameplay>
   </div>
 
   <a (click)="changeMenu('storyline')" class="cursor-pointer">
@@ -58,17 +69,6 @@
 
   <div *ngIf="showArtisticDirection" class="mb-12">
     <app-art-dir></app-art-dir>
-  </div>
-
-  <a (click)="changeMenu('gameplay')" class="cursor-pointer">
-    <div [ngClass]="{'!bg-gray_light_hover': showGameplay}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
-      <h1 class="py-4 text-xl text-white">{{ 'THE-GAME.MENU-M.4' | translate }}</h1>
-      <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showGameplay == false}" class="w-6 h-6 transition duration-75" alt="">
-    </div>
-  </a>
-
-  <div *ngIf="showGameplay" class="mb-12">
-    <app-gameplay></app-gameplay>
   </div>
 
   <a (click)="changeMenu('enemies')" class="cursor-pointer">

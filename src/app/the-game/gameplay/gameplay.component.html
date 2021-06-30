@@ -5,18 +5,16 @@
     En descendant dans la tour, le joueur aura l'occasion de découvrir plus de 27 étages différents, chacun unique dans son environnement et sa dynamique de jeu.<br><br>
     Certains étages seront entièrement dédiés au combat, tandis que d'autres seront plus calmes et permettront au joueur d'en apprendre davantage sur le lore.<br><br>
 
-    Les compétences spéciales du joueur sont débloquées au cours du jeu, et s'améliorent au fil de la descente des étages. Au programme, 4 compétences, chacune avec sa propre utilité. <br><br>
-
-    L'une des choses qui rendent le jeu unique et intéressant est la mise en place d'une atmosphère stressante. Avec par exemple des bruits de fond, des bruits de pas, une dificulté accrue, etc..
-
-    Le joueur disposera d'une arme avec deux modes :
+    En plus de cela, celui-ci disposera de compétences spéciales. Elles seront débloquées au cours du jeu, et s'amélioreront au fil de la descente des étages. Au programme, 4 compétences, chacune avec sa propre utilité.
+    <br><br>
+    <b>Le joueur disposera d'une arme avec deux modes :</b>
   </p>
 
   <div class="grid grid-cols-1 gap-12 mt-10 mb-10 lg:grid-flow-col lg:grid-cols-2">
     <div>
         <div class="relative bg-center bg-cover h-80 border-cadre rounded-xl background-image-arme-1 border-gray_background_light shadow-gray" alt="">
           <div class="font absolute flex items-center h-10 px-4 text-sm md:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
-            Blaster
+            Mode "Blaster"
           </div>
         </div>
         <p class="mt-5 small-paragraph">Peu de dégâts, mais tir plus rapide. Munitions infinies.</p>
@@ -25,7 +23,7 @@
     <div>
         <div class="relative bg-center bg-cover h-80 border-cadre rounded-xl background-image-arme-2 border-gray_background_light shadow-gray" alt="">
           <div class="font absolute flex items-center h-10 px-4 text-sm md:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
-            Fusil a pompe
+            Mode "Fusil a pompe"
           </div>
         </div>
         <p class="mt-5 small-paragraph">Dégâts conséquents. Tir plus lent avec des munitions limitées.</p>
@@ -36,33 +34,32 @@
 <!-------------- LANGUE EN ------------>
 
 <div *ngIf="lang == 'EN'">
-  <p class="paragraph">One of the things that makes the game unique and interesting is the setting of a stressful atmosphere. Here are some elements that will help:</p>
-  <ul class="mt-4 mb-4 ml-8 list-disc paragraph">
-    <li>Background noise (enemies, explosions, etc..)</li>
-    <li>Footsteps and breathing sounds of the player</li>
-    <li>Increased difficulty</li>
-    <li>More visible scenery, with flashing lights, broken things, etc.</li>
-  </ul>
-  <p class="paragraph">As the player descends the tower, he will have the opportunity to discover more than 27 different floors, each unique in their environment and dynamics. <br><br>
-    Some floors will be entirely dedicated to combat, while others will be quieter and will allow the player to learn more about the game lore. <br><br>
+  <p class="paragraph">
+    When descending the tower, the player will have the opportunity to discover more than 27 different floors, each one unique in its environment and its game dynamics.<br><br>
+    Some floors will be entirely dedicated to combat, while others will be calmer and allow the player to learn more about the lore.<br><br>
 
-    The player will have a weapon with two modes:
-  </p>
-  <ul class="mt-4 mb-4 ml-8 list-decimal paragraph">
-    <li><b>Blaster</b> : Little damage, but faster shooting. Infinite ammunition.</li>
-    <li><b>Shotgun</b> : Consequent damage. Slower shooting with limited ammunition</li>
-  </ul>
-  <p class="paragraph">  He will also be able to fight in hand-to-hand combat to stun a robot, or to slide forward to avoid enemies.
+    In addition to that, he will have special skills. They will be unlocked during the game, and will improve as you go down the floors. There are 4 skills, each with its own utility.
+    <br><br>
+    <b>The player will have a weapon with two modes:</b>
   </p>
 
-  <p class="paragraph">The player's special skills are unlocked during the game, and improve during the descent of the floors. Here is a quick summary of the special abilities provided:
-  </p>
-
-  <ul class="mt-4 mb-4 ml-8 list-disc paragraph">
-    <li><b>X-ray /</b>Allows the player to see through walls. This can be used to predict attacks from enemies, or to discover hidden rooms.</li><br> 
-    <li><b>Hack /</b>Allows the player to make a diversion by hacking an enemy. Once hacked, the player can create a diversion by controlling the enemy.</li><br> 
-    <li><b>Ultra velocity /</b>Allows the player to slow down his environment, in order to dodge or attack the enemies.</li><br> 
-    <li><b>Energy Shield /</b>Allows the player to protect themselves by creating a shield in front of them, protecting them from bullets or corpse attacks.</li>
-  </ul>
+  <div class="grid grid-cols-1 gap-12 mt-10 mb-10 lg:grid-flow-col lg:grid-cols-2">
+    <div>
+        <div class="relative bg-center bg-cover h-80 border-cadre rounded-xl background-image-arme-1 border-gray_background_light shadow-gray" alt="">
+          <div class="font absolute flex items-center h-10 px-4 text-sm md:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
+            Mode "Blaster"
+          </div>
+        </div>
+        <p class="mt-5 small-paragraph">Little damage, but faster shooting. Infinite ammunition.</p>
+    </div>
   
+    <div>
+        <div class="relative bg-center bg-cover h-80 border-cadre rounded-xl background-image-arme-2 border-gray_background_light shadow-gray" alt="">
+          <div class="font absolute flex items-center h-10 px-4 text-sm md:text-xs xl:text-sm font-medium text-white rounded-bl-md rounded-tr-md -bottom-2.5 -left-2.5 bg-blue_button border-blue_border border-lign">
+            Mode "Shotgun"
+          </div>
+        </div>
+        <p class="mt-5 small-paragraph">Heavy damage. Slower firing with limited ammunition.</p>
+    </div>  
+  </div>
 </div>
