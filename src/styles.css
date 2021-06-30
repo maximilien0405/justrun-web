@@ -126,6 +126,10 @@ html, body {
     height: 21.875rem !important;
     width: 37.5rem;
   }
+
+  .w-special {
+    max-width: 37.5rem;
+  }
 }
 
 .shadow-blue-button {
