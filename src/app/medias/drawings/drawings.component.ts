@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
-import { LangService } from '../../lang.service';
+import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-drawings',
@@ -9,29 +9,17 @@ import { LangService } from '../../lang.service';
 export class DrawingsComponent implements OnInit {
 
   @Input() imagesList1: any;
-  public lang = localStorage.getItem('lang')
+  public lang = this.translate.currentLang
 
-  constructor(private globalSrv: LangService) {
-   
-    globalSrv.itemValue.subscribe((nextValue) => {
-      if (nextValue == 'EN') {
-        this.lang = 'EN'
-      } else if(nextValue == 'FR') {
-        this.lang = 'FR'
-      }
-   })
+  constructor(private translate: TranslateService) {
+    this.translate.onLangChange
+    .subscribe((event: LangChangeEvent) => {
+      this.lang = event.lang
+      this.reloadData()
+  });
   }
 
-  ngOnInit(): void {
-    if(this.lang == 'EN') {
-      this.lang = 'EN'
-    }
-    else if(this.lang == 'FR') {
-      this.lang = 'FR'
-    } else {
-      this.lang = 'FR'
-    }
-  }
+  ngOnInit(): void {}
 
   reloadData() {
     this.imagesList1 = [...this.imagesList1];

@@ -20,8 +20,8 @@
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
               <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang === 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang === 'EN'; langElse" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'; langElse" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
 
               <ng-template #langElse>
                 <p class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
@@ -48,8 +48,8 @@
             </div>
           </div>
           <div class="flex flex-col w-full">
-            <p *ngIf="lang === 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang === 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
           </div>
         </div>
       </div>
@@ -71,8 +71,8 @@
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
               <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang === 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang === 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
 
               <div class="flex flex-row w-full ml-5">
                 <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
@@ -95,8 +95,8 @@
             </div>
           </div>
           <div class="flex flex-col w-full">
-            <p *ngIf="lang === 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang === 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
           </div>
         </div>
       </div>
@@ -118,8 +118,8 @@
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
               <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang === 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang === 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
 
               <div class="flex flex-row w-full ml-5">
                 <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
@@ -142,8 +142,8 @@
             </div>
           </div>
           <div class="flex flex-col w-full">
-            <p *ngIf="lang === 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang === 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
           </div>
         </div>
       </div>
@@ -165,8 +165,8 @@
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
               <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang === 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang === 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
 
               <div class="flex flex-row w-full ml-5">
                 <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
@@ -189,8 +189,8 @@
             </div>
           </div>
           <div class="flex flex-col w-full">
-            <p *ngIf="lang === 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang === 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
           </div>
         </div>
       </div>
@@ -212,8 +212,8 @@
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
               <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang === 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang === 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
 
               <div class="flex flex-row w-full ml-5">
                 <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
@@ -236,8 +236,8 @@
             </div>
           </div>
           <div class="flex flex-col w-full">
-            <p *ngIf="lang === 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang === 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
           </div>
         </div>
       </div>
@@ -259,8 +259,8 @@
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
               <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang === 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang === 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
 
               <div class="flex flex-row w-full ml-5">
                 <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
@@ -283,8 +283,8 @@
             </div>
           </div>
           <div class="flex flex-col w-full">
-            <p *ngIf="lang === 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang === 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
           </div>
         </div>
       </div>
@@ -305,8 +305,8 @@
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
               <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang === 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang === 'EN'; langElse" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'; langElse" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
 
               <ng-template #langElse>
                 <p class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
@@ -333,8 +333,8 @@
             </div>
           </div>
           <div class="flex flex-col w-full">
-            <p *ngIf="lang === 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang === 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
           </div>
         </div>
       </div>
@@ -352,8 +352,8 @@
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
               <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang === 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang === 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
 
               <div class="flex flex-row w-full ml-5">
                 <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
@@ -376,8 +376,8 @@
             </div>
           </div>
           <div class="flex flex-col w-full">
-            <p *ngIf="lang === 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang === 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
           </div>
         </div>
       </div>
@@ -395,8 +395,8 @@
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
               <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang === 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang === 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
 
               <div class="flex flex-row w-full ml-5">
                 <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
@@ -419,8 +419,8 @@
             </div>
           </div>
           <div class="flex flex-col w-full">
-            <p *ngIf="lang === 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang === 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
           </div>
         </div>
       </div>
@@ -438,8 +438,8 @@
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
               <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang === 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang === 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
 
               <div class="flex flex-row w-full ml-5">
                 <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
@@ -462,8 +462,8 @@
             </div>
           </div>
           <div class="flex flex-col w-full">
-            <p *ngIf="lang === 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang === 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
           </div>
         </div>
       </div>
@@ -481,8 +481,8 @@
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
               <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang === 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang === 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
 
               <div class="flex flex-row w-full ml-5">
                 <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
@@ -505,8 +505,8 @@
             </div>
           </div>
           <div class="flex flex-col w-full">
-            <p *ngIf="lang === 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang === 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
           </div>
         </div>
       </div>
@@ -524,8 +524,8 @@
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
               <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang === 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang === 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
 
               <div class="flex flex-row w-full ml-5">
                 <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
@@ -548,8 +548,8 @@
             </div>
           </div>
           <div class="flex flex-col w-full">
-            <p *ngIf="lang === 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang === 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
           </div>
         </div>
       </div>

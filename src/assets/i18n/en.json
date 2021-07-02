@@ -31,6 +31,13 @@
         "3" : "Artistic direction",
         "4" : "Gameplay",
         "5" : "Enemies"
+      },
+      "MENU-M" : {
+        "1" : "Presentation",
+        "2" : "Storyline",
+        "3" : "Artistic direction",
+        "4" : "Gameplay",
+        "5" : "Enemies"
       }
     },
     "MEDIAS" : {
@@ -46,6 +53,14 @@
       "TITLE": "OUR TEAM",
       "PARAGRAPH": "Our team is now composed of 19 different people of all ages and backgrounds.  We are all volunteers, and work around the same passion: video games.",
       "MENU" : {
+        "1" : "Project managers",
+        "2" : "Creative team",
+        "3" : "Game & level designer",
+        "4" : "Developers",
+        "5" : "Modelers & Animators",
+        "6" : "Drawers"
+      },
+      "MENU-M" : {
         "1" : "Project managers",
         "2" : "Creative team",
         "3" : "Game & level designer",
