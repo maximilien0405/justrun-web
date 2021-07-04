@@ -58,7 +58,8 @@
         "3" : "Game & level designer",
         "4" : "Developers",
         "5" : "Modelers & Animators",
-        "6" : "Drawers"
+        "6" : "Drawers",
+        "7" : "Musician & Sound designer"
       },
       "MENU-M" : {
         "1" : "Project managers",
@@ -66,7 +67,7 @@
         "3" : "Game & level designer",
         "4" : "Developers",
         "5" : "Modelers & Animators",
-        "6" : "Drawers"
+        "7" : "Musician & Sound designer"
       }
     },
     "CONTACT" : {

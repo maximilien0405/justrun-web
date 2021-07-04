@@ -20,6 +20,7 @@ export class OurTeamComponent implements OnInit {
   showDeveloment = false;
   showModelers = false;
   showDrawers = false;
+  showSoundDesign = false;
 
   constructor(private router: Router, private translate: TranslateService) {
     this.router.events.subscribe((event) => {
@@ -45,6 +46,7 @@ export class OurTeamComponent implements OnInit {
       this.showDrawers = false;
       this.showGameLevelDesign = false;
       this.showModelers = false;
+      this.showSoundDesign = false;
     }
     else if(menu == "creative-team") {
       this.showCreativeTeam = !this.showCreativeTeam;
@@ -53,6 +55,7 @@ export class OurTeamComponent implements OnInit {
       this.showDrawers = false;
       this.showGameLevelDesign = false;
       this.showModelers = false;
+      this.showSoundDesign = false;
     }
     else if(menu == "development") {
       this.showDeveloment = !this.showDeveloment;
@@ -61,6 +64,7 @@ export class OurTeamComponent implements OnInit {
       this.showDrawers = false;
       this.showGameLevelDesign = false;
       this.showModelers = false;
+      this.showSoundDesign = false;
     }
     else if(menu == "drawers") {
       this.showDrawers = !this.showDrawers;
@@ -69,6 +73,7 @@ export class OurTeamComponent implements OnInit {
       this.showDeveloment = false;
       this.showGameLevelDesign = false;
       this.showModelers = false;
+      this.showSoundDesign = false;
     }
     else if(menu == "game-level-design") {
       this.showGameLevelDesign = !this.showGameLevelDesign;
@@ -77,9 +82,20 @@ export class OurTeamComponent implements OnInit {
       this.showDeveloment = false;
       this.showDrawers = false;
       this.showModelers = false;
+      this.showSoundDesign = false;
     }
     else if(menu == "modelers") {
       this.showModelers = !this.showModelers;
+      this.showProjectManagement = false;
+      this.showCreativeTeam = false;
+      this.showDeveloment = false;
+      this.showDrawers = false;
+      this.showGameLevelDesign = false;
+      this.showSoundDesign = false;
+    }
+    else if(menu == "sound-design") {
+      this.showSoundDesign = !this.showSoundDesign;
+      this.showModelers = false;
       this.showProjectManagement = false;
       this.showCreativeTeam = false;
       this.showDeveloment = false;

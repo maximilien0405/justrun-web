@@ -63,7 +63,7 @@
     </div>
   </a>
 
-  <div *ngIf="showCreativeTeam" class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-12 ">
+  <div *ngIf="showCreativeTeam" class="grid w-full grid-cols-1 grid-rows-2 gap-6 mb-12 ">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
       <div *ngIf="i.group == 'creative-team'">
         <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
@@ -113,6 +113,53 @@
   <div *ngIf="showGameLevelDesign" class="grid w-full grid-cols-1 grid-rows-2 gap-6 mb-12 ">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
       <div *ngIf="i.group == 'game-level-design'">
+        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+          <div class="flex flex-row w-full pb-5">
+            <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-md border-lign border-blue_border" alt=""></div>
+            <div class="flex flex-col">
+              <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+
+              <div class="flex flex-row w-full ml-5">
+                <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
+                  <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                    <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
+                  </div>
+                </a>
+
+                <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
+                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                    <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
+                  </div>
+                </a>
+                <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
+                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                    <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col w-full">
+            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+
+  <a (click)="changeMenu('sound-design')" class="cursor-pointer">
+    <div [ngClass]="{'!bg-gray_light_hover': showSoundDesign}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+      <h1 class="py-4 text-xl text-white">{{ 'TEAM.MENU-M.7' | translate }}</h1>
+      <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showSoundDesign == false}" class="w-6 h-6 transition duration-75" alt="">
+    </div>
+  </a>
+
+  <div *ngIf="showSoundDesign" class="grid w-full grid-cols-1 grid-rows-2 gap-6 mb-12 ">
+    <ng-template ngFor let-i [ngForOf]="allProfiles">
+      <div *ngIf="i.group == 'sound-design'">
         <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
           <div class="flex flex-row w-full pb-5">
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-md border-lign border-blue_border" alt=""></div>
@@ -295,7 +342,7 @@
 <!--------------------- DESKTOP BOX DISPLAY ------------------------->
 <div class="hidden lg:block">
   <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.1' | translate }}</h1>
-  <div class="w-full h-1 my-auto mb-12 border-t-lign border-blue_border shadow-blue-border-lign"></div>
+  <div class="w-full h-1 my-auto mb-8 border-t-lign border-blue_border shadow-blue-border-lign"></div>
 
   <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-16 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
@@ -342,7 +389,7 @@
   </div>
 
   <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.2' | translate }}</h1>
-  <div class="w-full h-1 my-auto mb-12 border-t-lign border-blue_border shadow-blue-border-lign"></div>
+  <div class="w-full h-1 my-auto mb-8 border-t-lign border-blue_border shadow-blue-border-lign"></div>
 
   <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-16 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
@@ -385,7 +432,7 @@
   </div>
 
   <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.3' | translate }}</h1>
-  <div class="w-full h-1 my-auto mb-12 border-t-lign border-blue_border shadow-blue-border-lign"></div>
+  <div class="w-full h-1 my-auto mb-8 border-t-lign border-blue_border shadow-blue-border-lign"></div>
 
   <div class="grid w-full grid-cols-1 grid-rows-2 gap-6 mb-16 lg:grid-rows-1 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
@@ -428,7 +475,7 @@
   </div>
 
   <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.4' | translate }}</h1>
-  <div class="w-full h-1 my-auto mb-12 border-t-lign border-blue_border shadow-blue-border-lign"></div>
+  <div class="w-full h-1 my-auto mb-8 border-t-lign border-blue_border shadow-blue-border-lign"></div>
 
   <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-16 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
@@ -470,8 +517,51 @@
     </ng-template>
   </div>
 
+  <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.7' | translate }}</h1>
+  <div class="w-full h-1 my-auto mb-8 border-t-lign border-blue_border shadow-blue-border-lign"></div>
+
+  <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-16 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
+    <ng-template ngFor let-i [ngForOf]="allProfiles">
+      <div *ngIf="i.group == 'sound-design'">
+        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+          <div class="flex flex-row w-full pb-5">
+            <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-md border-lign border-blue_border" alt=""></div>
+            <div class="flex flex-col">
+              <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+
+              <div class="flex flex-row w-full ml-5">
+                <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
+                  <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                    <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
+                  </div>
+                </a>
+
+                <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
+                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                    <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
+                  </div>
+                </a>
+                <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
+                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                    <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col w-full">
+            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+
   <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.5' | translate }}</h1>
-  <div class="w-full h-1 my-auto mb-12 border-t-lign border-blue_border shadow-blue-border-lign"></div>
+  <div class="w-full h-1 my-auto mb-8 border-t-lign border-blue_border shadow-blue-border-lign"></div>
 
   <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-16 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
@@ -514,7 +604,7 @@
   </div>
 
   <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.6' | translate }}</h1>
-  <div class="w-full h-1 my-auto mb-12 border-t-lign border-blue_border shadow-blue-border-lign"></div>
+  <div class="w-full h-1 my-auto mb-8 border-t-lign border-blue_border shadow-blue-border-lign"></div>
 
   <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
