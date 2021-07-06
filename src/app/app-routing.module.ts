@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'our-team', component: OurTeamComponent },
   { path: 'medias', component: MediasComponent },
   { path: 'contact-us', component: ContactUsComponent },
+  { path: '**', redirectTo: '/' }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
