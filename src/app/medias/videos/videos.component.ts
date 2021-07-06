@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { LangService } from '../../lang.service';
 import { DomSanitizer } from '@angular/platform-browser';
+import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-videos',
@@ -9,31 +9,19 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class VideosComponent implements OnInit {
 
   @Input() imagesList3: any;
-  public lang = localStorage.getItem('lang')
+  public lang = this.translate.currentLang
 
   safeURL: any;
 
-  constructor(private globalSrv: LangService, private _sanitizer: DomSanitizer) {
-
-    globalSrv.itemValue.subscribe((nextValue) => {
-      if (nextValue == 'EN') {
-        this.lang = 'EN'
-      } else if(nextValue == 'FR') {
-        this.lang = 'FR'
-      }
-   })
+  constructor(private translate: TranslateService, private _sanitizer: DomSanitizer) {
+    this.translate.onLangChange
+    .subscribe((event: LangChangeEvent) => {
+      this.lang = event.lang
+      this.reloadData()
+  });
   }
 
-  ngOnInit(): void {
-    if(this.lang == 'EN') {
-      this.lang = 'EN'
-    }
-    else if(this.lang == 'FR') {
-      this.lang = 'FR'
-    } else {
-      this.lang = 'FR'
-    }
-  }
+  ngOnInit(): void {}
 
   reloadData() {
     this.imagesList3 = [...this.imagesList3];

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
+import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { Profile } from '../common/models/profile.model';
-import { LangService } from '../lang.service';
 import { PROFILE } from '../profile-list';
 @Component({
   selector: 'app-our-team',
@@ -12,7 +12,7 @@ export class OurTeamComponent implements OnInit {
   url = "";
   allProfiles = PROFILE;
 
-  public lang = localStorage.getItem('lang')
+  public lang = this.translate.currentLang
 
   showProjectManagement = true;
   showCreativeTeam = false;
@@ -21,33 +21,21 @@ export class OurTeamComponent implements OnInit {
   showModelers = false;
   showDrawers = false;
 
-  constructor(private router: Router, private globalSrv: LangService) {
+  constructor(private router: Router, private translate: TranslateService) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.url = this.router.url;
       }
     });
 
-    globalSrv.itemValue.subscribe((nextValue) => {
-      this.reloadData();
-      if (nextValue == 'EN') {
-        this.lang = 'EN'
-      } else if(nextValue == 'FR') {
-        this.lang = 'FR'
-      }
-   })
+    this.translate.onLangChange
+    .subscribe((event: LangChangeEvent) => {
+      this.lang = event.lang
+      this.reloadData()
+  });
   }
 
-  ngOnInit(): void {
-    if(this.lang == 'EN') {
-      this.lang = 'EN'
-    }
-    else if(this.lang == 'FR') {
-      this.lang = 'FR'
-    } else {
-      this.lang = 'FR'
-    }
-  }
+  ngOnInit(): void {}
 
   changeMenu(menu: string) {
     if(menu == "project-management") {
