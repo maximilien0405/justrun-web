@@ -9,7 +9,7 @@
   </div>
 </div>
 
-<div class="flex-row hidden mx-auto lg:flex">
+<div class="flex-row hidden mx-auto lg:flex fadeIn">
   <ng-template ngFor let-i [ngForOf]="imagesList3">
       <!-- Desktop -->
       <div (click)="displayFrame(i.image, i.descriptionFR, i.descriptionEN)" class="relative hidden md:flex sm:flex-row flex-grow px-0 py-2 transition duration-75 cursor-pointer sm:p-2.5 shadow-gray hover:opacity-90">
@@ -21,7 +21,7 @@
   </ng-template>
 </div>
 
-<div>
+<div class="fadeIn">
   <!-- Mobile + tablet -->
 
   <div class="flex lg:hidden flex-col flex-grow px-0 py-2 transition duration-75 cursor-pointer sm:p-2.5 shadow-gray hover:opacity-90">

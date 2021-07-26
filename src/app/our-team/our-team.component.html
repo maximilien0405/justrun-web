@@ -1,10 +1,10 @@
-<div class="items-center justify-center hidden w-full rounded-md md:flex h-36 bg-gray_background_light shadow-gray">
+<div class="items-center justify-center hidden w-full rounded-md fadeIn md:flex h-36 bg-gray_background_light shadow-gray">
   <h1 class="small-title font">{{ 'TEAM.TITLE' | translate }}</h1>
 </div>
 
-<p class="w-full md:text-center md:w-2/3 md:mx-auto mt-14 mb-14 paragraph">{{ 'TEAM.PARAGRAPH' | translate }}</p>
+<p class="w-full fadeIn md:text-center md:w-2/3 md:mx-auto mt-14 mb-14 paragraph">{{ 'TEAM.PARAGRAPH' | translate }}</p>
 
-<div class="block lg:hidden">
+<div class="block lg:hidden fadeIn">
   <a (click)="changeMenu('project-management')" class="cursor-pointer">
     <div [ngClass]="{'!bg-gray_light_hover': showProjectManagement}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
       <h1 class="py-4 text-xl text-white">{{ 'TEAM.MENU-M.1' | translate }}</h1>
@@ -340,7 +340,7 @@
 </div>
 
 <!--------------------- DESKTOP BOX DISPLAY ------------------------->
-<div class="hidden lg:block">
+<div class="hidden lg:block fadeIn">
   <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.1' | translate }}</h1>
   <div class="w-full h-1 my-auto mb-8 border-t-lign border-blue_border shadow-blue-border-lign"></div>
 
