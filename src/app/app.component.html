@@ -15,7 +15,7 @@
 
       <h1 *ngIf="url === '/the-game'" class="mt-32 small-title font">{{ 'THE-GAME.TITLE' | translate }}</h1>
       <h1 *ngIf="url === '/medias'" class="mt-32 small-title font">{{ 'MEDIAS.TITLE' | translate }}</h1>
-      <h1 *ngIf="url === '/contact-us'" class="mt-32 small-title font">{{ 'CONTACT.TITLE' | translate }}</h1>
+     <!--<h1 *ngIf="url === '/contact-us'" class="mt-32 small-title font">{{ 'CONTACT.TITLE' | translate }}</h1>-->
       <h1 *ngIf="url === '/our-team'" class="mt-32 small-title font">{{ 'TEAM.TITLE' | translate }}</h1>
 
     </div>
@@ -56,9 +56,9 @@
       <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/our-team'}" routerLink="our-team" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover font">
         {{ 'NAV.MENU-4' | translate }}
       </div>
-      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/contact-us'}" routerLink="contact-us" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover font">
+      <!--<div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/contact-us'}" routerLink="contact-us" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover font">
         {{ 'NAV.MENU-5' | translate }}
-      </div>
+      </div>-->
     </div>
   </div>
 
@@ -88,9 +88,9 @@
     </button>
 
     <!-- Contact us -->
-    <button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/contact-us'}" routerLink="contact-us" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border rounded-md cursor-pointer border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+    <!--<button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/contact-us'}" routerLink="contact-us" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border rounded-md cursor-pointer border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
       <p class="mx-auto text-sm font">{{ 'NAV.MENU-5' | translate }}</p>
-    </button>
+    </button>-->
   </div>
 
   <!---- BUY BUTTON (desktop only) --------->
