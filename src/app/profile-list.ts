@@ -21,7 +21,7 @@ export const PROFILE: Profile[] = [
       socialThreeLink: "https://www.behance.net/max-zim",
       socialThreeImg: "../assets/social/behance.svg",
     },
-    {
+    /*{
       userName: "Quentin F.",
       roleFR: "Chef de projet",
       roleEN: "Project Manager",
@@ -35,7 +35,7 @@ export const PROFILE: Profile[] = [
       socialTwoImg: "../assets/social/website.svg",
       socialThreeLink: "mailto:quentin.fert.pro@gmail.com",
       socialThreeImg: "../assets/social/mail.svg",
-    },
+    },*/
     {
       userName: "Antoine R.",
       roleFR: "Contributeur",
@@ -167,7 +167,7 @@ export const PROFILE: Profile[] = [
       socialThreeLink: "",
       socialThreeImg: "",
     },
-    {
+    /*{
       userName: "Clément D.",
       roleFR: "Développeur",
       roleEN: "Developer",
@@ -181,7 +181,7 @@ export const PROFILE: Profile[] = [
       socialTwoImg: "",
       socialThreeLink: "",
       socialThreeImg: "",
-    },
+    },*/
 
     /* --- MODELERS ---- */
 
