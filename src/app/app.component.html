@@ -28,13 +28,13 @@
 
     <div class="z-50 md:border-l-big md:border-gray_background_dark md:absolute md:top-9 md:right-button">
 
-      <button *ngIf="url !== '/'" (click)="dropdown()" [ngClass]="{'' : url !== '/'}" class="box-border flex items-center justify-center text-base leading-10 align-middle transition duration-75 rounded-md cursor-pointer lg:hidden size-button-hamburger min-w-20 shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_dark md:bg-gray_background_light">
+      <button *ngIf="url !== '/'" (click)="dropdown()" [ngClass]="{'' : url !== '/'}" class="box-border flex items-center justify-center text-base leading-10 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md lg:hidden size-button-hamburger min-w-20 shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_dark md:bg-gray_background_light">
         <svg [class.rotate-menu]="displayDropdown == true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 transition duration-special " fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
 
-      <div *ngIf="url === '/'"  (click)="dropdown()" class="box-border flex items-center justify-center text-base leading-10 align-middle transition duration-75 rounded-md cursor-pointer lg:hidden size-button-hamburger min-w-20 shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light">
+      <div *ngIf="url === '/'"  (click)="dropdown()" class="box-border flex items-center justify-center text-base leading-10 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md lg:hidden size-button-hamburger min-w-20 shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light">
         <svg [class.rotate-menu]="displayDropdown == true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 transition duration-special " fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
@@ -42,21 +42,21 @@
     </div>
 
     <!---- DROPDOWN NAVIGATION (mobile) -------------->
-    <div *ngIf="displayDropdown" [class.dropdown-height]="displayDropdown == true" class="absolute z-50 h-1 px-3 py-3 rounded-md lg:hidden transition-start md:right-button right-6 w-72 top-24 md:top-special bg-gray_background_light shadow-gray">
+    <div *ngIf="displayDropdown" [class.dropdown-height]="displayDropdown == true" class="absolute z-50 h-1 px-3 py-3 rounded-tl-md rounded-br-md lg:hidden transition-start md:right-button right-6 w-72 top-24 md:top-special bg-gray_background_light shadow-gray">
 
-      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/'}" routerLink="" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover font">
+      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/'}" routerLink="" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
         {{ 'NAV.MENU-1' | translate }}
       </div>
-      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/the-game'}" routerLink="the-game" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover font">
+      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/the-game'}" routerLink="the-game" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
         {{ 'NAV.MENU-2' | translate }}
       </div>
-      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/medias'}" routerLink="medias" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover font">
+      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/medias'}" routerLink="medias" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
         {{ 'NAV.MENU-3' | translate }}
       </div>
-      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/our-team'}" routerLink="our-team" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover font">
+      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/our-team'}" routerLink="our-team" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
         {{ 'NAV.MENU-4' | translate }}
       </div>
-      <!--<div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/contact-us'}" routerLink="contact-us" class="flex items-center justify-center w-full h-12 rounded-md cursor-pointer text-gray_subtitle hover:text-gray_subtitle_hover font">
+      <!--<div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/contact-us'}" routerLink="contact-us" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
         {{ 'NAV.MENU-5' | translate }}
       </div>-->
     </div>
@@ -68,27 +68,27 @@
   <div class="absolute flex-row hidden pb-2 ml-36 lg:inline-block px-special top-9 bg-gray_background_dark">
 
     <!-- Button Home -->
-    <button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/'}" routerLink="" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border rounded-md cursor-pointer border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+    <button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/'}" routerLink="" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border cursor-pointer rounded-tl-md rounded-br-md border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
       <p class="mx-auto text-sm font">{{ 'NAV.MENU-1' | translate }}</p>
     </button>
 
     <!-- Button The-game -->
-    <button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/the-game'}" routerLink="the-game" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border rounded-md cursor-pointer border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+    <button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/the-game'}" routerLink="the-game" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border cursor-pointer rounded-tl-md rounded-br-md border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
       <p class="mx-auto text-sm font">{{ 'NAV.MENU-2' | translate }}</p>
     </button>
 
     <!-- Button Medias -->
-    <button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/medias'}" routerLink="medias" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border rounded-md cursor-pointer border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+    <button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/medias'}" routerLink="medias" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border cursor-pointer rounded-tl-md rounded-br-md border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
       <p class="mx-auto text-sm font">{{ 'NAV.MENU-3' | translate }}</p>
     </button>
 
     <!-- Our team -->
-    <button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/our-team'}" routerLink="our-team" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border rounded-md cursor-pointer border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+    <button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/our-team'}" routerLink="our-team" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border cursor-pointer rounded-tl-md rounded-br-md border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
       <p class="mx-auto text-sm font">{{ 'NAV.MENU-4' | translate }}</p>
     </button>
 
     <!-- Contact us -->
-    <!--<button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/contact-us'}" routerLink="contact-us" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border rounded-md cursor-pointer border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+    <!--<button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/contact-us'}" routerLink="contact-us" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border cursor-pointer rounded-tl-md rounded-br-md border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
       <p class="mx-auto text-sm font">{{ 'NAV.MENU-5' | translate }}</p>
     </button>-->
   </div>
@@ -97,7 +97,7 @@
 
   <div class="absolute hidden md:block top-9 right-9 border-l-big border-b-big border-gray_background_dark">
     <a title="Discord Link" href="https://discord.com/invite/AsXv6GKW5V" target="_blank">
-      <button class="flex items-center text-sm font-bold font lea­­­ding-snug text-center text-white align-middle transition duration-75 border-lign hover:bg-blue_button_hover rounded-md cursor-pointer h-18 w-18 bg-blue_button shadow-blue-button shadow-gray border-blue_border px-2 focus:outline-none">
+      <button class="flex items-center text-sm font-bold font lea­­­ding-snug text-center text-white align-middle transition duration-75 border-lign hover:bg-blue_button_hover rounded-tr-md rounded-bl-md cursor-pointer h-18 w-18 bg-blue_button shadow-blue-button shadow-gray border-blue_border px-2 focus:outline-none">
         {{ 'BUYBUTTON' | translate }}
       </button>
     </a>
@@ -106,17 +106,17 @@
   <!---- SOCIAL BUTTONS (desktop only) --------->
   <div class="absolute hidden left-9 py-special top-96 bg-gray_background_dark md:inline-block">
     <a title="Discord Link" href="https://discord.com/invite/AsXv6GKW5V" target="_blank">
-      <div class="flex flex-col items-center justify-center w-10 h-10 align-middle transition duration-75 rounded-md cursor-pointer shadow-gray bg-gray_background_light hover:bg-gray_light_hover">
+      <div class="flex flex-col items-center justify-center w-10 h-10 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md shadow-gray bg-gray_background_light hover:bg-gray_light_hover">
         <img src="../assets/social/discord.png"  class="w-5 h-5" alt="discord">
       </div>
     </a>
     <a title="Instagram Link" href="https://www.instagram.com/justrunthegame/" target="_blank">
-      <div class="flex flex-col items-center justify-center w-10 h-10 mt-3 align-middle transition duration-75 rounded-md cursor-pointer shadow-gray bg-gray_background_light hover:bg-gray_light_hover">
+      <div class="flex flex-col items-center justify-center w-10 h-10 mt-3 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md shadow-gray bg-gray_background_light hover:bg-gray_light_hover">
         <img src="../assets/social/instagram.png" class="w-5 h-5" alt="instagram">
       </div>
     </a>
     <a title="Twitter Link" href="https://twitter.com/JustRun_Game" target="_blank">
-      <div class="flex flex-col items-center justify-center w-10 h-10 mt-3 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+      <div class="flex flex-col items-center justify-center w-10 h-10 mt-3 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
         <img src="../assets/social/twitter.png" class="w-5 h-5" alt="twitter">
       </div>
     </a>
@@ -137,7 +137,7 @@
     <div class="flex md:w-full md:flex-row">
 
       <!---- Change language --------->
-      <div class="flex flex-row items-center justify-between w-24 h-10 text-sm transition duration-75 rounded-md cursor-pointer select-none bg-gray_background_light text-gray_subtitle shadow-gray">
+      <div class="flex flex-row items-center justify-between w-24 h-10 text-sm transition duration-75 cursor-pointer select-none rounded-tl-md rounded-br-md bg-gray_background_light text-gray_subtitle shadow-gray">
         <div (click)="translate.use('fr') && changeLang('FR')" class="flex items-center w-1/2 h-full transition duration-75 rounded-l-md hover:bg-gray_light_hover group">
           <span class="w-full text-center text-gray_subtitle text-normal group-hover:text-gray_subtitle_hover font">FR</span>
         </div>
@@ -156,17 +156,17 @@
     <!---- SOCIAL BUTTONS --------->
     <div class="flex mt-0">
       <a title="Discord Link" href="https://discord.com/invite/AsXv6GKW5V" target="_blank">
-        <div class="flex items-center justify-center w-10 h-10 mr-3 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+        <div class="flex items-center justify-center w-10 h-10 mr-3 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
           <img src="../assets/social/discord.png"  class="w-5 h-5"  alt="discord">
         </div>
       </a>
       <a title="Instagram Link" href="https://www.instagram.com/justrunthegame/" target="_blank">
-        <div class="flex items-center justify-center w-10 h-10 mr-3 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+        <div class="flex items-center justify-center w-10 h-10 mr-3 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
           <img src="../assets/social/instagram.png" class="w-5 h-5" alt="instagram">
         </div>
       </a>
       <a title="Twitter Link" href="https://twitter.com/JustRun_Game" target="_blank">
-        <div class="flex items-center justify-center w-10 h-10 align-middle transition duration-75 rounded-md cursor-pointer bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+        <div class="flex items-center justify-center w-10 h-10 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
           <img src="../assets/social/twitter.png" class="w-5 h-5" alt="twitter">
         </div>
       </a>

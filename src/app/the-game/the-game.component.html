@@ -1,4 +1,4 @@
-<div class="items-center justify-center hidden w-full rounded-md fadeIn md:flex h-36 bg-gray_background_light shadow-gray">
+<div class="items-center justify-center hidden w-full rounded-tl-md rounded-br-md fadeIn md:flex h-36 bg-gray_background_light shadow-gray">
   <h1 class="small-title font">{{ 'THE-GAME.TITLE' | translate }}</h1>
 </div>
 
@@ -28,7 +28,7 @@
 
 <div class="block lg:hidden fadeIn">
   <a (click)="changeMenu('presentation')" class="cursor-pointer">
-    <div [ngClass]="{'!bg-gray_light_hover': showPresentation}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+    <div [ngClass]="{'!bg-gray_light_hover': showPresentation}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
       <h1 class="py-4 text-xl text-white">{{ 'THE-GAME.MENU-M.1' | translate }}</h1>
       <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showPresentation == false}" class="w-6 h-6 transition duration-75" alt="">
     </div>
@@ -39,7 +39,7 @@
   </div>
 
   <a (click)="changeMenu('gameplay')" class="cursor-pointer">
-    <div [ngClass]="{'!bg-gray_light_hover': showGameplay}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+    <div [ngClass]="{'!bg-gray_light_hover': showGameplay}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
       <h1 class="py-4 text-xl text-white">{{ 'THE-GAME.MENU-M.4' | translate }}</h1>
       <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showGameplay == false}" class="w-6 h-6 transition duration-75" alt="">
     </div>
@@ -50,7 +50,7 @@
   </div>
 
   <a (click)="changeMenu('storyline')" class="cursor-pointer">
-    <div [ngClass]="{'!bg-gray_light_hover': showStoryline}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+    <div [ngClass]="{'!bg-gray_light_hover': showStoryline}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
       <h1 class="py-4 text-xl text-white">{{ 'THE-GAME.MENU-M.2' | translate }}</h1>
       <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showStoryline == false}" class="w-6 h-6 transition duration-75" alt="">
     </div>
@@ -61,7 +61,7 @@
   </div>
 
   <a (click)="changeMenu('artistic-direction')" class="cursor-pointer">
-    <div [ngClass]="{'!bg-gray_light_hover': showArtisticDirection}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+    <div [ngClass]="{'!bg-gray_light_hover': showArtisticDirection}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
       <h1 class="py-4 text-xl text-white">{{ 'THE-GAME.MENU-M.3' | translate }}</h1>
       <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showArtisticDirection == false}" class="w-6 h-6 transition duration-75" alt="">
     </div>
@@ -72,7 +72,7 @@
   </div>
 
   <a (click)="changeMenu('enemies')" class="cursor-pointer">
-    <div [ngClass]="{'!bg-gray_light_hover': showEnemies}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+    <div [ngClass]="{'!bg-gray_light_hover': showEnemies}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
       <h1 class="py-4 text-xl text-white">{{ 'THE-GAME.MENU-M.5' | translate }}</h1>
       <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showEnemies == false}" class="w-6 h-6 transition duration-75" alt="">
     </div>

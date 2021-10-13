@@ -1,7 +1,7 @@
 <div *ngIf="frameShow == true" class="hidden w-full h-full xl:flex">
   <div class="flex items-center align-middle popup-sharing-blur" (click)="hide()">
     <div class="w-3/5 popup-sharing h-3/4">
-      <iframe title="Trailer GameCup 2021" class="w-full h-full rounded-md border-cadre border-gray_background_light" src="https://www.youtube.com/embed/1aDbkW2zI_M?&controls=1" allowfullscreen>
+      <iframe title="Trailer GameCup 2021" class="w-full h-full rounded-tl-md rounded-br-md border-cadre border-gray_background_light" src="https://www.youtube.com/embed/1aDbkW2zI_M?&controls=1" allowfullscreen>
       </iframe>
     </div>
   </div>
@@ -14,7 +14,7 @@
     <h1 class="title font">{{ 'HOME.TITLE' | translate}}</h1>
     <p class="mt-5 subtitle">{{ 'HOME.SUBTITLE' | translate }}</p>
     <a href="https://discord.com/invite/AsXv6GKW5V" target="_blank">
-     <button class="flex items-center w-40 h-12 mx-auto mt-8 text-sm font-medium text-white transition duration-75 rounded-md cursor-pointer xl:mx-0 border-lign hover:bg-blue_button_hover bg-blue_button shadow-blue-button shadow-gray border-blue_border focus:outline-none">
+     <button class="flex items-center w-40 h-12 mx-auto mt-8 text-sm font-medium text-white transition duration-75 rounded-tl-md rounded-br-md cursor-pointer xl:mx-0 border-lign hover:bg-blue_button_hover bg-blue_button shadow-blue-button shadow-gray border-blue_border focus:outline-none">
         <p class="mx-auto font">{{ 'BUYBUTTON' | translate }}</p>
       </button>
     </a>
@@ -26,7 +26,7 @@
     <div (click)="displayFrame()" class="flex items-center justify-center mx-auto transition duration-75 bg-center bg-cover cursor-pointer border-cadre border-gray_background_light hover:opacity-90 xl:m-0 rounded-xl size-special bg-gray_background_light shadow-gray img-home">
       <div class="flex items-center justify-center w-20 h-20 transition duration-75 rounded-full opacity-100 cursor-pointer bg-gray_background_light">
         <img src="../../assets/logos/play-button.svg" alt="" class="w-8 h-8">
-        <div class="absolute flex items-center h-10 px-4 text-sm font-medium text-white rounded-md font lg:text-xs xl:text-sm -bottom-4 bg-blue_button border-blue_border border-lign">
+        <div class="absolute flex items-center h-10 px-4 text-sm font-medium text-white rounded-tl-md rounded-br-md font lg:text-xs xl:text-sm -bottom-4 bg-blue_button border-blue_border border-lign">
           GAMECUP TRAILER 2021
         </div>
       </div>
@@ -43,7 +43,7 @@
 
       </div>
 
-      <iframe *ngIf="mobileFrame" title="Trailer GameCup 2021" class="w-full h-full rounded-md" src="https://www.youtube.com/embed/1aDbkW2zI_M?&controls=1" allowfullscreen>
+      <iframe *ngIf="mobileFrame" title="Trailer GameCup 2021" class="w-full h-full rounded-tl-md rounded-br-md" src="https://www.youtube.com/embed/1aDbkW2zI_M?&controls=1" allowfullscreen>
       </iframe>
     </div>
   </div>
