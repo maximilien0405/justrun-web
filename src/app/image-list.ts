@@ -4,11 +4,6 @@ import { Video } from './common/models/video.model';
 
 export const IMAGEList1: Image[] = [
     {
-      image: "../../../assets/img/drawings/etage.jpg",
-      descriptionFR: "Aspect d'un étage",
-      descriptionEN: "Aspect of a floor",
-    },
-    {
       image: "../../../assets/img/drawings/frejel.jpg",
       descriptionFR: "Frejel avec tout son équipement",
       descriptionEN: "Frejel with all his equipment",
@@ -52,11 +47,6 @@ export const IMAGEList1: Image[] = [
       image: "../../../assets/img/drawings/robot8.jpg",
       descriptionFR: "Détails buste du robot 'A-402'",
       descriptionEN: "Chest details of robot 'A-402",
-    },
-    {
-      image: "../../../assets/img/drawings/tours.jpg",
-      descriptionFR: "Croquis détaillé de la tour AntechCorp",
-      descriptionEN: "Detailed sketch of the AntechCorp tower",
     },
     {
       image: "../../../assets/img/drawings/ville.jpg",

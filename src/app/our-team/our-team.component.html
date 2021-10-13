@@ -15,7 +15,7 @@
   <div *ngIf="showProjectManagement" class="grid w-full grid-cols-1 grid-rows-2 gap-6 mb-12 ">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
       <div *ngIf="i.group == 'project-management'">
-        <div class="rounded-tl-md rounded-br-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
           <div class="flex flex-row w-full pb-5">
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
@@ -66,7 +66,7 @@
   <div *ngIf="showCreativeTeam" class="grid w-full grid-cols-1 grid-rows-2 gap-6 mb-12 ">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
       <div *ngIf="i.group == 'creative-team'">
-        <div class="rounded-tl-md rounded-br-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
           <div class="flex flex-row w-full pb-5">
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
@@ -113,7 +113,7 @@
   <div *ngIf="showGameLevelDesign" class="grid w-full grid-cols-1 grid-rows-2 gap-6 mb-12 ">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
       <div *ngIf="i.group == 'game-level-design'">
-        <div class="rounded-tl-md rounded-br-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
           <div class="flex flex-row w-full pb-5">
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
@@ -160,7 +160,7 @@
   <div *ngIf="showSoundDesign" class="grid w-full grid-cols-1 grid-rows-1 gap-6 mb-12 ">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
       <div *ngIf="i.group == 'sound-design'">
-        <div class="rounded-tl-md rounded-br-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
           <div class="flex flex-row w-full pb-5">
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
@@ -207,7 +207,7 @@
   <div *ngIf="showDeveloment" class="grid w-full grid-cols-1 grid-rows-1 gap-6 mb-12 ">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
       <div *ngIf="i.group == 'developpement'">
-        <div class="rounded-tl-md rounded-br-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
           <div class="flex flex-row w-full pb-5">
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
@@ -254,7 +254,7 @@
   <div *ngIf="showModelers" class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-12 ">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
       <div *ngIf="i.group == 'modelers'">
-        <div class="rounded-tl-md rounded-br-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
           <div class="flex flex-row w-full pb-5">
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
@@ -301,7 +301,7 @@
   <div *ngIf="showDrawers" class="grid w-full grid-cols-1 grid-rows-3 gap-6 ">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
       <div *ngIf="i.group == 'drawers'">
-        <div class="rounded-tl-md rounded-br-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
           <div class="flex flex-row w-full pb-5">
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
@@ -347,7 +347,7 @@
   <div class="grid w-full grid-cols-1 grid-rows-2 gap-6 mb-16 lg:grid-rows-1 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-2">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
       <div *ngIf="i.group == 'project-management'">
-        <div class="rounded-tl-md rounded-br-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
           <div class="flex flex-row w-full pb-5">
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
@@ -394,7 +394,7 @@
   <div class="grid w-full grid-cols-1 grid-rows-2 gap-6 mb-16 lg:grid-rows-1 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-2">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
       <div *ngIf="i.group == 'creative-team'">
-        <div class="rounded-tl-md rounded-br-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
           <div class="flex flex-row w-full pb-5">
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
@@ -437,7 +437,7 @@
   <div class="grid w-full grid-cols-1 grid-rows-2 gap-6 mb-16 lg:grid-rows-1 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
       <div *ngIf="i.group == 'game-level-design'">
-        <div class="rounded-tl-md rounded-br-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
           <div class="flex flex-row w-full pb-5">
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
@@ -480,7 +480,7 @@
   <div class="grid w-full grid-cols-1 grid-rows-1 gap-6 mb-16 lg:grid-rows-1 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
       <div *ngIf="i.group == 'developpement'">
-        <div class="rounded-tl-md rounded-br-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
           <div class="flex flex-row w-full pb-5">
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
@@ -523,7 +523,7 @@
   <div class="grid w-full grid-cols-1 grid-rows-1 gap-6 mb-16 lg:grid-rows-1 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
       <div *ngIf="i.group == 'sound-design'">
-        <div class="rounded-tl-md rounded-br-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
           <div class="flex flex-row w-full pb-5">
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
@@ -566,7 +566,7 @@
   <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-16 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
       <div *ngIf="i.group == 'modelers'">
-        <div class="rounded-tl-md rounded-br-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
           <div class="flex flex-row w-full pb-5">
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
@@ -609,7 +609,7 @@
   <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
       <div *ngIf="i.group == 'drawers'">
-        <div class="rounded-tl-md rounded-br-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
           <div class="flex flex-row w-full pb-5">
             <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
             <div class="flex flex-col">
