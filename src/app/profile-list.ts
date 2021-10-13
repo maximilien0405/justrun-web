@@ -35,7 +35,7 @@ export const PROFILE: Profile[] = [
       socialOneLink: "https://www.facebook.com/ju.zahar/",
       socialOneImg: "../assets/social/facebook.svg",
       socialTwoLink: "https://www.youtube.com/channel/UCMSoFWxKgEU753xEcv5VjlA",
-      socialTwoImg: "../assets/social/youtube.svg",
+      socialTwoImg: "../assets/social/youtube.png",
       socialThreeLink: "",
       socialThreeImg: "",
     },
@@ -102,7 +102,7 @@ export const PROFILE: Profile[] = [
       socialTwoLink: "https://www.linkedin.com/in/guillaume-hoarau-014324190/",
       socialTwoImg: "../assets/social/linkedin.svg",
       socialThreeLink: "https://www.youtube.com/channel/UCrbb8sZ7Xc8KRQvxHqtOx1A",
-      socialThreeImg: "../assets/social/youtube.svg",
+      socialThreeImg: "../assets/social/youtube.png",
     },
     // {
     //   userName: "Jonathan H.",
