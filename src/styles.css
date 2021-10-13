@@ -16,6 +16,11 @@
   -ms-animation: fadeIn ease 0.4s;
 }
 
+.image-background {
+  background-image: url('./assets/cover/background-image.jpg');
+  opacity: 22%;
+}
+
 @-webkit-keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
