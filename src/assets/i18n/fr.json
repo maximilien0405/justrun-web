@@ -53,7 +53,7 @@
       "TITLE": "NOTRE ÉQUIPE",
       "PARAGRAPH": "Notre équipe est maintenant composée de 15 personnes différentes, de tous âges et de tous horizons. Nous sommes tous bénévoles, et travaillons autour d'une même passion : les jeux vidéo.",
       "MENU" : {
-        "1" : "Chefs de projet",
+        "1" : "Managers",
         "2" : "Creative team",
         "3" : "Game & level designer",
         "4" : "DÉveloppeurs",
@@ -62,7 +62,7 @@
         "7" : "Musicien & Sound designer"
       },
       "MENU-M" : {
-        "1" : "Chefs de projet",
+        "1" : "Managers",
         "2" : "Creative team",
         "3" : "Game & level designer",
         "4" : "Développeurs",

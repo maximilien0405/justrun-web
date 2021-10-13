@@ -6,8 +6,8 @@ export const PROFILE: Profile[] = [
 
     {
       userName: "Maximilien Z.",
-      roleFR: "Chef de projet",
-      roleEN: "Project Manager",
+      roleFR: "Producer",
+      roleEN: "Producer",
       pdp: "../../../assets/img/pdp/max.jpg",
       group: "project-management",
       presentationFR: "Lui c'est le grand chef, enfin je pense. À vrai dire c'est un mystère. En tout cas il est sympa !",
@@ -21,43 +21,43 @@ export const PROFILE: Profile[] = [
       socialThreeLink: "https://www.behance.net/max-zim",
       socialThreeImg: "../assets/social/behance.svg",
     },
+    {
+      userName: "Hugo C.",
+      roleFR: "Directeur créatif",
+      roleEN: "Creative Director",
+      pdp: "../../../assets/img/pdp/hugo.jpg",
+      group: "project-management",
+      presentationFR: "Créer des jeux plus qu'un métier, une passion ! C'est cliché mais c'est si vrai.",
+      presentationEN: "Creating games is more than a job, it's a passion! It's a cliché but it's so true.",
+      socialOneLink: "https://www.linkedin.com/in/hugo-cluzel-983aa0177/",
+      socialOneImg: "../assets/social/linkedin.svg",
+      socialTwoLink: "https://petite-bryndye.itch.io/",
+      socialTwoImg: "../assets/social/website.svg",
+      socialThreeLink: "",
+      socialThreeImg: "",
+    },
 
     /* --- CREATIVE TEAM ---- */
 
     {
-      userName: "Julie Z.",
-      roleFR: "Scénariste",
-      roleEN: "Scriptwriter",
-      pdp: "../../../assets/img/pdp/julie.jpg",
+      userName: "Guillaume H.",
+      roleFR: "Compositeur",
+      roleEN: "Composer",
+      pdp: "../../../assets/img/pdp/guillaume.jpg",
       group: "creative-team",
-      presentationFR: "Quand elle n'est pas occupée à faire de l'humour, ça lui arrive d'écrire des scénarios.",
-      presentationEN: "When she's not busy making humor, she sometimes writes screenplays.",
-      socialOneLink: "https://www.facebook.com/ju.zahar/",
-      socialOneImg: "../assets/social/facebook.svg",
-      socialTwoLink: "https://www.youtube.com/channel/UCMSoFWxKgEU753xEcv5VjlA",
-      socialTwoImg: "../assets/social/youtube.png",
-      socialThreeLink: "",
-      socialThreeImg: "",
-    },
-    {
-      userName: "Sadjidat A.",
-      roleFR: "Community manager",
-      roleEN: "Community manager",
-      pdp: "../../../assets/img/pdp/sadidjat.jpeg",
-      group: "creative-team",
-      presentationFR: "Les réseaux sociaux semblent n’avoir aucun secret pour elle, attention aux stalks elle vous surveille !",
-      presentationEN: "Social networks seem to have no secret for her, beware of stalks she is watching you!",
-      socialOneLink: "https://www.instagram.com/san_eden2/",
-      socialOneImg: "../assets/social/instagram.png",
-      socialTwoLink: "",
-      socialTwoImg: "",
-      socialThreeLink: "",
-      socialThreeImg: "",
+      presentationFR: "Un compositeur déterminé, en harmonie avec ses idées.",
+      presentationEN: "A determined composer, in harmony with his ideas.",
+      socialOneLink: "http://guillaume-hoarau.com/",
+      socialOneImg: "../assets/social/website.svg",
+      socialTwoLink: "https://www.linkedin.com/in/guillaume-hoarau-014324190/",
+      socialTwoImg: "../assets/social/linkedin.svg",
+      socialThreeLink: "https://www.youtube.com/channel/UCrbb8sZ7Xc8KRQvxHqtOx1A",
+      socialThreeImg: "../assets/social/youtube.png",
     },
 
     /* --- GAME/LEVEL DESIGN ---- */
 
-    {
+    /*{
       userName: "Sacha M.",
       roleFR: "Game Designer",
       roleEN: "Game Designer",
@@ -71,7 +71,7 @@ export const PROFILE: Profile[] = [
       socialTwoImg: "",
       socialThreeLink: "",
       socialThreeImg: "",
-    },
+    },*/
     {
       userName: "Augustin P.",
       roleFR: "Level Designer",
@@ -87,57 +87,26 @@ export const PROFILE: Profile[] = [
       socialThreeLink: "",
       socialThreeImg: "",
     },
-    /* --- MUSIC & SOUND_DESIGN ---- */
-
     {
-      userName: "Guillaume H.",
-      roleFR: "Compositeur",
-      roleEN: "Composer",
-      pdp: "../../../assets/img/pdp/guillaume.jpg",
-      group: "sound-design",
-      presentationFR: "Un compositeur déterminé, en harmonie avec ses idées.",
-      presentationEN: "A determined composer, in harmony with his ideas.",
-      socialOneLink: "http://guillaume-hoarau.com/",
+      userName: "Alexandre A.",
+      roleFR: "Game Designer",
+      roleEN: "Game Designer",
+      pdp: "../../../assets/img/pdp/alexandre.jpg",
+      group: "game-level-design",
+      presentationFR: "Futur Hokage du game design ! « kept you waiting huh ? »",
+      presentationEN: "Future Hokage of game design! « kept you waiting huh? »",
+      socialOneLink: "https://alexandreafonso.fr/",
       socialOneImg: "../assets/social/website.svg",
-      socialTwoLink: "https://www.linkedin.com/in/guillaume-hoarau-014324190/",
+      socialTwoLink: "https://www.linkedin.com/in/alexandre-afonso-18a854119/",
       socialTwoImg: "../assets/social/linkedin.svg",
-      socialThreeLink: "https://www.youtube.com/channel/UCrbb8sZ7Xc8KRQvxHqtOx1A",
-      socialThreeImg: "../assets/social/youtube.png",
+      socialThreeLink: "Afonso.rodrigues.alexandre@gmail.com",
+      socialThreeImg: "../assets/social/mail.svg",
     },
-    // {
-    //   userName: "Jonathan H.",
-    //   roleFR: "Sound Designer",
-    //   roleEN: "Sound Designer",
-    //   pdp: "../../../assets/img/pdp/joh.jpg",
-    //   group: "sound-design",
-    //   presentationFR: "Un explorateur sonore en quête de sonorité qui le fera frissoner.",
-    //   presentationEN: "A sound explorer in search of a sound that will make him shiver.",
-    //   socialOneLink: "https://johensound.wixsite.com/website",
-    //   socialOneImg: "../assets/social/website.svg",
-    //   socialTwoLink: "https://twitter.com/JohenSound",
-    //   socialTwoImg: "../assets/social/twitter.png",
-    //   socialThreeLink: "https://soundcloud.com/johensound/sets",
-    //   socialThreeImg: "../assets/social/soundcloud.png",
-    // },
+
 
     /* --- DEVELOPPEMENT ---- */
 
     {
-      userName: "Maxime B.",
-      roleFR: "Développeur",
-      roleEN: "Developer",
-      pdp: "../../../assets/img/pdp/maxime.jpg",
-      group: "developpement",
-      presentationFR: "Un développeur passionné qui cherche a faire de sa passion son métier.",
-      presentationEN: "A passionate developer who wants to make his passion his job.",
-      socialOneLink: "https://github.com/maxo98",
-      socialOneImg: "../assets/social/github.svg",
-      socialTwoLink: "",
-      socialTwoImg: "",
-      socialThreeLink: "",
-      socialThreeImg: "",
-    },
-    /*{
       userName: "Clément D.",
       roleFR: "Développeur",
       roleEN: "Developer",
@@ -151,7 +120,7 @@ export const PROFILE: Profile[] = [
       socialTwoImg: "",
       socialThreeLink: "",
       socialThreeImg: "",
-    },*/
+    },
 
     /* --- MODELERS ---- */
 
@@ -202,51 +171,5 @@ export const PROFILE: Profile[] = [
     },
 
     /* --- DRAWERS ---- */
-
-    {
-      userName: "Pat'",
-      roleFR: "Dessinateur",
-      roleEN: "Drawer",
-      pdp: "../../../assets/img/pdp/pat.jpg",
-      group: "drawers",
-      presentationFR: "Il lui manque des bouts de peau, il grogne souvent et on sait pas pourquoi il tente toujours de mordre.",
-      presentationEN: "He is missing pieces of skin, he often growls and we do not know why he always tries to bite.",
-      socialOneLink: "https://www.facebook.com/LostShop313",
-      socialOneImg: "../assets/social/facebook.svg",
-      socialTwoLink: "https://www.instagram.com/lostshop313",
-      socialTwoImg: "../assets/social/instagram.png",
-      socialThreeLink: "https://www.etsy.com/fr/shop/LostShop313",
-      socialThreeImg: "../assets/social/website.svg",
-    },
-    {
-      userName: "I5olde'",
-      roleFR: "Dessinatrice",
-      roleEN: "Drawer",
-      pdp: "../../../assets/img/pdp/i5olde.jpg",
-      group: "drawers",
-      presentationFR: "Elle c'est un petit coup de pouce en dessin pour l'équipe, et de temps en temps un léger coup de pied !",
-      presentationEN: "She is a little help in drawing for the team, and from time to time a little kick!",
-      socialOneLink: "",
-      socialOneImg: "",
-      socialTwoLink: "",
-      socialTwoImg: "",
-      socialThreeLink: "",
-      socialThreeImg: "",
-    },
-    {
-      userName: "Onyx",
-      roleFR: "Dessinateur",
-      roleEN: "Drawer",
-      pdp: "../../../assets/img/pdp/onyx.jpg",
-      group: "drawers",
-      presentationFR: "Onyx, un dessinateur avec des bonnes idées qui a pas peur d'apprendre en s'aventurant dans du nouveau.",
-      presentationEN: "Onyx, a drawer with good ideas who is not afraid to learn by venturing into new things.",
-      socialOneLink: "",
-      socialOneImg: "",
-      socialTwoLink: "",
-      socialTwoImg: "",
-      socialThreeLink: "",
-      socialThreeImg: "",
-    },
-
+    /* A ajouter */
   ];
