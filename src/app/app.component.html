@@ -2,7 +2,7 @@
 
   <!---- LOGO (desktop) -------------->
 
-  <div class="absolute hidden md:inline-block left-9 top-9 border-r-big border-b-big border-gray_background_dark">
+  <div class="fixed top-0 hidden md:inline-block left-9 border-t-big border-r-big border-b-big border-gray_background_dark">
     <a routerLink="/">
       <img src="../assets/logos/oldlogo-tight.webp" class="w-18" alt="">
     </a>
@@ -11,7 +11,7 @@
   <!---- LOGO (mobile) + MENU ITEM (mobile) -------------->
 
   <div class="flex flex-row justify-between mb-14 md:mb-0">
-    <div *ngIf="url !== '/'" class="absolute top-0 left-0 z-0 flex justify-center w-full h-56 bg-gray_light_hover rounded-b-md shadow-gray md:hidden">
+    <div *ngIf="url !== '/'" class="absolute left-0 z-0 flex justify-center w-full h-56 bg-gray_light_hover rounded-b-md shadow-gray md:hidden">
 
       <h1 *ngIf="url === '/the-game'" class="mt-32 small-title font">{{ 'THE-GAME.TITLE' | translate }}</h1>
       <h1 *ngIf="url === '/medias'" class="mt-32 small-title font">{{ 'MEDIAS.TITLE' | translate }}</h1>
@@ -42,7 +42,7 @@
     </div>
 
     <!---- DROPDOWN NAVIGATION (mobile) -------------->
-    <div *ngIf="displayDropdown" [class.dropdown-height]="displayDropdown == true" class="absolute z-50 h-1 px-3 py-3 rounded-tl-md rounded-br-md lg:hidden transition-start md:right-button right-6 w-72 top-24 md:top-special bg-gray_background_light shadow-gray">
+    <div *ngIf="displayDropdown" [class.dropdown-height]="displayDropdown == true" class="fixed z-50 h-1 px-3 py-3 rounded-tl-md rounded-br-md lg:hidden transition-start md:right-button right-6 w-72 top-24 md:top-special bg-gray_background_light shadow-gray">
 
       <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/'}" routerLink="" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
         {{ 'NAV.MENU-1' | translate }}
@@ -95,7 +95,7 @@
 
   <!---- BUY BUTTON (desktop only) --------->
 
-  <div class="absolute hidden md:block top-9 right-9 border-l-big border-b-big border-gray_background_dark">
+  <div class="fixed top-0 hidden md:block right-9 border-l-big border-t-big border-b-big border-gray_background_dark">
     <a title="Discord Link" href="https://discord.com/invite/AsXv6GKW5V" target="_blank">
       <button class="flex items-center text-sm font-bold font lea­­­ding-snug text-center text-white align-middle transition duration-75 border-lign hover:bg-blue_button_hover rounded-tr-md rounded-bl-md cursor-pointer h-18 w-18 bg-blue_button shadow-blue-button shadow-gray border-blue_border px-2 focus:outline-none">
         {{ 'BUYBUTTON' | translate }}
@@ -104,7 +104,7 @@
   </div>
 
   <!---- SOCIAL BUTTONS (desktop only) --------->
-  <div class="absolute hidden left-9 py-special top-96 bg-gray_background_dark md:inline-block">
+  <div class="fixed hidden left-9 py-special top-96 bg-gray_background_dark md:inline-block">
     <a title="Discord Link" href="https://discord.com/invite/AsXv6GKW5V" target="_blank">
       <div class="flex flex-col items-center justify-center w-10 h-10 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md shadow-gray bg-gray_background_light hover:bg-gray_light_hover">
         <img src="../assets/social/discord.png"  class="w-5 h-5" alt="discord">
