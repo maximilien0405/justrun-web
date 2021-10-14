@@ -254,6 +254,10 @@ img {
   height: 34.375rem !important;
 }
 
+.h-special-2  {
+  height: 50rem !important;
+}
+
 .size-special {
   height: 28.125rem;
   width: 37.5rem;
