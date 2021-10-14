@@ -149,6 +149,7 @@ html, body {
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
   }
+
 }
 
 @media (max-width: 1024px) {
@@ -264,7 +265,11 @@ img {
 }
 
 .w-special-2 {
-  width: 300px !important;
+  width: 185px !important;
+}
+
+.w-special-3 {
+  min-width: 563px !important;
 }
 
 .size-special {
