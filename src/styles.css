@@ -18,7 +18,8 @@
 
 .image-background {
   background-image: url('./assets/cover/background-image.jpg');
-  opacity: 22%;
+  opacity: 35%;
+  z-index: 0 !important;
 }
 
 @-webkit-keyframes fadeIn {
@@ -256,6 +257,14 @@ img {
 
 .h-special-2  {
   height: 50rem !important;
+}
+
+.h-special-3  {
+  height: 50rem !important;
+}
+
+.w-special-2 {
+  width: 300px !important;
 }
 
 .size-special {

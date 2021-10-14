@@ -33,6 +33,7 @@ module.exports = {
       padding: {
         '13': '3.25rem',
         'special': '2.5rem',
+        'special2': '9.8rem', /* de base 7.3*/
       },
       height: {
         '18': '4.6875rem',
@@ -45,6 +46,7 @@ module.exports = {
       },
       margin: {
         'footer': '8.75rem',
+        'special': '2.5rem',
       },
       inset: {
         'button': '9.375rem',

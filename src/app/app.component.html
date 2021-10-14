@@ -1,187 +1,207 @@
-  <!-- Image background -->
+  <!-- SECTION TOP -->
+  <div class="w-full pt-10 px-special2">
+    <div class="flex flex-row w-full">
+        <!-- First lign -->
+        <div class="bg-yellow-400 w-special-2"></div>
+        
+        <!---- MENU ITEM (desktop) ---------->
+        <div class="flex-row inline-block">
 
-  <div class="absolute top-0 left-0 z-0 w-full h-special-2 image-background"></div>
+          <!-- Button Home -->
+          <button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/'}" routerLink="" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border cursor-pointer rounded-tl-md rounded-br-md border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+            <p class="mx-auto text-sm font">{{ 'NAV.MENU-1' | translate }}</p>
+          </button>
+
+          <!-- Button The-game -->
+          <button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/the-game'}" routerLink="the-game" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border cursor-pointer rounded-tl-md rounded-br-md border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+            <p class="mx-auto text-sm font">{{ 'NAV.MENU-2' | translate }}</p>
+          </button>
+
+          <!-- Button Medias -->
+          <button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/medias'}" routerLink="medias" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border cursor-pointer rounded-tl-md rounded-br-md border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+            <p class="mx-auto text-sm font">{{ 'NAV.MENU-3' | translate }}</p>
+          </button>
+
+          <!-- Our team -->
+          <button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/our-team'}" routerLink="our-team" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border cursor-pointer rounded-tl-md rounded-br-md border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+            <p class="mx-auto text-sm font">{{ 'NAV.MENU-4' | translate }}</p>
+          </button>
+
+          <!-- Contact us -->
+          <!--<button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/contact-us'}" routerLink="contact-us" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border cursor-pointer rounded-tl-md rounded-br-md border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+            <p class="mx-auto text-sm font">{{ 'NAV.MENU-5' | translate }}</p>
+          </button>-->
+        </div>
+        
+        <!-- Second lign -->
+        <div class="w-full bg-yellow-800"></div>
+    </div>
+  </div>
+
+  <div [ngClass]="{'pad-special': url !== '/'}" class="!z-50 max-w-6xl mx-auto mt-36">
+    <router-outlet></router-outlet>
+  </div>
+
+   <!----- Footer ------->
+   <div class="h-['140px'] mt-16 md:mt-0">
+    <div class="w-full h-1 border-t-lign border-blue_border md:hidden shadow-blue-border-lign"></div>
+    <div class="flex justify-between w-full pt-8 pb-5 sm:pb-8 sm:flex-row md:py-13">
+      <div class="flex md:w-full md:flex-row">
+
+        <!---- Change language --------->
+        <div class="flex flex-row items-center justify-between w-24 h-10 text-sm transition duration-75 cursor-pointer select-none rounded-tl-md rounded-br-md bg-gray_background_light text-gray_subtitle shadow-gray">
+          <div (click)="translate.use('fr') && changeLang('FR')" class="flex items-center w-1/2 h-full transition duration-75 rounded-l-md hover:bg-gray_light_hover group">
+            <span class="w-full text-center text-gray_subtitle text-normal group-hover:text-gray_subtitle_hover font">FR</span>
+          </div>
+
+          <div class="h-full bg-gray-400 w-lign" style="box-shadow: 0px 0px 15px rgba(18, 96, 109, 0.7);"></div>
+
+          <div (click)="translate.use('en') && changeLang('EN')" class="flex items-center w-1/2 h-full transition duration-75 hover:bg-gray_light_hover rounded-r-md group">
+            <span class="w-full text-center text-gray_subtitle text-normal group-hover:text-gray_subtitle_hover font">EN</span>
+          </div>
+        </div>
+
+        <!---- Copyright (desktop) --------->
+        <p class="items-center hidden sm:flex sm:ml-5 text-md text-gray_subtitle md:mt-0">{{ 'FOOTER.COPYRIGHT' | translate }}</p>
+      </div>
+
+      <!---- SOCIAL BUTTONS --------->
+      <div class="flex mt-0">
+        <a title="Discord Link" href="https://discord.com/invite/AsXv6GKW5V" target="_blank">
+          <div class="flex items-center justify-center w-10 h-10 mr-3 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+            <img src="../assets/social/discord.png"  class="w-5 h-5"  alt="discord">
+          </div>
+        </a>
+        <a title="Instagram Link" href="https://www.instagram.com/justrunthegame/" target="_blank">
+          <div class="flex items-center justify-center w-10 h-10 mr-3 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+            <img src="../assets/social/instagram.png" class="w-5 h-5" alt="instagram">
+          </div>
+        </a>
+        <a title="Twitter Link" href="https://twitter.com/JustRun_Game" target="_blank">
+          <div class="flex items-center justify-center w-10 h-10 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+            <img src="../assets/social/twitter.png" class="w-5 h-5" alt="twitter">
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- Mobile copyright -->
+    <p class="flex items-center w-full pb-8 ml-0 text-center sm:hidden text-md text-gray_subtitle md:mt-0">{{ 'FOOTER.COPYRIGHT' | translate }}</p>
+  </div>
+      
+  <!-- SECTION BOTTOM -->
+  <div class="w-full h-10 bg-yellow-700 section-bottom">bottom</div>
+
   
-<div class="w-full rounded-lg md:border-lign md:border-blue_border shadow-blue-border md:p-32">
-
-  <!---- LOGO (desktop) -------------->
-
-  <div class="fixed top-0 hidden md:inline-block left-9 border-t-big border-r-big border-b-big border-gray_background_dark">
-    <a routerLink="/">
-      <img src="../assets/logos/oldlogo-tight.webp" class="w-18" alt="">
-    </a>
-  </div>
-
-  <!---- LOGO (mobile) + MENU ITEM (mobile) -------------->
-
-  <div class="flex flex-row justify-between mb-14 md:mb-0">
-    <div *ngIf="url !== '/'" class="absolute top-0 left-0 z-0 flex justify-center w-full h-56 bg-gray_light_hover rounded-b-md shadow-gray md:hidden">
-
-      <h1 *ngIf="url === '/the-game'" class="mt-32 small-title font">{{ 'THE-GAME.TITLE' | translate }}</h1>
-      <h1 *ngIf="url === '/medias'" class="mt-32 small-title font">{{ 'MEDIAS.TITLE' | translate }}</h1>
-     <!--<h1 *ngIf="url === '/contact-us'" class="mt-32 small-title font">{{ 'CONTACT.TITLE' | translate }}</h1>-->
-      <h1 *ngIf="url === '/our-team'" class="mt-32 small-title font">{{ 'TEAM.TITLE' | translate }}</h1>
-
-    </div>
-
-    <a routerLink="/" class="z-50">
-      <img *ngIf="url === '/'" src="../assets/logos/oldlogo-tight.webp" class="!z-50 h-16 md:hidden" alt="" style="min-width: 4rem !important;">
-      <img *ngIf="url !== '/'" src="../assets/logos/logo-tight.webp" class="!z-50 h-16 md:hidden" alt="" style="min-width: 4rem !important;">
-    </a>
-    <div class="z-50 w-full h-1 my-auto mt-5 md:hidden border-t-lign border-blue_border shadow-blue-border-lign mx-7"></div>
-
-    <div class="z-50 md:border-l-big md:border-gray_background_dark md:absolute md:top-9 md:right-button">
-
-      <button *ngIf="url !== '/'" (click)="dropdown()" [ngClass]="{'' : url !== '/'}" class="box-border flex items-center justify-center text-base leading-10 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md lg:hidden size-button-hamburger min-w-20 shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_dark md:bg-gray_background_light">
-        <svg [class.rotate-menu]="displayDropdown == true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 transition duration-special " fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-
-      <div *ngIf="url === '/'"  (click)="dropdown()" class="box-border flex items-center justify-center text-base leading-10 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md lg:hidden size-button-hamburger min-w-20 shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light">
-        <svg [class.rotate-menu]="displayDropdown == true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 transition duration-special " fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
+  <!------- SECTION LEFT ------->
+  <div class="fixed top-0 left-0 h-full p-10">
+    <div class="flex flex-col h-full">
+      <!---- Logo ---->
+      <div class="inline-block mb-special">
+        <a routerLink="/">
+          <img src="../assets/logos/oldlogo-tight.webp" class="w-18" alt="">
+        </a>
       </div>
-    </div>
 
-    <!---- DROPDOWN NAVIGATION (mobile) -------------->
-    <div *ngIf="displayDropdown" [class.dropdown-height]="displayDropdown == true" class="fixed z-50 h-1 px-3 py-3 rounded-tl-md rounded-br-md lg:hidden transition-start md:right-button right-6 w-72 top-24 md:top-special bg-gray_background_light shadow-gray">
+      <!-- Lign to socials -->
+      <div class="h-full bg-blue-700 h-special-3"></div>
 
-      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/'}" routerLink="" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
-        {{ 'NAV.MENU-1' | translate }}
+      <!---- SOCIAL BUTTONS (desktop only) --------->
+      <div class="inline-block py-special">
+        <a title="Discord Link" href="https://discord.com/invite/AsXv6GKW5V" target="_blank">
+          <div class="flex flex-col items-center justify-center w-10 h-10 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md shadow-gray bg-gray_background_light hover:bg-gray_light_hover">
+            <img src="../assets/social/discord.png"  class="w-5 h-5" alt="discord">
+          </div>
+        </a>
+        <a title="Instagram Link" href="https://www.instagram.com/justrunthegame/" target="_blank">
+          <div class="flex flex-col items-center justify-center w-10 h-10 mt-3 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md shadow-gray bg-gray_background_light hover:bg-gray_light_hover">
+            <img src="../assets/social/instagram.png" class="w-5 h-5" alt="instagram">
+          </div>
+        </a>
+        <a title="Twitter Link" href="https://twitter.com/JustRun_Game" target="_blank">
+          <div class="flex flex-col items-center justify-center w-10 h-10 mt-3 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+            <img src="../assets/social/twitter.png" class="w-5 h-5" alt="twitter">
+          </div>
+        </a>
+        <a title="Youtube Link" href="https://www.youtube.com/channel/UC9LevErzSmVd5nPcwsEPq2w/featured" target="_blank">
+          <div class="flex flex-col items-center justify-center w-10 h-10 mt-3 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+            <img src="../assets/social/youtube.png" class="w-5 h-5" alt="twitter">
+          </div>
+        </a>
       </div>
-      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/the-game'}" routerLink="the-game" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
-        {{ 'NAV.MENU-2' | translate }}
-      </div>
-      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/medias'}" routerLink="medias" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
-        {{ 'NAV.MENU-3' | translate }}
-      </div>
-      <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/our-team'}" routerLink="our-team" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
-        {{ 'NAV.MENU-4' | translate }}
-      </div>
-      <!--<div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/contact-us'}" routerLink="contact-us" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
-        {{ 'NAV.MENU-5' | translate }}
-      </div>-->
+
+      <!-- Lign to bottom -->
+      <div class="h-full bg-blue-300"></div>
+        
     </div>
   </div>
+  <!------- SECTION RIGHT ------->
+  <div class="fixed top-0 right-0 h-full p-10">
+    <div class="flex flex-col h-full ">
+        
+      <!---- SEE MORE BUTTON (desktop only) --------->
+      <div class="inline-block">
+        <a routerLink="the-game">
+          <button class="flex items-center text-sm font-bold font lea­­­ding-snug text-center text-white align-middle transition duration-75 border-lign hover:bg-blue_button_hover rounded-tr-md rounded-bl-md cursor-pointer h-18 w-18 bg-blue_button shadow-blue-button shadow-gray border-blue_border px-2 focus:outline-none">
+            {{ 'BUYBUTTON' | translate }}
+          </button>
+        </a>
+      </div>
 
-  <!---- MENU ITEM (desktop) ---------->
+      <!-- Lign to bottom -->
+      <div class="h-full mt-5 bg-blue-700"></div>
+    </div>
+  </div>
+  
+<!---- LOGO (mobile) + MENU ITEM (mobile) -------------->
 
-  <div class="absolute flex-row hidden pb-2 ml-36 lg:inline-block px-special top-9 bg-gray_background_dark">
+<div class="flex flex-row justify-between mb-14 md:mb-0">
+  <div *ngIf="url !== '/'" class="absolute top-0 left-0 z-0 flex justify-center w-full h-56 bg-gray_light_hover rounded-b-md shadow-gray md:hidden">
 
-    <!-- Button Home -->
-    <button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/'}" routerLink="" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border cursor-pointer rounded-tl-md rounded-br-md border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
-      <p class="mx-auto text-sm font">{{ 'NAV.MENU-1' | translate }}</p>
-    </button>
+    <h1 *ngIf="url === '/the-game'" class="mt-32 small-title font">{{ 'THE-GAME.TITLE' | translate }}</h1>
+    <h1 *ngIf="url === '/medias'" class="mt-32 small-title font">{{ 'MEDIAS.TITLE' | translate }}</h1>
+    <!--<h1 *ngIf="url === '/contact-us'" class="mt-32 small-title font">{{ 'CONTACT.TITLE' | translate }}</h1>-->
+    <h1 *ngIf="url === '/our-team'" class="mt-32 small-title font">{{ 'TEAM.TITLE' | translate }}</h1>
 
-    <!-- Button The-game -->
-    <button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/the-game'}" routerLink="the-game" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border cursor-pointer rounded-tl-md rounded-br-md border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
-      <p class="mx-auto text-sm font">{{ 'NAV.MENU-2' | translate }}</p>
-    </button>
-
-    <!-- Button Medias -->
-    <button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/medias'}" routerLink="medias" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border cursor-pointer rounded-tl-md rounded-br-md border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
-      <p class="mx-auto text-sm font">{{ 'NAV.MENU-3' | translate }}</p>
-    </button>
-
-    <!-- Our team -->
-    <button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/our-team'}" routerLink="our-team" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border cursor-pointer rounded-tl-md rounded-br-md border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
-      <p class="mx-auto text-sm font">{{ 'NAV.MENU-4' | translate }}</p>
-    </button>
-
-    <!-- Contact us -->
-    <!--<button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/contact-us'}" routerLink="contact-us" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border cursor-pointer rounded-tl-md rounded-br-md border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
-      <p class="mx-auto text-sm font">{{ 'NAV.MENU-5' | translate }}</p>
-    </button>-->
   </div>
 
-  <!---- BUY BUTTON (desktop only) --------->
+  <a routerLink="/" class="z-50">
+    <img *ngIf="url === '/'" src="../assets/logos/oldlogo-tight.webp" class="!z-50 h-16 md:hidden" alt="" style="min-width: 4rem !important;">
+    <img *ngIf="url !== '/'" src="../assets/logos/logo-tight.webp" class="!z-50 h-16 md:hidden" alt="" style="min-width: 4rem !important;">
+  </a>
+  <div class="z-50 w-full h-1 my-auto mt-5 md:hidden border-t-lign border-blue_border shadow-blue-border-lign mx-7"></div>
 
-  <div class="fixed top-0 hidden md:block right-9 border-l-big border-t-big border-b-big border-gray_background_dark">
-    <a routerLink="the-game">
-      <button class="flex items-center text-sm font-bold font lea­­­ding-snug text-center text-white align-middle transition duration-75 border-lign hover:bg-blue_button_hover rounded-tr-md rounded-bl-md cursor-pointer h-18 w-18 bg-blue_button shadow-blue-button shadow-gray border-blue_border px-2 focus:outline-none">
-        {{ 'BUYBUTTON' | translate }}
-      </button>
-    </a>
+  <div class="z-50 md:border-l-big md:border-gray_background_dark md:absolute md:top-9 md:right-button">
+
+    <button *ngIf="url !== '/'" (click)="dropdown()" [ngClass]="{'' : url !== '/'}" class="box-border flex items-center justify-center text-base leading-10 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md lg:hidden size-button-hamburger min-w-20 shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_dark md:bg-gray_background_light">
+      <svg [class.rotate-menu]="displayDropdown == true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 transition duration-special " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <div *ngIf="url === '/'"  (click)="dropdown()" class="box-border flex items-center justify-center text-base leading-10 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md lg:hidden size-button-hamburger min-w-20 shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light">
+      <svg [class.rotate-menu]="displayDropdown == true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 transition duration-special " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </div>
   </div>
 
-  <!---- SOCIAL BUTTONS (desktop only) --------->
-  <div class="fixed hidden left-9 py-special top-96 bg-gray_background_dark md:inline-block">
-    <a title="Discord Link" href="https://discord.com/invite/AsXv6GKW5V" target="_blank">
-      <div class="flex flex-col items-center justify-center w-10 h-10 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md shadow-gray bg-gray_background_light hover:bg-gray_light_hover">
-        <img src="../assets/social/discord.png"  class="w-5 h-5" alt="discord">
-      </div>
-    </a>
-    <a title="Instagram Link" href="https://www.instagram.com/justrunthegame/" target="_blank">
-      <div class="flex flex-col items-center justify-center w-10 h-10 mt-3 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md shadow-gray bg-gray_background_light hover:bg-gray_light_hover">
-        <img src="../assets/social/instagram.png" class="w-5 h-5" alt="instagram">
-      </div>
-    </a>
-    <a title="Twitter Link" href="https://twitter.com/JustRun_Game" target="_blank">
-      <div class="flex flex-col items-center justify-center w-10 h-10 mt-3 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
-        <img src="../assets/social/twitter.png" class="w-5 h-5" alt="twitter">
-      </div>
-    </a>
-    <a title="Youtube Link" href="https://www.youtube.com/channel/UC9LevErzSmVd5nPcwsEPq2w/featured" target="_blank">
-      <div class="flex flex-col items-center justify-center w-10 h-10 mt-3 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
-        <img src="../assets/social/youtube.png" class="w-5 h-5" alt="twitter">
-      </div>
-    </a>
-  </div>
+  <!---- DROPDOWN NAVIGATION (mobile) -------------->
+  <div *ngIf="displayDropdown" [class.dropdown-height]="displayDropdown == true" class="fixed z-50 h-1 px-3 py-3 rounded-tl-md rounded-br-md lg:hidden transition-start md:right-button right-6 w-72 top-24 md:top-special bg-gray_background_light shadow-gray">
 
-  <!--------------- CONTENT ----------------------------------------------------->
-
-  <div [ngClass]="{'pad-special': url !== '/'}" class="max-w-6xl mx-auto md:!pt-0">
-      <router-outlet></router-outlet>
+    <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/'}" routerLink="" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
+      {{ 'NAV.MENU-1' | translate }}
+    </div>
+    <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/the-game'}" routerLink="the-game" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
+      {{ 'NAV.MENU-2' | translate }}
+    </div>
+    <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/medias'}" routerLink="medias" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
+      {{ 'NAV.MENU-3' | translate }}
+    </div>
+    <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/our-team'}" routerLink="our-team" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
+      {{ 'NAV.MENU-4' | translate }}
+    </div>
+    <!--<div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/contact-us'}" routerLink="contact-us" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
+      {{ 'NAV.MENU-5' | translate }}
+    </div>-->
   </div>
 </div>
-
-<!--------------- FOOTER ----------------------------------------------------->
-
-<div class="h-['140px'] mt-16 md:mt-0">
-  <div class="w-full h-1 border-t-lign border-blue_border md:hidden shadow-blue-border-lign"></div>
-  <div class="flex justify-between w-full pt-8 pb-5 sm:pb-8 sm:flex-row md:py-13">
-    <div class="flex md:w-full md:flex-row">
-
-      <!---- Change language --------->
-      <div class="flex flex-row items-center justify-between w-24 h-10 text-sm transition duration-75 cursor-pointer select-none rounded-tl-md rounded-br-md bg-gray_background_light text-gray_subtitle shadow-gray">
-        <div (click)="translate.use('fr') && changeLang('FR')" class="flex items-center w-1/2 h-full transition duration-75 rounded-l-md hover:bg-gray_light_hover group">
-          <span class="w-full text-center text-gray_subtitle text-normal group-hover:text-gray_subtitle_hover font">FR</span>
-        </div>
-
-        <div class="h-full bg-gray-400 w-lign" style="box-shadow: 0px 0px 15px rgba(18, 96, 109, 0.7);"></div>
-
-        <div (click)="translate.use('en') && changeLang('EN')" class="flex items-center w-1/2 h-full transition duration-75 hover:bg-gray_light_hover rounded-r-md group">
-          <span class="w-full text-center text-gray_subtitle text-normal group-hover:text-gray_subtitle_hover font">EN</span>
-        </div>
-      </div>
-
-      <!---- Copyright (desktop) --------->
-      <p class="items-center hidden sm:flex sm:ml-5 text-md text-gray_subtitle md:mt-0">{{ 'FOOTER.COPYRIGHT' | translate }}</p>
-    </div>
-
-    <!---- SOCIAL BUTTONS --------->
-    <div class="flex mt-0">
-      <a title="Discord Link" href="https://discord.com/invite/AsXv6GKW5V" target="_blank">
-        <div class="flex items-center justify-center w-10 h-10 mr-3 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
-          <img src="../assets/social/discord.png"  class="w-5 h-5"  alt="discord">
-        </div>
-      </a>
-      <a title="Instagram Link" href="https://www.instagram.com/justrunthegame/" target="_blank">
-        <div class="flex items-center justify-center w-10 h-10 mr-3 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
-          <img src="../assets/social/instagram.png" class="w-5 h-5" alt="instagram">
-        </div>
-      </a>
-      <a title="Twitter Link" href="https://twitter.com/JustRun_Game" target="_blank">
-        <div class="flex items-center justify-center w-10 h-10 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
-          <img src="../assets/social/twitter.png" class="w-5 h-5" alt="twitter">
-        </div>
-      </a>
-    </div>
-  </div>
-  <!-- Mobile copyright -->
-  <p class="flex items-center w-full pb-8 ml-0 text-center sm:hidden text-md text-gray_subtitle md:mt-0">{{ 'FOOTER.COPYRIGHT' | translate }}</p>
-</div>
-
-
