@@ -19,7 +19,6 @@ import { PresentationComponent } from './the-game/presentation/presentation.comp
 import { StorylineComponent } from './the-game/storyline/storyline.component';
 import { ArtDirComponent } from './the-game/art-dir/art-dir.component';
 import { GameplayComponent } from './the-game/gameplay/gameplay.component';
-import { EnemiesComponent } from './the-game/enemies/enemies.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -39,8 +38,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     PresentationComponent,
     StorylineComponent,
     ArtDirComponent,
-    GameplayComponent,
-    EnemiesComponent,
+    GameplayComponent
   ],
   imports: [
     BrowserModule,

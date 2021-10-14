@@ -29,15 +29,13 @@
         "1" : "PrÉsentation",
         "2" : "ScÉnario",
         "3" : "Direction artistique",
-        "4" : "Gameplay",
-        "5" : "Ennemis"
+        "4" : "Gameplay"
       },
       "MENU-M" : {
         "1" : "Présentation",
         "2" : "Scénario",
         "3" : "Direction artistique",
-        "4" : "Gameplay & mécanique",
-        "5" : "Ennemis"
+        "4" : "Gameplay & mécanique"
       }
     },
     "MEDIAS" : {
