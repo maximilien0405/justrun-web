@@ -38,7 +38,9 @@
         </div>
       
         <!-- First lign -->
-        <div class="hidden bg-yellow-400 w-special-2 lg:flex"></div>
+        <div class="hidden w-special-2 lg:flex">
+          <div class="z-50 w-full h-1 my-auto mt-4 border-t-lign border-blue_border shadow-blue-border-lign"></div>
+        </div>
 
         <!---- MENU ITEM (desktop) ---------->
         <div class="hidden w-special-3 lg:flex">
@@ -70,7 +72,9 @@
         </div>
     </div>
     <!-- Second lign -->
-    <div class="z-50 w-full bg-yellow-800"></div>
+    <div class="z-50 w-full">
+      <div class="z-50 w-full h-1 my-auto mt-4 mb-4 border-t-lign border-blue_border shadow-blue-border-lign"></div>
+    </div>
 
     <!-- Mobile dropdown -->
     <div class="z-50 md:border-gray_background_dark lg:hidden ml-special">
@@ -89,12 +93,12 @@
     </div>
   </div>
 
-  <div class="!z-50 max-w-6xl mx-auto mt-24">
+  <div class="!z-50 max-w-6xl mx-auto mt-24 px-6 mb-44">
     <router-outlet></router-outlet>
   </div>
 
    <!----- Footer ------->
-   <div>
+  <div class="block md:hidden">
     <div class="w-full h-1 border-t-lign border-blue_border shadow-blue-border-lign"></div>
     <div class="flex justify-between w-full pt-8 pb-5 sm:pb-8 sm:flex-row md:py-13">
       <div class="flex md:w-full md:flex-row">
@@ -129,8 +133,13 @@
           </div>
         </a>
         <a title="Twitter Link" href="https://twitter.com/JustRun_Game" target="_blank">
-          <div class="flex items-center justify-center w-10 h-10 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+          <div class="flex items-center justify-center w-10 h-10 mr-3 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
             <img src="../assets/social/twitter.png" class="w-5 h-5" alt="twitter">
+          </div>
+        </a>
+        <a title="Youtube Link" href="https://www.youtube.com/channel/UC9LevErzSmVd5nPcwsEPq2w/featured" target="_blank">
+          <div class="flex items-center justify-center w-10 h-10 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+            <img src="../assets/social/youtube.png" class="w-5 h-5" alt="youtube">
           </div>
         </a>
       </div>
@@ -150,7 +159,9 @@
       </div>
 
       <!-- Lign to socials -->
-      <div class="h-full bg-blue-700 h-special-3"></div>
+      <div class="h-full h-special-3" style="padding-left: 17px;">
+        <div class="z-50 w-1 h-full border-r-lign border-blue_border shadow-blue-border-lign"></div>
+      </div>
 
       <!---- SOCIAL BUTTONS (desktop only) --------->
       <div class="inline-block py-special">
@@ -171,13 +182,15 @@
         </a>
         <a title="Youtube Link" href="https://www.youtube.com/channel/UC9LevErzSmVd5nPcwsEPq2w/featured" target="_blank">
           <div class="flex flex-col items-center justify-center w-10 h-10 mt-3 align-middle transition duration-75 cursor-pointer rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
-            <img src="../assets/social/youtube.png" class="w-5 h-5" alt="twitter">
+            <img src="../assets/social/youtube.png" class="w-5 h-5" alt="youtube">
           </div>
         </a>
       </div>
 
       <!-- Lign to bottom -->
-      <div class="h-full bg-blue-300"></div>
+      <div class="h-full" style="padding-left: 17px;">
+        <div class="z-50 w-1 h-full border-r-lign border-blue_border shadow-blue-border-lign"></div>
+      </div>
 
     </div>
   </div>
@@ -195,13 +208,21 @@
       </div>
 
       <!-- Lign to bottom -->
-      <div class="h-full bg-blue-700 mt-special"></div>
+      <div class="h-full mt-special" style="padding-left: 53px;">
+        <div class="z-50 w-1 h-full border-r-lign border-blue_border shadow-blue-border-lign"></div>
+      </div>
+
+      <!---- Change language --------->
+      <div class="flex flex-col items-center justify-between w-10 text-sm transition duration-75 cursor-pointer select-none mr-9 mt-special rounded-tl-md rounded-br-md bg-gray_background_light text-gray_subtitle shadow-gray" style="">
+        <div (click)="translate.use('fr') && changeLang('FR')" class="flex items-center w-full h-10 transition duration-75 rounded-l-md hover:bg-gray_light_hover group">
+          <span class="w-full text-center text-gray_subtitle text-normal group-hover:text-gray_subtitle_hover font">FR</span>
+        </div>
+
+        <div class="w-full bg-gray-400 h-lign" style="box-shadow: 0px 0px 15px rgba(18, 96, 109, 0.7);"></div>
+
+        <div (click)="translate.use('en') && changeLang('EN')" class="flex items-center w-full h-10 transition duration-75 hover:bg-gray_light_hover rounded-r-md group">
+          <span class="w-full text-center text-gray_subtitle text-normal group-hover:text-gray_subtitle_hover font">EN</span>
+        </div>
+      </div>
     </div>
   </div>
-
-
-
-
-
-  <!-- <div class="z-50 w-full h-1 my-auto mt-5 md:hidden border-t-lign border-blue_border shadow-blue-border-lign mx-7"></div>
-    -->
