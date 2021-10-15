@@ -54,8 +54,8 @@
         "1" : "Managers",
         "2" : "Creative team",
         "3" : "Game & level designer",
-        "4" : "DÉveloppeurs",
-        "5" : "ModÉlisateurs & Animateurs",
+        "4" : "DÉveloppeurs & Animateurs",
+        "5" : "ModÉlisateurs",
         "6" : "Dessinateurs",
         "7" : "Musicien & Sound designer"
       },
@@ -63,8 +63,8 @@
         "1" : "Managers",
         "2" : "Creative team",
         "3" : "Game & level designer",
-        "4" : "Développeurs",
-        "5" : "Modélisateurs & Animateurs",
+        "4" : "Développeurs & Animateurs",
+        "5" : "Modélisateurs",
         "6" : "Dessinateurs",
         "7" : "Musicien & Sound designer"
       }

@@ -29,6 +29,7 @@ module.exports = {
         lign: '0.0938rem',
         big: '2.5rem',
         cadre: '0.625rem',
+        biglign: '0.25rem',
       },
       padding: {
         '13': '3.25rem',

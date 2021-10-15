@@ -2,22 +2,23 @@
   <h1 class="small-title font">{{ 'MEDIAS.TITLE' | translate }}</h1>
 </div>
 
-<p class="w-full fadeIn md:text-center md:w-2/3 md:mx-auto mt-14 mb-14 paragraph">{{ 'MEDIAS.PARAGRAPH' | translate }}</p>
+<p class="hidden w-full md:flex mt-14 fadeIn md:text-center md:w-2/3 md:mx-auto mb-14 paragraph">{{ 'MEDIAS.PARAGRAPH' | translate }}</p>
+<p style="margin-top: 10.625rem;" class="flex w-full md:hidden fadeIn md:text-center md:w-2/3 md:mx-auto mb-14 paragraph">{{ 'MEDIAS.PARAGRAPH' | translate }}</p>
 
 <div class="flex items-center justify-center w-full align-middle fadeIn">
   <div class="inline-block rounded-tl-md rounded-br-md mb-14 bg-gray_background_light shadow-gray">
     <!-- Button Models  -->
-    <button id="doki" [ngClass]="{'text-white bg-blue_button hover:bg-blue_button border-lign !border-blue_border hover:!text-white': showModels == true}" (click)="changeMenu('models')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 border rounded-tl-md rounded-br-md cursor-pointer border-gray_background_light text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+    <button id="doki" [ngClass]="{'text-white bg-blue_button hover:bg-blue_button border-lign !border-blue_border hover:!text-white': showModels == true}" (click)="changeMenu('models')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 border cursor-pointer rounded-tl-md rounded-br-md border-gray_background_light text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
       <p class="mx-auto text-sm font">{{ 'MEDIAS.MENU.2' | translate }}</p>
     </button>
 
     <!-- Button Drawings -->
-    <button id="doki" [ngClass]="{'text-white bg-blue_button hover:bg-blue_button border-lign !border-blue_border hover:!text-white': showDrawings == true}" (click)="changeMenu('drawings')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 border rounded-tl-md rounded-br-md cursor-pointer border-gray_background_light text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+    <button id="doki" [ngClass]="{'text-white bg-blue_button hover:bg-blue_button border-lign !border-blue_border hover:!text-white': showDrawings == true}" (click)="changeMenu('drawings')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 border cursor-pointer rounded-tl-md rounded-br-md border-gray_background_light text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
       <p class="mx-auto text-sm font">{{ 'MEDIAS.MENU.1' | translate }}</p>
     </button>
 
     <!-- Button Videos -->
-    <button id="doki" [ngClass]="{'text-white bg-blue_button hover:bg-blue_button border-lign !border-blue_border hover:!text-white': showVideos == true}" (click)="changeMenu('videos')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 border rounded-tl-md rounded-br-md cursor-pointer border-gray_background_light text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+    <button id="doki" [ngClass]="{'text-white bg-blue_button hover:bg-blue_button border-lign !border-blue_border hover:!text-white': showVideos == true}" (click)="changeMenu('videos')" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 border cursor-pointer rounded-tl-md rounded-br-md border-gray_background_light text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
       <p class="mx-auto text-sm font">{{ 'MEDIAS.MENU.3' | translate }}</p>
     </button>
   </div>

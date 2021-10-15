@@ -136,6 +136,21 @@ export const PROFILE: Profile[] = [
       socialThreeLink: "",
       socialThreeImg: "",
     },
+    {
+      userName: "Thomas G.",
+      roleFR: "Animateur 3D",
+      roleEN: "3D Animator",
+      pdp: "../../../assets/img/pdp/tomas.jpg",
+      group: "developpement",
+      presentationFR: "Après toutes ces années, il essaie tant bien que mal d'apprendre a dessiner. Résultat : pas top",
+      presentationEN: "After all these years, he tries to learn how to draw. Result : not great",
+      socialOneLink: "https://www.instagram.com/___thomas_gross__/",
+      socialOneImg: "../assets/social/instagram.png",
+      socialTwoLink: "",
+      socialTwoImg: "",
+      socialThreeLink: "",
+      socialThreeImg: "",
+    },
 
     /* --- MODELERS ---- */
 
@@ -168,22 +183,7 @@ export const PROFILE: Profile[] = [
       socialTwoImg: "../assets/social/sketchfab.svg",
       socialThreeLink: "",
       socialThreeImg: "",
-    },
-    {
-      userName: "Thomas G.",
-      roleFR: "Animateur 3D",
-      roleEN: "3D Animator",
-      pdp: "../../../assets/img/pdp/tomas.jpg",
-      group: "modelers",
-      presentationFR: "Après toutes ces années, il essaie tant bien que mal d'apprendre a dessiner. Résultat : pas top",
-      presentationEN: "After all these years, he tries to learn how to draw. Result : not great",
-      socialOneLink: "https://www.instagram.com/___thomas_gross__/",
-      socialOneImg: "../assets/social/instagram.png",
-      socialTwoLink: "",
-      socialTwoImg: "",
-      socialThreeLink: "",
-      socialThreeImg: "",
-    },
+    }
 
     /* --- DRAWERS ---- */
     /* A ajouter */

@@ -2,7 +2,8 @@
   <h1 class="small-title font">{{ 'TEAM.TITLE' | translate }}</h1>
 </div>
 
-<p class="w-full fadeIn md:text-center md:w-2/3 md:mx-auto mt-14 mb-14 paragraph">{{ 'TEAM.PARAGRAPH' | translate }}</p>
+<p class="hidden w-full md:flex mt-14 fadeIn md:text-center md:w-2/3 md:mx-auto mb-14 paragraph">{{ 'TEAM.PARAGRAPH' | translate }}</p>
+<p style="margin-top: 10.625rem;" class="flex w-full md:hidden fadeIn md:text-center md:w-2/3 md:mx-auto mb-14 paragraph">{{ 'TEAM.PARAGRAPH' | translate }}</p>
 
 <div class="block lg:hidden fadeIn">
   <a (click)="changeMenu('project-management')" class="cursor-pointer">
@@ -342,7 +343,7 @@
 <!--------------------- DESKTOP BOX DISPLAY ------------------------->
 <div class="hidden lg:block fadeIn">
   <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.1' | translate }}</h1>
-  <div class="w-full h-1 my-auto mb-8 border-t-lign border-blue_border shadow-blue-border-lign"></div>
+  <div class="w-full h-1 my-auto mb-10 rounded-full border-t-biglign border-gray_background_light"></div>
 
   <div class="grid w-full grid-cols-1 grid-rows-2 gap-6 mb-16 lg:grid-rows-1 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-2">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
@@ -389,7 +390,7 @@
   </div>
 
   <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.2' | translate }}</h1>
-  <div class="w-full h-1 my-auto mb-8 border-t-lign border-blue_border shadow-blue-border-lign"></div>
+  <div class="w-full h-1 my-auto mb-10 rounded-full border-t-biglign border-gray_background_light"></div>
 
   <div class="grid w-full grid-cols-1 grid-rows-2 gap-6 mb-16 lg:grid-rows-1 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-2">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
@@ -432,7 +433,7 @@
   </div>
 
   <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.3' | translate }}</h1>
-  <div class="w-full h-1 my-auto mb-8 border-t-lign border-blue_border shadow-blue-border-lign"></div>
+  <div class="w-full h-1 my-auto mb-10 rounded-full border-t-biglign border-gray_background_light"></div>
 
   <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-16 lg:grid-rows-1 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
@@ -475,9 +476,9 @@
   </div>
 
   <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.4' | translate }}</h1>
-  <div class="w-full h-1 my-auto mb-8 border-t-lign border-blue_border shadow-blue-border-lign"></div>
+  <div class="w-full h-1 my-auto mb-10 rounded-full border-t-biglign border-gray_background_light"></div>
 
-  <div class="grid w-full grid-cols-1 grid-rows-1 gap-6 mb-16 lg:grid-rows-1 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
+  <div class="grid w-full grid-cols-1 grid-rows-1 gap-6 mb-16 lg:grid-rows-1 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-2">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
       <div *ngIf="i.group == 'developpement'">
         <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
@@ -518,7 +519,7 @@
   </div>
 
   <!--<h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.7' | translate }}</h1>
-  <div class="w-full h-1 my-auto mb-8 border-t-lign border-blue_border shadow-blue-border-lign"></div>
+  <div class="w-full h-1 my-auto mb-10 rounded-full border-t-biglign border-gray_background_light"></div>
 
   <div class="grid w-full grid-cols-1 grid-rows-1 gap-6 mb-16 lg:grid-rows-1 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
@@ -561,7 +562,7 @@
   </div>-->
 
   <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.5' | translate }}</h1>
-  <div class="w-full h-1 my-auto mb-8 border-t-lign border-blue_border shadow-blue-border-lign"></div>
+  <div class="w-full h-1 my-auto mb-10 rounded-full border-t-biglign border-gray_background_light"></div>
 
   <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-16 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
     <ng-template ngFor let-i [ngForOf]="allProfiles">
@@ -604,7 +605,7 @@
   </div>
 
   <!--<h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.6' | translate }}</h1>
-  <div class="w-full h-1 my-auto mb-8 border-t-lign border-blue_border shadow-blue-border-lign"></div>
+  <div class="w-full h-1 my-auto mb-10 rounded-full border-t-biglign border-gray_background_light"></div>
 
   <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
     <ng-template ngFor let-i [ngForOf]="allProfiles">

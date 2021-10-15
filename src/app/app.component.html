@@ -1,46 +1,42 @@
-
-<!---- LOGO (mobile) + MENU ITEM (mobile) -------------->
-
-<div class="z-50 flex flex-row justify-between mb-14 md:mb-0">
-  <div *ngIf="url !== '/'" class="absolute top-0 left-0 z-0 flex justify-center w-full h-56 bg-gray_light_hover rounded-b-md shadow-gray md:hidden">
-
-    <h1 *ngIf="url === '/the-game'" class="mt-32 small-title font">{{ 'THE-GAME.TITLE' | translate }}</h1>
-    <h1 *ngIf="url === '/medias'" class="mt-32 small-title font">{{ 'MEDIAS.TITLE' | translate }}</h1>
-    <!--<h1 *ngIf="url === '/contact-us'" class="mt-32 small-title font">{{ 'CONTACT.TITLE' | translate }}</h1>-->
-    <h1 *ngIf="url === '/our-team'" class="mt-32 small-title font">{{ 'TEAM.TITLE' | translate }}</h1>
-
-  </div>
-
-  <a routerLink="/" class="z-50">
-    <img *ngIf="url === '/'" src="../assets/logos/logo-tight.webp" class="!z-50 h-16 md:hidden" alt="" style="min-width: 4rem !important;">
-    <img *ngIf="url !== '/'" src="../assets/logos/logo-tight.webp" class="!z-50 h-16 md:hidden" alt="" style="min-width: 4rem !important;">
-  </a>
-  <div class="z-50 w-full h-1 my-auto mt-5 md:hidden border-t-lign border-blue_border shadow-blue-border-lign mx-7"></div>
-
-  <!---- DROPDOWN NAVIGATION (mobile) -------------->
-  <div *ngIf="displayDropdown" [class.dropdown-height]="displayDropdown == true" class="fixed z-50 h-1 px-3 py-3 rounded-tl-md rounded-br-md lg:hidden transition-start right-6 w-72 top-24 md:top-special bg-gray_background_light shadow-gray">
-
-    <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/'}" routerLink="" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
-      {{ 'NAV.MENU-1' | translate }}
-    </div>
-    <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/the-game'}" routerLink="the-game" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
-      {{ 'NAV.MENU-2' | translate }}
-    </div>
-    <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/medias'}" routerLink="medias" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
-      {{ 'NAV.MENU-3' | translate }}
-    </div>
-    <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/our-team'}" routerLink="our-team" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
-      {{ 'NAV.MENU-4' | translate }}
-    </div>
-    <!--<div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/contact-us'}" routerLink="contact-us" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
-      {{ 'NAV.MENU-5' | translate }}
-    </div>-->
-  </div>
-</div>
-
   <!-- SECTION TOP -->
   <div class="flex flex-row w-full pt-10">
     <div class="flex flex-row">
+        <!-- Logo mobile -->
+        <a routerLink="/" class="z-50 flex lg:hidden mr-special">
+          <img src="../assets/logos/logo-tight.webp" class="!z-50 h-16 md:hidden" alt="" style="min-width: 4rem !important;">
+        </a>
+
+         <!---- DROPDOWN NAVIGATION (mobile) -------------->
+        <div *ngIf="displayDropdown" [class.dropdown-height]="displayDropdown == true" class="fixed z-50 h-1 px-3 py-3 rounded-tl-md rounded-br-md lg:hidden transition-start right-6 w-72 top-24 md:top-special bg-gray_background_light shadow-gray">
+
+          <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/'}" routerLink="" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
+            {{ 'NAV.MENU-1' | translate }}
+          </div>
+          <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/the-game'}" routerLink="the-game" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
+            {{ 'NAV.MENU-2' | translate }}
+          </div>
+          <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/medias'}" routerLink="medias" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
+            {{ 'NAV.MENU-3' | translate }}
+          </div>
+          <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/our-team'}" routerLink="our-team" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
+            {{ 'NAV.MENU-4' | translate }}
+          </div>
+          <!--<div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/contact-us'}" routerLink="contact-us" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
+            {{ 'NAV.MENU-5' | translate }}
+          </div>-->
+        </div>
+
+        <div class="flex flex-row justify-between mb-14 md:mb-0">
+          <div *ngIf="url !== '/'" class="absolute top-0 left-0 z-0 flex justify-center w-full h-56 bg-gray_light_hover rounded-b-md shadow-gray md:hidden">
+        
+            <h1 *ngIf="url === '/the-game'" class="mt-32 small-title font">{{ 'THE-GAME.TITLE' | translate }}</h1>
+            <h1 *ngIf="url === '/medias'" class="mt-32 small-title font">{{ 'MEDIAS.TITLE' | translate }}</h1>
+            <!--<h1 *ngIf="url === '/contact-us'" class="mt-32 small-title font">{{ 'CONTACT.TITLE' | translate }}</h1>-->
+            <h1 *ngIf="url === '/our-team'" class="mt-32 small-title font">{{ 'TEAM.TITLE' | translate }}</h1>
+        
+          </div>
+        </div>
+      
         <!-- First lign -->
         <div class="hidden bg-yellow-400 w-special-2 lg:flex"></div>
 
@@ -74,7 +70,7 @@
         </div>
     </div>
     <!-- Second lign -->
-    <div class="w-full bg-yellow-800"></div>
+    <div class="z-50 w-full bg-yellow-800"></div>
 
     <!-- Mobile dropdown -->
     <div class="z-50 md:border-gray_background_dark lg:hidden ml-special">
@@ -93,13 +89,13 @@
     </div>
   </div>
 
-  <div class="!z-50 max-w-6xl mx-auto mt-6 md:pt-20 pt-0">
+  <div class="!z-50 max-w-6xl mx-auto mt-24">
     <router-outlet></router-outlet>
   </div>
 
    <!----- Footer ------->
-   <div class="h-['140px'] mt-16 md:mt-0">
-    <div class="w-full h-1 mt-13 border-t-lign border-blue_border shadow-blue-border-lign"></div>
+   <div>
+    <div class="w-full h-1 border-t-lign border-blue_border shadow-blue-border-lign"></div>
     <div class="flex justify-between w-full pt-8 pb-5 sm:pb-8 sm:flex-row md:py-13">
       <div class="flex md:w-full md:flex-row">
 
@@ -142,10 +138,6 @@
     <!-- Mobile copyright -->
     <p class="flex items-center w-full pb-8 ml-0 text-center sm:hidden text-md text-gray_subtitle md:mt-0">{{ 'FOOTER.COPYRIGHT' | translate }}</p>
   </div>
-
-  <!-- SECTION BOTTOM -->
-  <div class="hidden w-full h-10 bg-yellow-700 section-bottom md:flex">bottom</div>
-
 
   <!------- SECTION LEFT ------->
   <div class="fixed top-0 left-0 hidden h-full p-10 md:flex">
@@ -206,3 +198,10 @@
       <div class="h-full bg-blue-700 mt-special"></div>
     </div>
   </div>
+
+
+
+
+
+  <!-- <div class="z-50 w-full h-1 my-auto mt-5 md:hidden border-t-lign border-blue_border shadow-blue-border-lign mx-7"></div>
+    -->
