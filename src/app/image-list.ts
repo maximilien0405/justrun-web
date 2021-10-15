@@ -104,11 +104,6 @@ export const IMAGEList2: Image[] = [
     image: "../../../assets/img/models/frejel.jpg",
     descriptionFR: "Frejel avec son costume",
     descriptionEN: "Frejel with his suit",
-  },
-   {
-    image: "../../../assets/img/models/box.jpg",
-    descriptionFR: "Boîtes en carton pour l'entrepôt",
-    descriptionEN: "Cardboard boxes for storage",
   }
 ];
 

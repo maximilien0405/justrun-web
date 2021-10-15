@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { trigger, transition, style, animate, state, keyframes } from '@angular/animations';
+import { HostListener } from "@angular/core";
 
 @Component({
   selector: 'app-home',
@@ -41,4 +42,10 @@ export class HomeComponent implements OnInit {
     this.mobileFrame = true;
     console.log("test")
   }
+
+  @HostListener('document:keydown.escape', ['$event']) onKeydownHandler(event:
+    KeyboardEvent) {
+      this.hide()
+   }
+
 }

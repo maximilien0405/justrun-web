@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, HostListener } from '@angular/core';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -39,5 +39,10 @@ export class ModelsComponent implements OnInit {
   hide() {
     this.frameShow = false
   }
+
+  @HostListener('document:keydown.escape', ['$event']) onKeydownHandler(event:
+    KeyboardEvent) {
+      this.hide()
+   }
 
 }

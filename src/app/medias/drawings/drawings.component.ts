@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, HostListener } from '@angular/core';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 
@@ -40,4 +40,9 @@ export class DrawingsComponent implements OnInit {
   hide() {
     this.frameShow = false
   }
+
+  @HostListener('document:keydown.escape', ['$event']) onKeydownHandler(event:
+    KeyboardEvent) {
+      this.hide()
+   }
 }
