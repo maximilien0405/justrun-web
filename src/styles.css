@@ -17,8 +17,8 @@
 }
 
 .image-background {
-  background-image: url('./assets/cover/background-image.jpg');
-  opacity: 35%;
+  background-image: url('./assets/cover/background-image2.jpeg');
+  opacity: 30%;
   z-index: 0 !important;
 }
 
@@ -257,7 +257,7 @@ img {
 }
 
 .h-special-2  {
-  height: 50rem !important;
+  height: 100% !important;
 }
 
 .h-special-3  {
