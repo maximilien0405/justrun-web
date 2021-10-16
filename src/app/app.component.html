@@ -1,5 +1,5 @@
   <!-- SECTION TOP -->
-  <div class="relative z-50 flex flex-row w-full pt-10">
+  <div class="relative z-50 flex flex-row w-full px-6 pt-10 md:px-0 fadeIn ">
     <div class="flex flex-row">
         <!-- Logo mobile -->
         <a routerLink="/" class="z-50 flex lg:hidden mr-special">
@@ -7,7 +7,7 @@
         </a>
 
          <!---- DROPDOWN NAVIGATION (mobile) -------------->
-        <div *ngIf="displayDropdown" [class.dropdown-height]="displayDropdown == true" class="fixed z-50 h-1 px-3 py-3 rounded-tl-md rounded-br-md lg:hidden transition-start right-6 w-72 top-24 md:top-special bg-gray_background_light shadow-gray">
+        <div *ngIf="displayDropdown" [class.dropdown-height]="displayDropdown == true" class="fixed z-50 h-1 px-3 py-3 rounded-tl-md rounded-br-md lg:hidden transition-start right-6 md:right-40 w-72 top-special bg-gray_background_light shadow-gray">
 
           <div (click)="dropdown()" [ngClass]="{'text-white bg-gray_light_hover border-lign border-blue_border': url == '/'}" routerLink="" class="flex items-center justify-center w-full h-12 cursor-pointer rounded-tl-md rounded-br-md text-gray_subtitle hover:text-gray_subtitle_hover font">
             {{ 'NAV.MENU-1' | translate }}
@@ -28,12 +28,10 @@
 
         <div class="flex flex-row justify-between mb-14 md:mb-0">
           <div *ngIf="url !== '/'" class="absolute top-0 left-0 z-0 flex justify-center w-full h-56 bg-gray_light_hover rounded-b-md shadow-gray md:hidden">
-
             <h1 *ngIf="url === '/the-game'" class="mt-32 small-title font">{{ 'THE-GAME.TITLE' | translate }}</h1>
             <h1 *ngIf="url === '/medias'" class="mt-32 small-title font">{{ 'MEDIAS.TITLE' | translate }}</h1>
             <!--<h1 *ngIf="url === '/contact-us'" class="mt-32 small-title font">{{ 'CONTACT.TITLE' | translate }}</h1>-->
             <h1 *ngIf="url === '/our-team'" class="mt-32 small-title font">{{ 'TEAM.TITLE' | translate }}</h1>
-
           </div>
         </div>
 
@@ -93,12 +91,12 @@
     </div>
   </div>
 
-  <div class="!z-50 max-w-6xl mx-auto mt-24 px-6 mb-44">
+  <div class="!z-50 max-w-6xl mx-auto mt-24 px-6 lg:px-0 mb-44">
     <router-outlet></router-outlet>
   </div>
 
    <!----- Footer ------->
-  <div class="block md:hidden">
+  <div class="block px-6 md:hidden">
     <div class="w-full h-1 border-t-lign border-blue_border shadow-blue-border-lign"></div>
     <div class="flex justify-between w-full pt-8 pb-5 sm:pb-8 sm:flex-row md:py-13">
       <div class="flex md:w-full md:flex-row">
@@ -149,7 +147,7 @@
   </div>
 
   <!------- SECTION LEFT ------->
-  <div class="fixed top-0 left-0 hidden h-full p-10 md:flex">
+  <div class="fixed top-0 left-0 hidden h-full p-10 md:flex fadeIn">
     <div class="flex flex-col h-full">
       <!---- Logo ---->
       <div class="inline-block mb-special">
@@ -194,7 +192,7 @@
     </div>
   </div>
   <!------- SECTION RIGHT ------->
-  <div class="fixed top-0 right-0 items-end hidden h-full p-10 md:flex">
+  <div class="fixed top-0 right-0 items-end hidden h-full p-10 fadeIn md:flex">
     <div class="flex flex-col h-full ">
 
       <!---- SEE MORE BUTTON (desktop only) --------->
@@ -220,7 +218,7 @@
             <span class="w-full text-center text-gray_subtitle text-normal group-hover:text-gray_subtitle_hover font">FR</span>
           </div>
 
-          <div class="w-full bg-gray-400 h-lign" style="box-shadow: 0px 0px 15px rgba(18, 96, 109, 0.7);"></div>
+          <div class="w-full bg-gray-600 h-lign"></div>
 
           <div (click)="translate.use('en') && changeLang('EN')" class="flex items-center w-full h-10 transition duration-75 hover:bg-gray_light_hover rounded-r-md group">
             <span class="w-full text-center text-gray_subtitle text-normal group-hover:text-gray_subtitle_hover font">EN</span>
