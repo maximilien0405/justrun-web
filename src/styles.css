@@ -18,7 +18,7 @@
 
 .image-background {
   background-image: url('./assets/cover/background-image.jpg');
-  opacity: 40%;
+  opacity: 35%;
   z-index: 0 !important;
 }
 

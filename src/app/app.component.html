@@ -28,15 +28,15 @@
 
         <div class="flex flex-row justify-between mb-14 md:mb-0">
           <div *ngIf="url !== '/'" class="absolute top-0 left-0 z-0 flex justify-center w-full h-56 bg-gray_light_hover rounded-b-md shadow-gray md:hidden">
-        
+
             <h1 *ngIf="url === '/the-game'" class="mt-32 small-title font">{{ 'THE-GAME.TITLE' | translate }}</h1>
             <h1 *ngIf="url === '/medias'" class="mt-32 small-title font">{{ 'MEDIAS.TITLE' | translate }}</h1>
             <!--<h1 *ngIf="url === '/contact-us'" class="mt-32 small-title font">{{ 'CONTACT.TITLE' | translate }}</h1>-->
             <h1 *ngIf="url === '/our-team'" class="mt-32 small-title font">{{ 'TEAM.TITLE' | translate }}</h1>
-        
+
           </div>
         </div>
-      
+
         <!-- First lign -->
         <div class="hidden w-special-2 lg:flex">
           <div class="z-50 w-full h-1 my-auto mt-4 border-t-lign border-blue_border shadow-blue-border-lign"></div>
@@ -46,27 +46,27 @@
         <div class="hidden w-special-3 lg:flex">
 
           <!-- Button Home -->
-          <button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/'}" routerLink="" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 border cursor-pointer ml-special rounded-tl-md rounded-br-md border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+          <button id="oki" [ngClass]="{'!text-white border-lign !border-blue_border shadow-blue-button': url == '/'}" routerLink="" class="box-border items-center inline-block h-10 px-5 text-base leading-10 transition duration-75 border cursor-pointer ml-special rounded-tl-md rounded-br-md border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
             <p class="mx-auto text-sm font">{{ 'NAV.MENU-1' | translate }}</p>
           </button>
 
           <!-- Button The-game -->
-          <button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/the-game'}" routerLink="the-game" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border cursor-pointer rounded-tl-md rounded-br-md border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+          <button id="oki" [ngClass]="{'!text-white border-lign !border-blue_border shadow-blue-button': url == '/the-game'}" routerLink="the-game" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border cursor-pointer rounded-tl-md rounded-br-md border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
             <p class="mx-auto text-sm font">{{ 'NAV.MENU-2' | translate }}</p>
           </button>
 
           <!-- Button Medias -->
-          <button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/medias'}" routerLink="medias" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border cursor-pointer rounded-tl-md rounded-br-md border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+          <button id="oki" [ngClass]="{'!text-white border-lign !border-blue_border shadow-blue-button': url == '/medias'}" routerLink="medias" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border cursor-pointer rounded-tl-md rounded-br-md border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
             <p class="mx-auto text-sm font">{{ 'NAV.MENU-3' | translate }}</p>
           </button>
 
           <!-- Our team -->
-          <button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/our-team'}" routerLink="our-team" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border cursor-pointer mr-special rounded-tl-md rounded-br-md border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+          <button id="oki" [ngClass]="{'!text-white border-lign !border-blue_border shadow-blue-button': url == '/our-team'}" routerLink="our-team" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border cursor-pointer mr-special rounded-tl-md rounded-br-md border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
             <p class="mx-auto text-sm font">{{ 'NAV.MENU-4' | translate }}</p>
           </button>
 
           <!-- Contact us -->
-          <!--<button id="oki" [ngClass]="{'text-white border-lign !border-blue_border shadow-blue-button': url == '/contact-us'}" routerLink="contact-us" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border cursor-pointer rounded-tl-md rounded-br-md border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
+          <!--<button id="oki" [ngClass]="{'!text-white border-lign !border-blue_border shadow-blue-button': url == '/contact-us'}" routerLink="contact-us" class="box-border items-center inline-block h-10 px-5 ml-3 text-base leading-10 transition duration-75 border cursor-pointer rounded-tl-md rounded-br-md border-gray_background_light shadow-gray text-gray_subtitle hover:text-gray_subtitle_hover focus:outline-none bg-gray_background_light hover:bg-gray_light_hover">
             <p class="mx-auto text-sm font">{{ 'NAV.MENU-5' | translate }}</p>
           </button>-->
         </div>
@@ -191,11 +191,10 @@
       <div class="h-full" style="padding-left: 17px;">
         <div class="z-50 w-1 h-full border-r-lign border-blue_border shadow-blue-border-lign"></div>
       </div>
-
     </div>
   </div>
   <!------- SECTION RIGHT ------->
-  <div class="fixed top-0 right-0 hidden h-full p-10 md:flex">
+  <div class="fixed top-0 right-0 items-end hidden h-full p-10 md:flex">
     <div class="flex flex-col h-full ">
 
       <!---- SEE MORE BUTTON (desktop only) --------->
@@ -212,16 +211,21 @@
         <div class="z-50 w-1 h-full border-r-lign border-blue_border shadow-blue-border-lign"></div>
       </div>
 
-      <!---- Change language --------->
-      <div class="flex flex-col items-center justify-between w-10 text-sm transition duration-75 cursor-pointer select-none mr-9 mt-special rounded-tl-md rounded-br-md bg-gray_background_light text-gray_subtitle shadow-gray" style="">
-        <div (click)="translate.use('fr') && changeLang('FR')" class="flex items-center w-full h-10 transition duration-75 rounded-l-md hover:bg-gray_light_hover group">
-          <span class="w-full text-center text-gray_subtitle text-normal group-hover:text-gray_subtitle_hover font">FR</span>
+      <div class="flex items-end w-full h-20 mt-special">
+        <div class="w-10 h-full ml-9">
+
+        <!---- Change language --------->
+        <div class="flex flex-col items-center justify-between w-10 text-sm transition duration-75 cursor-pointer select-none rounded-tl-md rounded-br-md bg-gray_background_light text-gray_subtitle shadow-gray">
+          <div (click)="translate.use('fr') && changeLang('FR')" class="flex items-center w-full h-10 transition duration-75 rounded-l-md hover:bg-gray_light_hover group">
+            <span class="w-full text-center text-gray_subtitle text-normal group-hover:text-gray_subtitle_hover font">FR</span>
+          </div>
+
+          <div class="w-full bg-gray-400 h-lign" style="box-shadow: 0px 0px 15px rgba(18, 96, 109, 0.7);"></div>
+
+          <div (click)="translate.use('en') && changeLang('EN')" class="flex items-center w-full h-10 transition duration-75 hover:bg-gray_light_hover rounded-r-md group">
+            <span class="w-full text-center text-gray_subtitle text-normal group-hover:text-gray_subtitle_hover font">EN</span>
+          </div>
         </div>
-
-        <div class="w-full bg-gray-400 h-lign" style="box-shadow: 0px 0px 15px rgba(18, 96, 109, 0.7);"></div>
-
-        <div (click)="translate.use('en') && changeLang('EN')" class="flex items-center w-full h-10 transition duration-75 hover:bg-gray_light_hover rounded-r-md group">
-          <span class="w-full text-center text-gray_subtitle text-normal group-hover:text-gray_subtitle_hover font">EN</span>
         </div>
       </div>
     </div>
