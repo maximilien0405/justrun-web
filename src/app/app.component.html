@@ -1,5 +1,5 @@
   <!-- SECTION TOP -->
-  <div class="relative z-50 flex flex-row w-full px-6 pt-10 md:px-40 fadeIn ">
+  <div class="absolute top-0 z-50 flex flex-row w-full px-6 pt-10 md:px-40 fadeIn ">
     <div class="flex flex-row">
         <!-- Logo mobile -->
         <a routerLink="/" class="z-50 flex lg:hidden mr-special">
@@ -92,19 +92,19 @@
   </div>
 
   <!-- ROUTER OUTLET -->
-  <div *ngIf="url !== '/'" class="!z-50 mx-auto mt-24 mb-14 lg:mb-36 px-6 md:px-40">
+  <div *ngIf="url !== '/'" class="!z-50 mx-auto mt-44 mb-14 lg:mb-36 px-6 md:px-40">
     <router-outlet></router-outlet>
   </div>
 
   <!-- HOME PAGE -->
-  <div *ngIf="url === '/'" class="!z-50 mx-auto mt-24 lg:px-0 mb-14 lg:mb-36">
+  <div *ngIf="url === '/'" class="!z-50 mx-auto lg:px-0 mb-14 lg:mb-36">
     <!-- Image background -->
     <div class="fadeIn">
-      <div class="z-0 w-full bg-center bg-cover h-special-2 image-background">
+      <div class="relative z-0 w-full bg-center bg-cover h-special-2 image-background">
         <!-- HEADER COMPONENT ------------------------>
 
         <div class="flex flex-col justify-between fadeIn xl:flex-row">
-          <div class="mx-auto mb-20 text-center mt-28 w-96">
+          <div class="mx-auto mt-64 mb-64 text-center w-96">
             <h1 class="relative z-50 title font">{{ 'HOME.TITLE' | translate}}</h1>
             <p class="relative z-50 mt-5 subtitle">{{ 'HOME.SUBTITLE' | translate }}</p>
             <a routerLink="the-game">
@@ -119,9 +119,9 @@
 
     <!-- 3 BOXS --------------------------------->
 
-    <div class="flex flex-col items-start mt-20 mb-20 fadeIn xl:items-end lg:items-center xl:mt-36">
-      <h2 class="xl:text-right lg:text-center small-title font">{{ 'HOME.MIDDLE-TITLE' | translate}}</h2>
-      <p class="w-full mt-4 xl:text-right lg:w-2/3 paragraph lg:text-center">{{ 'HOME.MIDDLE-PARAGRAPH' | translate}}</p>
+    <div class="flex flex-col items-center mt-20 mb-20 fadeIn">
+      <h2 class="text-center small-title font">{{ 'HOME.MIDDLE-TITLE' | translate}}</h2>
+      <p class="mt-4 text-center w-special-4 paragraph">{{ 'HOME.MIDDLE-PARAGRAPH' | translate}}</p>
     </div>
 
     <div class="grid grid-cols-1 gap-12 mb-16 fadeIn sm:grid-cols-2 lg:grid-flow-col lg:grid-cols-3 lg:mb-14">

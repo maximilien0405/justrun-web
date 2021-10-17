@@ -17,8 +17,7 @@
 }
 
 .image-background {
-  background-image: url('./assets/cover/background-image.jpg');
-  opacity: 35%;
+  background-image: url('./assets/cover/cover2.png');
   z-index: 0 !important;
 }
 
@@ -274,6 +273,10 @@ img {
 
 .w-special-3 {
   min-width: 563px !important;
+}
+
+.w-special-4 {
+  width: 663px !important;
 }
 
 .size-special {
