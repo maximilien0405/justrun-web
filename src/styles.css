@@ -153,6 +153,9 @@ html, body {
             box-shadow: none !important;
   }
 
+  .w-special-big {
+    width: 100% !important;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -275,9 +278,14 @@ img {
   min-width: 563px !important;
 }
 
-.w-special-4 {
-  width: 663px !important;
+.w-special-big {
+  width: 663px;
 }
+
+.w-special-medium {
+  width: 463px !important;
+}
+
 
 .size-special {
   height: 28.125rem;
