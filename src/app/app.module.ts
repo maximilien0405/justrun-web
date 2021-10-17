@@ -14,7 +14,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DrawingsComponent } from './medias/drawings/drawings.component';
 import { ModelsComponent } from './medias/models/models.component';
 import { VideosComponent } from './medias/videos/videos.component';
-import { HomeComponent } from './home/home.component';
 import { PresentationComponent } from './the-game/presentation/presentation.component';
 import { StorylineComponent } from './the-game/storyline/storyline.component';
 import { ArtDirComponent } from './the-game/art-dir/art-dir.component';
@@ -34,7 +33,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     DrawingsComponent,
     ModelsComponent,
     VideosComponent,
-    HomeComponent,
     PresentationComponent,
     StorylineComponent,
     ArtDirComponent,

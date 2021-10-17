@@ -1,649 +1,651 @@
-<div class="items-center justify-center hidden w-full rounded-tl-md rounded-br-md fadeIn md:flex h-36 bg-gray_background_light shadow-gray">
-  <h1 class="small-title font">{{ 'TEAM.TITLE' | translate }}</h1>
-</div>
+<div class="max-w-6xl mx-auto">
+  <div class="items-center justify-center hidden w-full rounded-tl-md rounded-br-md fadeIn md:flex h-36 bg-gray_background_light shadow-gray">
+    <h1 class="small-title font">{{ 'TEAM.TITLE' | translate }}</h1>
+  </div>
 
-<p class="hidden w-full md:flex mt-14 fadeIn md:text-center md:w-2/3 md:mx-auto mb-14 paragraph">{{ 'TEAM.PARAGRAPH' | translate }}</p>
-<p style="margin-top: 10.625rem;" class="flex w-full md:hidden fadeIn md:text-center md:w-2/3 md:mx-auto mb-14 paragraph">{{ 'TEAM.PARAGRAPH' | translate }}</p>
+  <p class="hidden w-full md:flex mt-14 fadeIn md:text-center md:w-2/3 md:mx-auto mb-14 paragraph">{{ 'TEAM.PARAGRAPH' | translate }}</p>
+  <p style="margin-top: 10.625rem;" class="flex w-full md:hidden fadeIn md:text-center md:w-2/3 md:mx-auto mb-14 paragraph">{{ 'TEAM.PARAGRAPH' | translate }}</p>
 
-<div class="block lg:hidden fadeIn">
-  <a (click)="changeMenu('project-management')" class="cursor-pointer">
-    <div [ngClass]="{'!bg-gray_light_hover': showProjectManagement}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
-      <h1 class="py-4 text-xl text-white">{{ 'TEAM.MENU-M.1' | translate }}</h1>
-      <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showProjectManagement == false}" class="w-6 h-6 transition duration-75" alt="">
+  <div class="block lg:hidden fadeIn">
+    <a (click)="changeMenu('project-management')" class="cursor-pointer">
+      <div [ngClass]="{'!bg-gray_light_hover': showProjectManagement}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+        <h1 class="py-4 text-xl text-white">{{ 'TEAM.MENU-M.1' | translate }}</h1>
+        <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showProjectManagement == false}" class="w-6 h-6 transition duration-75" alt="">
+      </div>
+    </a>
+
+    <div *ngIf="showProjectManagement" class="grid w-full grid-cols-1 grid-rows-2 gap-6 mb-12 ">
+      <ng-template ngFor let-i [ngForOf]="allProfiles">
+        <div *ngIf="i.group == 'project-management'">
+          <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+            <div class="flex flex-row w-full pb-5">
+              <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
+              <div class="flex flex-col">
+                <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
+                <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+                <p *ngIf="lang == 'en' || lang == 'EN'; langElse" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+
+                <ng-template #langElse>
+                  <p class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+                </ng-template>
+
+                <div class="flex flex-row w-full ml-5">
+                  <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
+                    </div>
+                  </a>
+
+                  <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                  <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col w-full">
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            </div>
+          </div>
+        </div>
+      </ng-template>
     </div>
-  </a>
 
-  <div *ngIf="showProjectManagement" class="grid w-full grid-cols-1 grid-rows-2 gap-6 mb-12 ">
-    <ng-template ngFor let-i [ngForOf]="allProfiles">
-      <div *ngIf="i.group == 'project-management'">
-        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
-          <div class="flex flex-row w-full pb-5">
-            <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
-            <div class="flex flex-col">
-              <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang == 'en' || lang == 'EN'; langElse" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+    <a (click)="changeMenu('creative-team')" class="cursor-pointer">
+      <div [ngClass]="{'!bg-gray_light_hover': showCreativeTeam}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+        <h1 class="py-4 text-xl text-white">{{ 'TEAM.MENU-M.2' | translate }}</h1>
+        <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showCreativeTeam == false}" class="w-6 h-6 transition duration-75" alt="">
+      </div>
+    </a>
 
-              <ng-template #langElse>
-                <p class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              </ng-template>
+    <div *ngIf="showCreativeTeam" class="grid w-full grid-cols-1 grid-rows-2 gap-6 mb-12 ">
+      <ng-template ngFor let-i [ngForOf]="allProfiles">
+        <div *ngIf="i.group == 'creative-team'">
+          <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+            <div class="flex flex-row w-full pb-5">
+              <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
+              <div class="flex flex-col">
+                <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
+                <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+                <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
 
-              <div class="flex flex-row w-full ml-5">
-                <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
-                  </div>
-                </a>
+                <div class="flex flex-row w-full ml-5">
+                  <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
+                    </div>
+                  </a>
 
-                <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
-                <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
+                  <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                  <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="flex flex-col w-full">
-            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            <div class="flex flex-col w-full">
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            </div>
           </div>
         </div>
-      </div>
-    </ng-template>
-  </div>
-
-  <a (click)="changeMenu('creative-team')" class="cursor-pointer">
-    <div [ngClass]="{'!bg-gray_light_hover': showCreativeTeam}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
-      <h1 class="py-4 text-xl text-white">{{ 'TEAM.MENU-M.2' | translate }}</h1>
-      <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showCreativeTeam == false}" class="w-6 h-6 transition duration-75" alt="">
+      </ng-template>
     </div>
-  </a>
 
-  <div *ngIf="showCreativeTeam" class="grid w-full grid-cols-1 grid-rows-2 gap-6 mb-12 ">
-    <ng-template ngFor let-i [ngForOf]="allProfiles">
-      <div *ngIf="i.group == 'creative-team'">
-        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
-          <div class="flex flex-row w-full pb-5">
-            <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
-            <div class="flex flex-col">
-              <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+    <a (click)="changeMenu('game-level-design')" class="cursor-pointer">
+      <div [ngClass]="{'!bg-gray_light_hover': showGameLevelDesign}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+        <h1 class="py-4 text-xl text-white">{{ 'TEAM.MENU-M.3' | translate }}</h1>
+        <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showGameLevelDesign == false}" class="w-6 h-6 transition duration-75" alt="">
+      </div>
+    </a>
 
-              <div class="flex flex-row w-full ml-5">
-                <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
-                  </div>
-                </a>
+    <div *ngIf="showGameLevelDesign" class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-12 ">
+      <ng-template ngFor let-i [ngForOf]="allProfiles">
+        <div *ngIf="i.group == 'game-level-design'">
+          <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+            <div class="flex flex-row w-full pb-5">
+              <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
+              <div class="flex flex-col">
+                <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
+                <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+                <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
 
-                <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
-                <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
+                <div class="flex flex-row w-full ml-5">
+                  <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
+                    </div>
+                  </a>
+
+                  <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                  <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="flex flex-col w-full">
-            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            <div class="flex flex-col w-full">
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            </div>
           </div>
         </div>
-      </div>
-    </ng-template>
-  </div>
-
-  <a (click)="changeMenu('game-level-design')" class="cursor-pointer">
-    <div [ngClass]="{'!bg-gray_light_hover': showGameLevelDesign}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
-      <h1 class="py-4 text-xl text-white">{{ 'TEAM.MENU-M.3' | translate }}</h1>
-      <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showGameLevelDesign == false}" class="w-6 h-6 transition duration-75" alt="">
+      </ng-template>
     </div>
-  </a>
 
-  <div *ngIf="showGameLevelDesign" class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-12 ">
-    <ng-template ngFor let-i [ngForOf]="allProfiles">
-      <div *ngIf="i.group == 'game-level-design'">
-        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
-          <div class="flex flex-row w-full pb-5">
-            <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
-            <div class="flex flex-col">
-              <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+    <!--<a (click)="changeMenu('sound-design')" class="cursor-pointer">
+      <div [ngClass]="{'!bg-gray_light_hover': showSoundDesign}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+        <h1 class="py-4 text-xl text-white">{{ 'TEAM.MENU-M.7' | translate }}</h1>
+        <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showSoundDesign == false}" class="w-6 h-6 transition duration-75" alt="">
+      </div>
+    </a>
 
-              <div class="flex flex-row w-full ml-5">
-                <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
-                  </div>
-                </a>
+    <div *ngIf="showSoundDesign" class="grid w-full grid-cols-1 grid-rows-1 gap-6 mb-12 ">
+      <ng-template ngFor let-i [ngForOf]="allProfiles">
+        <div *ngIf="i.group == 'sound-design'">
+          <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+            <div class="flex flex-row w-full pb-5">
+              <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
+              <div class="flex flex-col">
+                <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
+                <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+                <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
 
-                <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
-                <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
+                <div class="flex flex-row w-full ml-5">
+                  <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
+                    </div>
+                  </a>
+
+                  <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                  <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="flex flex-col w-full">
-            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            <div class="flex flex-col w-full">
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            </div>
           </div>
         </div>
-      </div>
-    </ng-template>
-  </div>
+      </ng-template>
+    </div>-->
 
-  <!--<a (click)="changeMenu('sound-design')" class="cursor-pointer">
-    <div [ngClass]="{'!bg-gray_light_hover': showSoundDesign}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
-      <h1 class="py-4 text-xl text-white">{{ 'TEAM.MENU-M.7' | translate }}</h1>
-      <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showSoundDesign == false}" class="w-6 h-6 transition duration-75" alt="">
+    <a (click)="changeMenu('development')" class="cursor-pointer">
+      <div [ngClass]="{'!bg-gray_light_hover': showDeveloment}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+        <h1 class="py-4 text-xl text-white">{{ 'TEAM.MENU-M.4' | translate }}</h1>
+        <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showDeveloment == false}" class="w-6 h-6 transition duration-75" alt="">
+      </div>
+    </a>
+
+    <div *ngIf="showDeveloment" class="grid w-full grid-cols-1 grid-rows-1 gap-6 mb-12 ">
+      <ng-template ngFor let-i [ngForOf]="allProfiles">
+        <div *ngIf="i.group == 'developpement'">
+          <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+            <div class="flex flex-row w-full pb-5">
+              <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
+              <div class="flex flex-col">
+                <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
+                <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+                <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+
+                <div class="flex flex-row w-full ml-5">
+                  <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
+                    </div>
+                  </a>
+
+                  <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                  <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col w-full">
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            </div>
+          </div>
+        </div>
+      </ng-template>
     </div>
-  </a>
 
-  <div *ngIf="showSoundDesign" class="grid w-full grid-cols-1 grid-rows-1 gap-6 mb-12 ">
-    <ng-template ngFor let-i [ngForOf]="allProfiles">
-      <div *ngIf="i.group == 'sound-design'">
-        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
-          <div class="flex flex-row w-full pb-5">
-            <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
-            <div class="flex flex-col">
-              <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+    <a (click)="changeMenu('modelers')" class="cursor-pointer">
+      <div [ngClass]="{'!bg-gray_light_hover': showModelers}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+        <h1 class="py-4 text-xl text-white">{{ 'TEAM.MENU-M.5' | translate }}</h1>
+        <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showModelers == false}" class="w-6 h-6 transition duration-75" alt="">
+      </div>
+    </a>
 
-              <div class="flex flex-row w-full ml-5">
-                <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
-                  </div>
-                </a>
+    <div *ngIf="showModelers" class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-12 ">
+      <ng-template ngFor let-i [ngForOf]="allProfiles">
+        <div *ngIf="i.group == 'modelers'">
+          <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+            <div class="flex flex-row w-full pb-5">
+              <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
+              <div class="flex flex-col">
+                <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
+                <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+                <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
 
-                <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
-                <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
+                <div class="flex flex-row w-full ml-5">
+                  <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
+                    </div>
+                  </a>
+
+                  <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                  <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="flex flex-col w-full">
-            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            <div class="flex flex-col w-full">
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            </div>
           </div>
         </div>
-      </div>
-    </ng-template>
-  </div>-->
-
-  <a (click)="changeMenu('development')" class="cursor-pointer">
-    <div [ngClass]="{'!bg-gray_light_hover': showDeveloment}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
-      <h1 class="py-4 text-xl text-white">{{ 'TEAM.MENU-M.4' | translate }}</h1>
-      <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showDeveloment == false}" class="w-6 h-6 transition duration-75" alt="">
+      </ng-template>
     </div>
-  </a>
 
-  <div *ngIf="showDeveloment" class="grid w-full grid-cols-1 grid-rows-1 gap-6 mb-12 ">
-    <ng-template ngFor let-i [ngForOf]="allProfiles">
-      <div *ngIf="i.group == 'developpement'">
-        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
-          <div class="flex flex-row w-full pb-5">
-            <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
-            <div class="flex flex-col">
-              <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+    <!--<a (click)="changeMenu('drawers')" class="cursor-pointer">
+      <div [ngClass]="{'!bg-gray_light_hover': showDrawers}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
+        <h1 class="py-4 text-xl text-white">{{ 'TEAM.MENU-M.6' | translate }}</h1>
+        <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showDrawers == false}" class="w-6 h-6 transition duration-75" alt="">
+      </div>
+    </a>
 
-              <div class="flex flex-row w-full ml-5">
-                <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
-                  </div>
-                </a>
+    <div *ngIf="showDrawers" class="grid w-full grid-cols-1 grid-rows-3 gap-6 ">
+      <ng-template ngFor let-i [ngForOf]="allProfiles">
+        <div *ngIf="i.group == 'drawers'">
+          <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+            <div class="flex flex-row w-full pb-5">
+              <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
+              <div class="flex flex-col">
+                <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
+                <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+                <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
 
-                <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
-                <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
+                <div class="flex flex-row w-full ml-5">
+                  <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
+                    </div>
+                  </a>
+
+                  <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                  <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="flex flex-col w-full">
-            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            <div class="flex flex-col w-full">
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            </div>
           </div>
         </div>
-      </div>
-    </ng-template>
+      </ng-template>
+    </div>-->
   </div>
 
-  <a (click)="changeMenu('modelers')" class="cursor-pointer">
-    <div [ngClass]="{'!bg-gray_light_hover': showModelers}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
-      <h1 class="py-4 text-xl text-white">{{ 'TEAM.MENU-M.5' | translate }}</h1>
-      <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showModelers == false}" class="w-6 h-6 transition duration-75" alt="">
+  <!--------------------- DESKTOP BOX DISPLAY ------------------------->
+  <div class="hidden lg:block fadeIn">
+    <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.1' | translate }}</h1>
+    <div class="w-full h-1 my-auto mb-10 rounded-full border-t-biglign border-gray_background_light"></div>
+
+    <div class="grid w-full grid-cols-1 grid-rows-2 gap-6 mb-16 lg:grid-rows-1 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-2">
+      <ng-template ngFor let-i [ngForOf]="allProfiles">
+        <div *ngIf="i.group == 'project-management'">
+          <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+            <div class="flex flex-row w-full pb-5">
+              <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
+              <div class="flex flex-col">
+                <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
+                <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+                <p *ngIf="lang == 'en' || lang == 'EN'; langElse" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+
+                <ng-template #langElse>
+                  <p class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+                </ng-template>
+
+                <div class="flex flex-row w-full ml-5">
+                  <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
+                    </div>
+                  </a>
+
+                  <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                  <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col w-full">
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            </div>
+          </div>
+        </div>
+      </ng-template>
     </div>
-  </a>
 
-  <div *ngIf="showModelers" class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-12 ">
-    <ng-template ngFor let-i [ngForOf]="allProfiles">
-      <div *ngIf="i.group == 'modelers'">
-        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
-          <div class="flex flex-row w-full pb-5">
-            <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
-            <div class="flex flex-col">
-              <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+    <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.2' | translate }}</h1>
+    <div class="w-full h-1 my-auto mb-10 rounded-full border-t-biglign border-gray_background_light"></div>
 
-              <div class="flex flex-row w-full ml-5">
-                <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
-                  </div>
-                </a>
+    <div class="grid w-full grid-cols-1 grid-rows-2 gap-6 mb-16 lg:grid-rows-1 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-2">
+      <ng-template ngFor let-i [ngForOf]="allProfiles">
+        <div *ngIf="i.group == 'creative-team'">
+          <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+            <div class="flex flex-row w-full pb-5">
+              <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
+              <div class="flex flex-col">
+                <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
+                <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+                <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
 
-                <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
-                <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
+                <div class="flex flex-row w-full ml-5">
+                  <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
+                    </div>
+                  </a>
+
+                  <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                  <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="flex flex-col w-full">
-            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            <div class="flex flex-col w-full">
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            </div>
           </div>
         </div>
-      </div>
-    </ng-template>
-  </div>
-
-  <!--<a (click)="changeMenu('drawers')" class="cursor-pointer">
-    <div [ngClass]="{'!bg-gray_light_hover': showDrawers}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
-      <h1 class="py-4 text-xl text-white">{{ 'TEAM.MENU-M.6' | translate }}</h1>
-      <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showDrawers == false}" class="w-6 h-6 transition duration-75" alt="">
+      </ng-template>
     </div>
-  </a>
 
-  <div *ngIf="showDrawers" class="grid w-full grid-cols-1 grid-rows-3 gap-6 ">
-    <ng-template ngFor let-i [ngForOf]="allProfiles">
-      <div *ngIf="i.group == 'drawers'">
-        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
-          <div class="flex flex-row w-full pb-5">
-            <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
-            <div class="flex flex-col">
-              <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+    <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.3' | translate }}</h1>
+    <div class="w-full h-1 my-auto mb-10 rounded-full border-t-biglign border-gray_background_light"></div>
 
-              <div class="flex flex-row w-full ml-5">
-                <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
-                  </div>
-                </a>
+    <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-16 lg:grid-rows-1 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
+      <ng-template ngFor let-i [ngForOf]="allProfiles">
+        <div *ngIf="i.group == 'game-level-design'">
+          <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+            <div class="flex flex-row w-full pb-5">
+              <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
+              <div class="flex flex-col">
+                <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
+                <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+                <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
 
-                <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
-                <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
+                <div class="flex flex-row w-full ml-5">
+                  <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
+                    </div>
+                  </a>
+
+                  <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                  <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="flex flex-col w-full">
-            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
-          </div>
-        </div>
-      </div>
-    </ng-template>
-  </div>-->
-</div>
-
-<!--------------------- DESKTOP BOX DISPLAY ------------------------->
-<div class="hidden lg:block fadeIn">
-  <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.1' | translate }}</h1>
-  <div class="w-full h-1 my-auto mb-10 rounded-full border-t-biglign border-gray_background_light"></div>
-
-  <div class="grid w-full grid-cols-1 grid-rows-2 gap-6 mb-16 lg:grid-rows-1 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-2">
-    <ng-template ngFor let-i [ngForOf]="allProfiles">
-      <div *ngIf="i.group == 'project-management'">
-        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
-          <div class="flex flex-row w-full pb-5">
-            <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
-            <div class="flex flex-col">
-              <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang == 'en' || lang == 'EN'; langElse" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
-
-              <ng-template #langElse>
-                <p class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              </ng-template>
-
-              <div class="flex flex-row w-full ml-5">
-                <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
-                  </div>
-                </a>
-
-                <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
-                <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
-              </div>
+            <div class="flex flex-col w-full">
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
             </div>
           </div>
-          <div class="flex flex-col w-full">
-            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+        </div>
+      </ng-template>
+    </div>
+
+    <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.4' | translate }}</h1>
+    <div class="w-full h-1 my-auto mb-10 rounded-full border-t-biglign border-gray_background_light"></div>
+
+    <div class="grid w-full grid-cols-1 grid-rows-1 gap-6 mb-16 lg:grid-rows-1 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-2">
+      <ng-template ngFor let-i [ngForOf]="allProfiles">
+        <div *ngIf="i.group == 'developpement'">
+          <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+            <div class="flex flex-row w-full pb-5">
+              <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
+              <div class="flex flex-col">
+                <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
+                <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+                <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+
+                <div class="flex flex-row w-full ml-5">
+                  <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
+                    </div>
+                  </a>
+
+                  <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                  <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col w-full">
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            </div>
           </div>
         </div>
-      </div>
-    </ng-template>
+      </ng-template>
+    </div>
+
+    <!--<h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.7' | translate }}</h1>
+    <div class="w-full h-1 my-auto mb-10 rounded-full border-t-biglign border-gray_background_light"></div>
+
+    <div class="grid w-full grid-cols-1 grid-rows-1 gap-6 mb-16 lg:grid-rows-1 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
+      <ng-template ngFor let-i [ngForOf]="allProfiles">
+        <div *ngIf="i.group == 'sound-design'">
+          <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+            <div class="flex flex-row w-full pb-5">
+              <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
+              <div class="flex flex-col">
+                <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
+                <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+                <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+
+                <div class="flex flex-row w-full ml-5">
+                  <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
+                    </div>
+                  </a>
+
+                  <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                  <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col w-full">
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </div>-->
+
+    <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.5' | translate }}</h1>
+    <div class="w-full h-1 my-auto mb-10 rounded-full border-t-biglign border-gray_background_light"></div>
+
+    <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-16 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
+      <ng-template ngFor let-i [ngForOf]="allProfiles">
+        <div *ngIf="i.group == 'modelers'">
+          <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+            <div class="flex flex-row w-full pb-5">
+              <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
+              <div class="flex flex-col">
+                <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
+                <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+                <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+
+                <div class="flex flex-row w-full ml-5">
+                  <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
+                    </div>
+                  </a>
+
+                  <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                  <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col w-full">
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+
+    <!--<h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.6' | translate }}</h1>
+    <div class="w-full h-1 my-auto mb-10 rounded-full border-t-biglign border-gray_background_light"></div>
+
+    <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
+      <ng-template ngFor let-i [ngForOf]="allProfiles">
+        <div *ngIf="i.group == 'drawers'">
+          <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
+            <div class="flex flex-row w-full pb-5">
+              <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
+              <div class="flex flex-col">
+                <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
+                <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
+                <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
+
+                <div class="flex flex-row w-full ml-5">
+                  <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
+                    </div>
+                  </a>
+
+                  <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                  <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
+                    <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
+                      <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col w-full">
+              <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
+              <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </div>-->
   </div>
-
-  <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.2' | translate }}</h1>
-  <div class="w-full h-1 my-auto mb-10 rounded-full border-t-biglign border-gray_background_light"></div>
-
-  <div class="grid w-full grid-cols-1 grid-rows-2 gap-6 mb-16 lg:grid-rows-1 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-2">
-    <ng-template ngFor let-i [ngForOf]="allProfiles">
-      <div *ngIf="i.group == 'creative-team'">
-        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
-          <div class="flex flex-row w-full pb-5">
-            <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
-            <div class="flex flex-col">
-              <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
-
-              <div class="flex flex-row w-full ml-5">
-                <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
-                  </div>
-                </a>
-
-                <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
-                <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col w-full">
-            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
-          </div>
-        </div>
-      </div>
-    </ng-template>
-  </div>
-
-  <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.3' | translate }}</h1>
-  <div class="w-full h-1 my-auto mb-10 rounded-full border-t-biglign border-gray_background_light"></div>
-
-  <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-16 lg:grid-rows-1 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
-    <ng-template ngFor let-i [ngForOf]="allProfiles">
-      <div *ngIf="i.group == 'game-level-design'">
-        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
-          <div class="flex flex-row w-full pb-5">
-            <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
-            <div class="flex flex-col">
-              <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
-
-              <div class="flex flex-row w-full ml-5">
-                <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
-                  </div>
-                </a>
-
-                <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
-                <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col w-full">
-            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
-          </div>
-        </div>
-      </div>
-    </ng-template>
-  </div>
-
-  <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.4' | translate }}</h1>
-  <div class="w-full h-1 my-auto mb-10 rounded-full border-t-biglign border-gray_background_light"></div>
-
-  <div class="grid w-full grid-cols-1 grid-rows-1 gap-6 mb-16 lg:grid-rows-1 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-2">
-    <ng-template ngFor let-i [ngForOf]="allProfiles">
-      <div *ngIf="i.group == 'developpement'">
-        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
-          <div class="flex flex-row w-full pb-5">
-            <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
-            <div class="flex flex-col">
-              <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
-
-              <div class="flex flex-row w-full ml-5">
-                <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
-                  </div>
-                </a>
-
-                <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
-                <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col w-full">
-            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
-          </div>
-        </div>
-      </div>
-    </ng-template>
-  </div>
-
-  <!--<h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.7' | translate }}</h1>
-  <div class="w-full h-1 my-auto mb-10 rounded-full border-t-biglign border-gray_background_light"></div>
-
-  <div class="grid w-full grid-cols-1 grid-rows-1 gap-6 mb-16 lg:grid-rows-1 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
-    <ng-template ngFor let-i [ngForOf]="allProfiles">
-      <div *ngIf="i.group == 'sound-design'">
-        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
-          <div class="flex flex-row w-full pb-5">
-            <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
-            <div class="flex flex-col">
-              <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
-
-              <div class="flex flex-row w-full ml-5">
-                <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
-                  </div>
-                </a>
-
-                <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
-                <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col w-full">
-            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
-          </div>
-        </div>
-      </div>
-    </ng-template>
-  </div>-->
-
-  <h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.5' | translate }}</h1>
-  <div class="w-full h-1 my-auto mb-10 rounded-full border-t-biglign border-gray_background_light"></div>
-
-  <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 mb-16 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
-    <ng-template ngFor let-i [ngForOf]="allProfiles">
-      <div *ngIf="i.group == 'modelers'">
-        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
-          <div class="flex flex-row w-full pb-5">
-            <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
-            <div class="flex flex-col">
-              <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
-
-              <div class="flex flex-row w-full ml-5">
-                <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
-                  </div>
-                </a>
-
-                <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
-                <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col w-full">
-            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
-          </div>
-        </div>
-      </div>
-    </ng-template>
-  </div>
-
-  <!--<h1 class="p-4 pt-0 pl-0 mb-1 text-xl text-white font">{{ 'TEAM.MENU.6' | translate }}</h1>
-  <div class="w-full h-1 my-auto mb-10 rounded-full border-t-biglign border-gray_background_light"></div>
-
-  <div class="grid w-full grid-cols-1 grid-rows-3 gap-6 lg:grid-rows-2 lg:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3">
-    <ng-template ngFor let-i [ngForOf]="allProfiles">
-      <div *ngIf="i.group == 'drawers'">
-        <div class="rounded-md p-9 !pb-8 bg-gray_background_light shadow-gray w-full">
-          <div class="flex flex-row w-full pb-5">
-            <div class="h-24" style="min-width: 6rem !important; max-width: 6rem !important;"><img [src]="i.pdp" class="w-full h-full rounded-tl-md rounded-br-md border-lign border-blue_border" alt=""></div>
-            <div class="flex flex-col">
-              <p class="ml-5 -mt-1 text-lg font-medium text-white">{{ i.userName }}</p>
-              <p *ngIf="lang == 'fr' || lang == 'FR'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleFR }}</p>
-              <p *ngIf="lang == 'en' || lang == 'EN'" class="mt-1 mb-3 ml-5 !text-sm small-paragraph">─ {{ i.roleEN }}</p>
-
-              <div class="flex flex-row w-full ml-5">
-                <a *ngIf="i.socialOneLink" [href]="i.socialOneLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center w-8 h-8 mr-1.5 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialOneImg" class="w-3.5 h-3.5">
-                  </div>
-                </a>
-
-                <a *ngIf="i.socialTwoLink" [href]="i.socialTwoLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialTwoImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
-                <a *ngIf="i.socialThreeLink" [href]="i.socialThreeLink" target="_blank">
-                  <div class="flex flex-col items-center justify-center mr-1.5 w-8 h-8 align-middle transition duration-75 rounded-tl-md rounded-br-md cursor-pointer bg-gray_light_hover small-shadow-gray">
-                    <img [src]="i.socialThreeImg" class="w-3.5 h-3.5" alt="">
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="flex flex-col w-full">
-            <p *ngIf="lang == 'fr' || lang == 'FR'" class="paragraph !text-base">{{ i.presentationFR }}</p>
-            <p *ngIf="lang == 'en' || lang == 'EN'" class="paragraph !text-base">{{ i.presentationEN }}</p>
-          </div>
-        </div>
-      </div>
-    </ng-template>
-  </div>-->
 </div>
