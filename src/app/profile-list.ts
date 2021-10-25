@@ -12,14 +12,12 @@ export const PROFILE: Profile[] = [
       group: "project-management",
       presentationFR: "Lui c'est le grand chef, enfin je pense. À vrai dire c'est un mystère. En tout cas il est sympa !",
       presentationEN: "He's the big boss, I think. To tell you the truth, it's a mystery. Anyway, he is nice!",
-      /*socialOneLink: "https://www.maximilien-zimmermann.ch",
-      socialOneImg: "../assets/social/website.svg",*/
-      socialOneLink: "https://www.linkedin.com/in/maximilien-zimmermann-a2a290183/",
-      socialOneImg: "../assets/social/linkedin.svg",
+      socialOneLink: "https://www.maximilien.work",
+      socialOneImg: "../assets/social/website.svg",
       socialTwoLink: "mailto:maximilien.zimmermann@ik.me",
       socialTwoImg: "../assets/social/mail.svg",
-      socialThreeLink: "https://www.behance.net/max-zim",
-      socialThreeImg: "../assets/social/behance.svg",
+      socialThreeLink: "https://www.linkedin.com/in/maximilien-zimmermann-a2a290183/",
+      socialThreeImg: "../assets/social/linkedin.svg",
     },
     {
       userName: "Hugo C.",
