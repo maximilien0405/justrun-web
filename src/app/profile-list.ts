@@ -52,6 +52,21 @@ export const PROFILE: Profile[] = [
       socialThreeLink: "https://www.youtube.com/channel/UCrbb8sZ7Xc8KRQvxHqtOx1A",
       socialThreeImg: "../assets/social/youtube.png",
     },
+    {
+      userName: "Julien O.",
+      roleFR: "Scénariste",
+      roleEN: "Writer",
+      pdp: "../../../assets/img/pdp/julien.jpg",
+      group: "creative-team",
+      presentationFR: "Lui c'est la plume, prêt à dégainer son stylo (ou son clavier, soyons fous) pour ajouter quelques péripéties à notre héros.",
+      presentationEN: "He is the pen, ready to draw his pen (or his keyboard, let's be crazy) to add some adventures to our hero",
+      socialOneLink: "https://www.facebook.com/julien.oppenheimer",
+      socialOneImg: "../assets/social/facebook.svg",
+      socialTwoLink: "",
+      socialTwoImg: "",
+      socialThreeLink: "",
+      socialThreeImg: "",
+    },
 
     /* --- GAME/LEVEL DESIGN ---- */
 
