@@ -4,7 +4,7 @@ export const PROFILE: Profile[] = [
 
     /* --- PROJECT MANAGEMENT ---- */
 
-    {
+    /*{
       userName: "Maximilien Z.",
       roleFR: "Producer",
       roleEN: "Producer",
@@ -18,7 +18,7 @@ export const PROFILE: Profile[] = [
       socialTwoImg: "../assets/social/mail.svg",
       socialThreeLink: "https://www.linkedin.com/in/maximilien-zimmermann-a2a290183/",
       socialThreeImg: "../assets/social/linkedin.svg",
-    },
+    },*/
     {
       userName: "Hugo C.",
       roleFR: "Directeur créatif",
@@ -100,55 +100,9 @@ export const PROFILE: Profile[] = [
       socialThreeLink: "",
       socialThreeImg: "",
     },
-    {
-      userName: "Augustin P.",
-      roleFR: "Level Designer",
-      roleEN: "Level Designer",
-      pdp: "../../../assets/img/pdp/augustin.jpg",
-      group: "game-level-design",
-      presentationFR: "Il tente encore aujourd'hui d'inventer le niveau parfait..      ",
-      presentationEN: "He is still trying to invent the perfect level...",
-      socialOneLink: "https://www.instagram.com/augustin_porcher/",
-      socialOneImg: "../assets/social/instagram.png",
-      socialTwoLink: "",
-      socialTwoImg: "",
-      socialThreeLink: "",
-      socialThreeImg: "",
-    },
-    {
-      userName: "Alexandre A.",
-      roleFR: "Game Designer",
-      roleEN: "Game Designer",
-      pdp: "../../../assets/img/pdp/alexandre.jpg",
-      group: "game-level-design",
-      presentationFR: "Futur Hokage du game design ! « kept you waiting huh ? »",
-      presentationEN: "Future Hokage of game design! « kept you waiting huh? »",
-      socialOneLink: "https://alexandreafonso.fr/",
-      socialOneImg: "../assets/social/website.svg",
-      socialTwoLink: "https://www.linkedin.com/in/alexandre-afonso-18a854119/",
-      socialTwoImg: "../assets/social/linkedin.svg",
-      socialThreeLink: "Afonso.rodrigues.alexandre@gmail.com",
-      socialThreeImg: "../assets/social/mail.svg",
-    },
-
 
     /* --- DEVELOPPEMENT ---- */
 
-    {
-      userName: "Clément D.",
-      roleFR: "Développeur",
-      roleEN: "Developer",
-      pdp: "../../../assets/img/pdp/clement.jpg",
-      group: "developpement",
-      presentationFR: "Un amateur de jeux-vidéo en quête de projets sur lesquels travailler.",
-      presentationEN: "A video game enthusiast looking for projects to work on.",
-      socialOneLink: "",
-      socialOneImg: "",
-      socialTwoLink: "",
-      socialTwoImg: "",
-      socialThreeLink: "",
-      socialThreeImg: "",
-    },
     {
       userName: "Thomas G.",
       roleFR: "Animateur 3D",
@@ -169,8 +123,8 @@ export const PROFILE: Profile[] = [
 
     {
       userName: "Adjé B.",
-      roleFR: "Modélisateur 3D",
-      roleEN: "3D modeler",
+      roleFR: "Responsable Artistes",
+      roleEN: "Lead Artists",
       pdp: "../../../assets/img/pdp/adje.jpg",
       group: "modelers",
       presentationFR: "Un modélisateur 3D fort sympathique, toujours là pour relever les défis et motiver les troupes.",
