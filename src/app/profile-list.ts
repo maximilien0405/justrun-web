@@ -102,7 +102,21 @@ export const PROFILE: Profile[] = [
     },
 
     /* --- DEVELOPPEMENT ---- */
-
+    {
+      userName: "John B.",
+      roleFR: "Développeur",
+      roleEN: "Developper",
+      pdp: "../../../assets/img/pdp/john.png",
+      group: "developpement",
+      presentationFR: "Je suis le gars qui créer des bugs.",
+      presentationEN: "I'm the guy who creates bugs.",
+      socialOneLink: "https://gamejolt.com/@ShatteredDevs",
+      socialOneImg: "../assets/social/website.svg",
+      socialTwoLink: "https://github.com/Linuxydable",
+      socialTwoImg: "../assets/social/github.svg",
+      socialThreeLink: "",
+      socialThreeImg: "",
+    },
     {
       userName: "Thomas G.",
       roleFR: "Animateur 3D",
