@@ -12,7 +12,7 @@
     <div class="w-full h-1 my-auto mb-10 rounded-full border-t-biglign border-gray_background_light"></div>
     <app-presentation></app-presentation>
 
-    <!--<h1 class="p-4 pt-0 pl-0 mt-20 mb-1 text-xl text-white font">{{ 'THE-GAME.MENU.4' | translate }}</h1>
+    <h1 class="p-4 pt-0 pl-0 mt-20 mb-1 text-xl text-white font">{{ 'THE-GAME.MENU.4' | translate }}</h1>
     <div class="w-full h-1 my-auto mb-10 rounded-full border-t-biglign border-gray_background_light"></div>
     <app-gameplay></app-gameplay>
 
@@ -22,7 +22,7 @@
 
     <h1 class="p-4 pt-0 pl-0 mt-20 mb-1 text-xl text-white font">{{ 'THE-GAME.MENU.3' | translate }}</h1>
     <div class="w-full h-1 my-auto mb-10 rounded-full border-t-biglign border-gray_background_light"></div>
-    <app-art-dir></app-art-dir>-->
+    <app-art-dir></app-art-dir>
   </div>
 
   <div class="block lg:hidden fadeIn">
@@ -37,7 +37,7 @@
       <app-presentation></app-presentation>
     </div>
 
-    <!--<a (click)="changeMenu('gameplay')" class="cursor-pointer">
+    <a (click)="changeMenu('gameplay')" class="cursor-pointer">
       <div [ngClass]="{'!bg-gray_light_hover': showGameplay}" class="flex items-center justify-between w-full px-4 mb-6 transition duration-75 rounded-tl-md rounded-br-md bg-gray_background_light shadow-gray hover:bg-gray_light_hover">
         <h1 class="py-4 text-xl text-white">{{ 'THE-GAME.MENU-M.4' | translate }}</h1>
         <img src="../../assets/social/arrow.svg" [ngClass]="{'icon-new': showGameplay == false}" class="w-6 h-6 transition duration-75" alt="">
@@ -69,5 +69,5 @@
     <div *ngIf="showArtisticDirection" class="mb-12">
       <app-art-dir></app-art-dir>
     </div>
-  </div>-->
+  </div>
 </div>
