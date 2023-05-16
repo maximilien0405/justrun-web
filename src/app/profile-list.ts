@@ -70,7 +70,7 @@ export const PROFILE: Profile[] = [
 
     /* --- GAME/LEVEL DESIGN ---- */
 
-    /*{
+    {
       userName: "Sacha M.",
       roleFR: "Game Designer",
       roleEN: "Game Designer",
@@ -84,7 +84,7 @@ export const PROFILE: Profile[] = [
       socialTwoImg: "",
       socialThreeLink: "",
       socialThreeImg: "",
-    },*/
+    },
     {
       userName: "Timothee B.",
       roleFR: "Tech artist",
