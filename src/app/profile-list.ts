@@ -4,7 +4,7 @@ export const PROFILE: Profile[] = [
 
     /* --- PROJECT MANAGEMENT ---- */
 
-    /*{
+    {
       userName: "Maximilien Z.",
       roleFR: "Producer",
       roleEN: "Producer",
@@ -18,7 +18,7 @@ export const PROFILE: Profile[] = [
       socialTwoImg: "../assets/social/mail.svg",
       socialThreeLink: "https://www.linkedin.com/in/maximilien-zimmermann-a2a290183/",
       socialThreeImg: "../assets/social/linkedin.svg",
-    },*/
+    },
     {
       userName: "Hugo C.",
       roleFR: "Directeur créatif",
